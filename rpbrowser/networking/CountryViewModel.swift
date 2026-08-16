@@ -33,5 +33,12 @@ class CountryViewModel {
         }
     }
     
+    // MARK: - Preview
+    static var example: CountryViewModel {
+        let svc = MockSignSearchService()
+        let vm = CountryViewModel(service: svc)
+        vm.state = .loaded(Index.example)
+        return vm
+    }
 }
 

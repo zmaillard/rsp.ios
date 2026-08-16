@@ -20,18 +20,18 @@ struct BrowseScreen: View {
                     Text("Loading...")
                 }
             case .loaded(let countries):
-                List(countries.countries){ country in
+                List(countries.countries.sorted()){ country in
                     NavigationLink(value: country){
                         Text(country.name)
                     }
                 }.navigationDestination(for: CountrySlim.self)
-                { country in StateListView(country: country)
+                { country in StateListView(country: country, countryDetailsViewModel: CountryDetailsViewModel())
                     
                 }.navigationDestination(for: SearchType.self)
                 { searchType in SignListView(searchType: searchType)
                     
                 }.navigationDestination(for: StateSlim.self)
-                { state in CountyListView(state: state)
+                { state in CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
                     
                 }.navigationDestination(for: RoadSign.self)
                 { sign in SignDetailView(sign: sign){}
@@ -48,5 +48,5 @@ struct BrowseScreen: View {
 }
 
  #Preview {
- BrowseScreen(countryViewModel: CountryViewModel())
+     BrowseScreen(countryViewModel: CountryViewModel.example)
  }

@@ -9,12 +9,8 @@ import SwiftUI
 
 struct CountyListView: View {
     let state:StateSlim
-    
-    init(state: StateSlim) {
-        self.state = state
-    }
-    
-    var stateDetailsViewModel = StateDetailsViewModel()
+    let stateDetailsViewModel: StateDetailsViewModel
+
     var body: some View {
         VStack {
             switch stateDetailsViewModel.state {
@@ -25,7 +21,7 @@ struct CountyListView: View {
                     Text("Loading...")
                 }
             case .loaded(let state):
-                List(state.stateSubdivisions){ county in
+                List(state.stateSubdivisions.sorted()){ county in
                     NavigationLink(value: SearchType.StateSubdivisionFilter(county.id)){
                         Text(county.name)
                     }
@@ -39,4 +35,6 @@ struct CountyListView: View {
     }
 }
 
-
+#Preview {
+    CountyListView(state: StateSlim.example, stateDetailsViewModel: StateDetailsViewModel.example)
+}

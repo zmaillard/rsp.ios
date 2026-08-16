@@ -31,7 +31,14 @@ class CountryDetailsViewModel {
             self.state = .error("unknown error")
         }
     }
-    
+
+    // MARK: - Preview
+    static var example: CountryDetailsViewModel {
+        let svc = MockSignSearchService()
+        let vm = CountryDetailsViewModel(service: svc)
+        vm.state = .loaded(Country.example)
+        return vm
+    }
 }
 
 

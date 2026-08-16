@@ -12,9 +12,19 @@ struct Index: Decodable, Equatable, Hashable  {
         case imageCount
         case countries
     }
+    
+    // MARK: - Preview
+    static var example: Index {
+        return Index(imageCount: 19099, countries: [
+            CountrySlim(id: "united-states", name: "United States", url: "https://roadsign.pictures/country/united-states/index.json"),
+            CountrySlim(id: "canada", name: "Canada", url: "https://roadsign.pictures/country/canada/index.json"),
+            CountrySlim(id: "mexico", name: "Mexico", url: "https://roadsign.pictures/country/mexico/index.json"),
+            CountrySlim(id: "costa-rica", name: "Costa Rica", url: "https://roadsign.pictures/country/costa-rica/index.json")
+        ])
+    }
 }
 
-struct CountrySlim: Decodable,  Identifiable, Equatable, Hashable  {
+struct CountrySlim: Decodable, Comparable, Identifiable, Equatable, Hashable  {
     let id: String
     let name: String
     let url: String
@@ -24,6 +34,16 @@ struct CountrySlim: Decodable,  Identifiable, Equatable, Hashable  {
         case name
         case url
     }
+    static func < (lhs: CountrySlim, rhs: CountrySlim) -> Bool {
+        return lhs.name < rhs.name
+    }
+    
+
+    // MARK:: - Preview
+    static var example: CountrySlim {
+        return CountrySlim(id: "united-states", name: "United States", url: "https://roadsign.pictures/country/united-states/index.json")
+    }
+
 }
 
 struct HighwayTypeSlim : Decodable, Identifiable, Equatable, Hashable {
@@ -38,7 +58,7 @@ struct HighwayTypeSlim : Decodable, Identifiable, Equatable, Hashable {
     }
 }
 
-struct StateSlim : Decodable, Identifiable, Equatable, Hashable {
+struct StateSlim : Decodable, Identifiable, Comparable, Equatable, Hashable {
     let id: String
     let name: String
     let url: String
@@ -47,6 +67,21 @@ struct StateSlim : Decodable, Identifiable, Equatable, Hashable {
         case id = "slug"
         case name
         case url
+    }
+    
+    static func < (lhs: StateSlim, rhs: StateSlim) -> Bool {
+        return lhs.name < rhs.name
+    }
+    
+
+    
+    // MARK: - Preview
+    static var example: StateSlim {
+        guard let sampleData = try? SampleDataLoader.loadSampleData() else {
+            return StateSlim(id: "", name: "", url: "")
+        }
+        
+        return sampleData.country.states[0]
     }
 }
 struct Country : Decodable, Identifiable, Equatable, Hashable {
@@ -64,4 +99,12 @@ struct Country : Decodable, Identifiable, Equatable, Hashable {
         case highwayTypes
     }
     
+    // MARK: - Preview
+    static var example: Country {
+        guard let sampleData = try? SampleDataLoader.loadSampleData() else {
+            return Country(id: "", name: "", imageCount: 0, states: [], highwayTypes: [])
+        }
+        
+        return sampleData.country
+    }
 }

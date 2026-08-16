@@ -44,8 +44,6 @@ struct SearchScreen: View {
     }
 }
 
-/*
 #Preview {
     SearchScreen()
 }
-*/

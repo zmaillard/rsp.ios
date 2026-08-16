@@ -635,8 +635,32 @@
         ],
         "subdivisionName": "Province"
     },
-    "root":
-    {"countries":[{"name":"United States","slug":"united-states","url":"https://roadsign.pictures/country/united-states/index.json"},{"name":"Canada","slug":"canada","url":"https://roadsign.pictures/country/canada/index.json"},{"name":"Mexico","slug":"mexico","url":"https://roadsign.pictures/country/mexico/index.json"},{"name":"Costa Rica","slug":"costa-rica","url":"https://roadsign.pictures/country/costa-rica/index.json"}],"imageCount":19099},
+    "root": {
+        "countries": [
+            {
+                "name": "United States",
+                "slug": "united-states",
+                "url":
+                    "https://roadsign.pictures/country/united-states/index.json"
+            },
+            {
+                "name": "Canada",
+                "slug": "canada",
+                "url": "https://roadsign.pictures/country/canada/index.json"
+            },
+            {
+                "name": "Mexico",
+                "slug": "mexico",
+                "url": "https://roadsign.pictures/country/mexico/index.json"
+            },
+            {
+                "name": "Costa Rica",
+                "slug": "costa-rica",
+                "url": "https://roadsign.pictures/country/costa-rica/index.json"
+            }
+        ],
+        "imageCount": 19099
+    },
     "search": [
         {
             "id": "3991845742",

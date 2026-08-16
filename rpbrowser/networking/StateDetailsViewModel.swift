@@ -33,6 +33,13 @@ class StateDetailsViewModel {
         }
     }
     
+    // MARK: - Preview
+    static var example: StateDetailsViewModel {
+        let svc = MockSignSearchService()
+        let vm = StateDetailsViewModel(service: svc)
+        vm.state = .loaded(StateDetails.example)
+        return vm
+    }
 }
 
 

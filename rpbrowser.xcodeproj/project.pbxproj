@@ -65,9 +65,10 @@
 				model/SearchType.swift,
 				model/State.swift,
 				networking/APIError.swift,
+				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
+				networking/Services/MockSignSearchService.swift,
 				networking/Services/SignSearchService.swift,
-				view/SignImageView.swift,
 			);
 			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
 		};

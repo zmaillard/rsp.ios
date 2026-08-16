@@ -9,12 +9,8 @@ import SwiftUI
 
 struct StateListView: View {
     let country:CountrySlim
+    let countryDetailsViewModel: CountryDetailsViewModel
     
-    init(country: CountrySlim) {
-        self.country = country
-    }
-    
-    var countryDetailsViewModel = CountryDetailsViewModel()
     var body: some View {
         VStack {
             switch countryDetailsViewModel.state {
@@ -25,7 +21,7 @@ struct StateListView: View {
                     Text("Loading...")
                 }
             case .loaded(let country):
-                List(country.states){ state in
+                List(country.states.sorted()){ state in
                     NavigationLink(value: state){
                         Text(state.name)
                     }
@@ -40,3 +36,6 @@ struct StateListView: View {
 }
 
 
+#Preview {
+    StateListView(country: CountrySlim.example, countryDetailsViewModel: CountryDetailsViewModel.example)
+}
