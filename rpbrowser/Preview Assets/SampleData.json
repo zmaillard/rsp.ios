@@ -1,0 +1,817 @@
+{
+    "signDetail": {
+        "date": "2016-07-17T15:10:39Z",
+        "description":
+            "\u003cp\u003eFirst AK-9 shield northbound along 3rd Ave. in Seward.  Speed limit 25 MPH.\u003c/p\u003e\n",
+        "hasProcessed": false,
+        "highways": [
+            {
+                "imageName": "AK-9.png",
+                "name": "AK-9",
+                "slug": "ak9",
+                "url": "https://roadsign.pictures/highway/ak9/index.json"
+            }
+        ],
+        "image": {
+            "large":
+                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_l.jpg",
+            "medium":
+                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_m.jpg",
+            "original":
+                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463.jpg",
+            "small":
+                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_s.jpg",
+            "thumbnail":
+                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_t.jpg"
+        },
+        "imageid": "4384734159547601463",
+        "latitude": 60.1008027777778,
+        "longitude": -149.441955555556,
+        "place": {
+            "name": "Seward",
+            "slug": "alaska_seward",
+            "url": "https://roadsign.pictures/place/alaska_seward/index.json"
+        },
+        "state": {
+            "name": "Alaska",
+            "slug": "alaska",
+            "url": "https://roadsign.pictures/state/alaska/index.json"
+        },
+        "stateSubdivision": {
+            "name": "Kenai Peninsula Borough",
+            "slug": "alaska_kenai-peninsula-borough",
+            "url":
+                "https://roadsign.pictures/county/alaska_kenai-peninsula-borough/index.json"
+        },
+        "title": "AK-9 North - Seward"
+    },
+    "state": {
+        "highways": [
+            {
+                "imageName": "AB-1A.png",
+                "name": "AB-1A",
+                "slug": "ab1a",
+                "url": "https://roadsign.pictures/highway/ab1a/index.json"
+            },
+            {
+                "imageName": "AB-2.png",
+                "name": "AB-2",
+                "slug": "ab2",
+                "url": "https://roadsign.pictures/highway/ab2/index.json"
+            },
+            {
+                "imageName": "AB-22.png",
+                "name": "AB-22",
+                "slug": "ab22",
+                "url": "https://roadsign.pictures/highway/ab22/index.json"
+            },
+            {
+                "imageName": "AB-22X.png",
+                "name": "AB-22X",
+                "slug": "ab22x",
+                "url": "https://roadsign.pictures/highway/ab22x/index.json"
+            },
+            {
+                "imageName": "AB-23.png",
+                "name": "AB-23",
+                "slug": "ab23",
+                "url": "https://roadsign.pictures/highway/ab23/index.json"
+            },
+            {
+                "imageName": "AB-25.png",
+                "name": "AB-25",
+                "slug": "ab25",
+                "url": "https://roadsign.pictures/highway/ab25/index.json"
+            },
+            {
+                "imageName": "AB-2A.png",
+                "name": "AB-2A",
+                "slug": "ab2a",
+                "url": "https://roadsign.pictures/highway/ab2a/index.json"
+            },
+            {
+                "imageName": "AB-3.png",
+                "name": "AB-3",
+                "slug": "ab3",
+                "url": "https://roadsign.pictures/highway/ab3/index.json"
+            },
+            {
+                "imageName": "AB-36.png",
+                "name": "AB-36",
+                "slug": "ab36",
+                "url": "https://roadsign.pictures/highway/ab36/index.json"
+            },
+            {
+                "imageName": "AB-3A.png",
+                "name": "AB-3A",
+                "slug": "ab3a",
+                "url": "https://roadsign.pictures/highway/ab3a/index.json"
+            },
+            {
+                "imageName": "AB-40.png",
+                "name": "AB-40",
+                "slug": "ab40",
+                "url": "https://roadsign.pictures/highway/ab40/index.json"
+            },
+            {
+                "imageName": "AB-41.png",
+                "name": "AB-41",
+                "slug": "ab41",
+                "url": "https://roadsign.pictures/highway/ab41/index.json"
+            },
+            {
+                "imageName": "AB-5.png",
+                "name": "AB-5",
+                "slug": "ab5",
+                "url": "https://roadsign.pictures/highway/ab5/index.json"
+            },
+            {
+                "imageName": "AB-501.png",
+                "name": "AB-501",
+                "slug": "ab501",
+                "url": "https://roadsign.pictures/highway/ab501/index.json"
+            },
+            {
+                "imageName": "AB-505.png",
+                "name": "AB-505",
+                "slug": "ab505",
+                "url": "https://roadsign.pictures/highway/ab505/index.json"
+            },
+            {
+                "imageName": "AB-506.png",
+                "name": "AB-506",
+                "slug": "ab506",
+                "url": "https://roadsign.pictures/highway/ab506/index.json"
+            },
+            {
+                "imageName": "AB-507.png",
+                "name": "AB-507",
+                "slug": "ab507",
+                "url": "https://roadsign.pictures/highway/ab507/index.json"
+            },
+            {
+                "imageName": "AB-509.png",
+                "name": "AB-509",
+                "slug": "ab509",
+                "url": "https://roadsign.pictures/highway/ab509/index.json"
+            },
+            {
+                "imageName": "AB-52.png",
+                "name": "AB-52",
+                "slug": "ab52",
+                "url": "https://roadsign.pictures/highway/ab52/index.json"
+            },
+            {
+                "imageName": "AB-522.png",
+                "name": "AB-522",
+                "slug": "ab522",
+                "url": "https://roadsign.pictures/highway/ab522/index.json"
+            },
+            {
+                "imageName": "AB-550.png",
+                "name": "AB-550",
+                "slug": "ab550",
+                "url": "https://roadsign.pictures/highway/ab550/index.json"
+            },
+            {
+                "imageName": "AB-561.png",
+                "name": "AB-561",
+                "slug": "ab561",
+                "url": "https://roadsign.pictures/highway/ab561/index.json"
+            },
+            {
+                "imageName": "AB-563.png",
+                "name": "AB-563",
+                "slug": "ab563",
+                "url": "https://roadsign.pictures/highway/ab563/index.json"
+            },
+            {
+                "imageName": "AB-6.png",
+                "name": "AB-6",
+                "slug": "ab6",
+                "url": "https://roadsign.pictures/highway/ab6/index.json"
+            },
+            {
+                "imageName": "AB-62.png",
+                "name": "AB-62",
+                "slug": "ab62",
+                "url": "https://roadsign.pictures/highway/ab62/index.json"
+            },
+            {
+                "imageName": "AB-68.png",
+                "name": "AB-68",
+                "slug": "ab68",
+                "url": "https://roadsign.pictures/highway/ab68/index.json"
+            },
+            {
+                "imageName": "AB-785.png",
+                "name": "AB-785",
+                "slug": "ab785",
+                "url": "https://roadsign.pictures/highway/ab785/index.json"
+            },
+            {
+                "imageName": "AB-786.png",
+                "name": "AB-786",
+                "slug": "ab786",
+                "url": "https://roadsign.pictures/highway/ab786/index.json"
+            },
+            {
+                "imageName": "AB-811.png",
+                "name": "AB-811",
+                "slug": "ab811",
+                "url": "https://roadsign.pictures/highway/ab811/index.json"
+            },
+            {
+                "imageName": "AB-817.png",
+                "name": "AB-817",
+                "slug": "ab817",
+                "url": "https://roadsign.pictures/highway/ab817/index.json"
+            },
+            {
+                "imageName": "AB-873.png",
+                "name": "AB-873",
+                "slug": "ab873",
+                "url": "https://roadsign.pictures/highway/ab873/index.json"
+            },
+            {
+                "imageName": "AB-93.png",
+                "name": "AB-93",
+                "slug": "ab93",
+                "url": "https://roadsign.pictures/highway/ab93/index.json"
+            },
+            {
+                "imageName": "BC-3.png",
+                "name": "BC-3",
+                "slug": "bc3",
+                "url": "https://roadsign.pictures/highway/bc3/index.json"
+            },
+            {
+                "imageName": "TC-1.png",
+                "name": "TC-1",
+                "slug": "tc1",
+                "url": "https://roadsign.pictures/highway/tc1/index.json"
+            }
+        ],
+        "imageCount": 142,
+        "name": "Alberta",
+        "places": [
+            {
+                "name": "Bragg Creek",
+                "slug": "bragg-creek",
+                "url":
+                    "https://roadsign.pictures/place/alberta_bragg-creek/index.json"
+            },
+            {
+                "name": "High River",
+                "slug": "high-river",
+                "url":
+                    "https://roadsign.pictures/place/alberta_high-river/index.json"
+            },
+            {
+                "name": "Calgary",
+                "slug": "calgary",
+                "url":
+                    "https://roadsign.pictures/place/alberta_calgary/index.json"
+            },
+            {
+                "name": "Cardston",
+                "slug": "cardston",
+                "url":
+                    "https://roadsign.pictures/place/alberta_cardston/index.json"
+            },
+            {
+                "name": "Magrath",
+                "slug": "magrath",
+                "url":
+                    "https://roadsign.pictures/place/alberta_magrath/index.json"
+            },
+            {
+                "name": "Onefour",
+                "slug": "onefour",
+                "url":
+                    "https://roadsign.pictures/place/alberta_onefour/index.json"
+            },
+            {
+                "name": "Chestermere",
+                "slug": "chestermere",
+                "url":
+                    "https://roadsign.pictures/place/alberta_chestermere/index.json"
+            },
+            {
+                "name": "Standard",
+                "slug": "standard",
+                "url":
+                    "https://roadsign.pictures/place/alberta_standard/index.json"
+            },
+            {
+                "name": "Cluny",
+                "slug": "cluny",
+                "url":
+                    "https://roadsign.pictures/place/alberta_cluny/index.json"
+            },
+            {
+                "name": "Lethbridge",
+                "slug": "lethbridge",
+                "url":
+                    "https://roadsign.pictures/place/alberta_lethbridge/index.json"
+            },
+            {
+                "name": "Pincher Creek",
+                "slug": "pincher-creek",
+                "url":
+                    "https://roadsign.pictures/place/alberta_pincher-creek/index.json"
+            },
+            {
+                "name": "Lundbreck",
+                "slug": "lundbreck",
+                "url":
+                    "https://roadsign.pictures/place/alberta_lundbreck/index.json"
+            },
+            {
+                "name": "Brocket",
+                "slug": "brocket",
+                "url":
+                    "https://roadsign.pictures/place/alberta_brocket/index.json"
+            },
+            {
+                "name": "Seebe",
+                "slug": "seebe",
+                "url":
+                    "https://roadsign.pictures/place/alberta_seebe/index.json"
+            },
+            {
+                "name": "Waterton Park",
+                "slug": "waterton-park",
+                "url":
+                    "https://roadsign.pictures/place/alberta_waterton-park/index.json"
+            },
+            {
+                "name": "Strathmore",
+                "slug": "strathmore",
+                "url":
+                    "https://roadsign.pictures/place/alberta_strathmore/index.json"
+            },
+            {
+                "name": "Frank",
+                "slug": "frank",
+                "url":
+                    "https://roadsign.pictures/place/alberta_frank/index.json"
+            },
+            {
+                "name": "Crowsnest",
+                "slug": "crowsnest",
+                "url":
+                    "https://roadsign.pictures/place/alberta_crowsnest/index.json"
+            },
+            {
+                "name": "Welling",
+                "slug": "welling",
+                "url":
+                    "https://roadsign.pictures/place/alberta_welling/index.json"
+            },
+            {
+                "name": "Medicine Hat",
+                "slug": "medicine-hat",
+                "url":
+                    "https://roadsign.pictures/place/alberta_medicine-hat/index.json"
+            },
+            {
+                "name": "Monarch",
+                "slug": "monarch",
+                "url":
+                    "https://roadsign.pictures/place/alberta_monarch/index.json"
+            },
+            {
+                "name": "Lake Louise",
+                "slug": "lake-louise",
+                "url":
+                    "https://roadsign.pictures/place/alberta_lake-louise/index.json"
+            },
+            {
+                "name": "Del Bonita",
+                "slug": "del-bonita",
+                "url":
+                    "https://roadsign.pictures/place/alberta_del-bonita/index.json"
+            },
+            {
+                "name": "Castle Junction",
+                "slug": "castle-junction",
+                "url":
+                    "https://roadsign.pictures/place/alberta_castle-junction/index.json"
+            },
+            {
+                "name": "Sawback",
+                "slug": "sawback",
+                "url":
+                    "https://roadsign.pictures/place/alberta_sawback/index.json"
+            },
+            {
+                "name": "Fort Macleod",
+                "slug": "fort-macleod",
+                "url":
+                    "https://roadsign.pictures/place/alberta_fort-macleod/index.json"
+            },
+            {
+                "name": "Irvine",
+                "slug": "irvine",
+                "url":
+                    "https://roadsign.pictures/place/alberta_irvine/index.json"
+            },
+            {
+                "name": "Duchess",
+                "slug": "duchess",
+                "url":
+                    "https://roadsign.pictures/place/alberta_duchess/index.json"
+            },
+            {
+                "name": "Brooks",
+                "slug": "brooks",
+                "url":
+                    "https://roadsign.pictures/place/alberta_brooks/index.json"
+            },
+            {
+                "name": "Dead Man's Flats",
+                "slug": "dead-mans-flats",
+                "url":
+                    "https://roadsign.pictures/place/alberta_dead-mans-flats/index.json"
+            },
+            {
+                "name": "Cochrane",
+                "slug": "cochrane",
+                "url":
+                    "https://roadsign.pictures/place/alberta_cochrane/index.json"
+            },
+            {
+                "name": "Bassano",
+                "slug": "bassano",
+                "url":
+                    "https://roadsign.pictures/place/alberta_bassano/index.json"
+            },
+            {
+                "name": "Cressday",
+                "slug": "cressday",
+                "url":
+                    "https://roadsign.pictures/place/alberta_cressday/index.json"
+            },
+            {
+                "name": "Pecten",
+                "slug": "pecten",
+                "url":
+                    "https://roadsign.pictures/place/alberta_pecten/index.json"
+            },
+            {
+                "name": "Pincher Station",
+                "slug": "pincher-station",
+                "url":
+                    "https://roadsign.pictures/place/alberta_pincher-station/index.json"
+            },
+            {
+                "name": "Morley",
+                "slug": "morley",
+                "url":
+                    "https://roadsign.pictures/place/alberta_morley/index.json"
+            },
+            {
+                "name": "Stand Off",
+                "slug": "stand-off",
+                "url":
+                    "https://roadsign.pictures/place/alberta_stand-off/index.json"
+            },
+            {
+                "name": "Canmore",
+                "slug": "canmore",
+                "url":
+                    "https://roadsign.pictures/place/alberta_canmore/index.json"
+            },
+            {
+                "name": "Banff",
+                "slug": "banff",
+                "url":
+                    "https://roadsign.pictures/place/alberta_banff/index.json"
+            },
+            {
+                "name": "Bellevue",
+                "slug": "bellevue",
+                "url":
+                    "https://roadsign.pictures/place/alberta_bellevue/index.json"
+            }
+        ],
+        "slug": "alberta",
+        "stateSubdivisions": [
+            {
+                "name": "Foothills County",
+                "slug": "foothills-county",
+                "url":
+                    "https://roadsign.pictures/county/alberta_foothills-county/index.json"
+            },
+            {
+                "name": "Wheatland County",
+                "slug": "wheatland-county",
+                "url":
+                    "https://roadsign.pictures/county/alberta_wheatland-county/index.json"
+            },
+            {
+                "name": "Cypress County",
+                "slug": "cypress-county",
+                "url":
+                    "https://roadsign.pictures/county/alberta_cypress-county/index.json"
+            },
+            {
+                "name": "Newell County No. 4",
+                "slug": "newell-county-no-4",
+                "url":
+                    "https://roadsign.pictures/county/alberta_newell-county-no-4/index.json"
+            },
+            {
+                "name": "Willow Creek No. 26",
+                "slug": "willow-creek-no-26",
+                "url":
+                    "https://roadsign.pictures/county/alberta_willow-creek-no-26/index.json"
+            },
+            {
+                "name": "Pincher Creek No. 9",
+                "slug": "pincher-creek-no-9",
+                "url":
+                    "https://roadsign.pictures/county/alberta_pincher-creek-no-9/index.json"
+            },
+            {
+                "name": "Rocky View",
+                "slug": "rocky-view",
+                "url":
+                    "https://roadsign.pictures/county/alberta_rocky-view/index.json"
+            },
+            {
+                "name": "Crowsnest Pass",
+                "slug": "crowsnest-pass",
+                "url":
+                    "https://roadsign.pictures/county/alberta_crowsnest-pass/index.json"
+            },
+            {
+                "name": "Cardston County",
+                "slug": "cardston-county",
+                "url":
+                    "https://roadsign.pictures/county/alberta_cardston-county/index.json"
+            },
+            {
+                "name": "Improvement District No. 9",
+                "slug": "improvement-district-no-9",
+                "url":
+                    "https://roadsign.pictures/county/alberta_improvement-district-no-9/index.json"
+            },
+            {
+                "name": "Improvement District No. 4",
+                "slug": "improvement-district-no-4",
+                "url":
+                    "https://roadsign.pictures/county/alberta_improvement-district-no-4/index.json"
+            },
+            {
+                "name": "Kananaskis",
+                "slug": "kananaskis",
+                "url":
+                    "https://roadsign.pictures/county/alberta_kananaskis/index.json"
+            },
+            {
+                "name": "Lethbridge County",
+                "slug": "lethbridge-county",
+                "url":
+                    "https://roadsign.pictures/county/alberta_lethbridge-county/index.json"
+            },
+            {
+                "name": "Bighorn No. 8",
+                "slug": "bighorn-no-8",
+                "url":
+                    "https://roadsign.pictures/county/alberta_bighorn-no-8/index.json"
+            }
+        ],
+        "subdivisionName": "Specialized and Rural Municipalities"
+    },
+    "country": {
+        "highwayTypes": [
+            {
+                "name": "Trans-Canada Highway",
+                "slug": "trans-canada-highway",
+                "url":
+                    "https://roadsign.pictures/highwaytype/trans-canada-highway/index.json"
+            },
+            {
+                "name": "British Columbia Provincial Highway",
+                "slug": "british-columbia-provincial-highway",
+                "url":
+                    "https://roadsign.pictures/highwaytype/british-columbia-provincial-highway/index.json"
+            },
+            {
+                "name": "Alberta Provincial Highway",
+                "slug": "alberta-provincial-highway",
+                "url":
+                    "https://roadsign.pictures/highwaytype/alberta-provincial-highway/index.json"
+            },
+            {
+                "name": "Saskatchewan Provincial Highway",
+                "slug": "saskatchewan-provincial-highway",
+                "url":
+                    "https://roadsign.pictures/highwaytype/saskatchewan-provincial-highway/index.json"
+            }
+        ],
+        "imageCount": 537,
+        "name": "Canada",
+        "slug": "canada",
+        "states": [
+            {
+                "name": "Saskatchewan",
+                "slug": "saskatchewan",
+                "url": "https://roadsign.pictures/state/saskatchewan/index.json"
+            },
+            {
+                "name": "British Columbia",
+                "slug": "british-columbia",
+                "url":
+                    "https://roadsign.pictures/state/british-columbia/index.json"
+            },
+            {
+                "name": "Alberta",
+                "slug": "alberta",
+                "url": "https://roadsign.pictures/state/alberta/index.json"
+            }
+        ],
+        "subdivisionName": "Province"
+    },
+    "root":
+    {"countries":[{"name":"United States","slug":"united-states","url":"https://roadsign.pictures/country/united-states/index.json"},{"name":"Canada","slug":"canada","url":"https://roadsign.pictures/country/canada/index.json"},{"name":"Mexico","slug":"mexico","url":"https://roadsign.pictures/country/mexico/index.json"},{"name":"Costa Rica","slug":"costa-rica","url":"https://roadsign.pictures/country/costa-rica/index.json"}],"imageCount":19099},
+    "search": [
+        {
+            "id": "3991845742",
+            "_geo": {
+                "lng": -120.214227,
+                "lat": 39.322999
+            },
+            "country": {
+                "name": "United States",
+                "slug": "united-states"
+            },
+            "county": {
+                "name": "Nevada County",
+                "slug": "nevada-county"
+            },
+            "dateTaken": "2009-10-04 13:41:12.0",
+            "description":
+                "Advanced signage for Exit 188B - CA-267/North Lake Tahoe. Approaching Exit 185 - CA-89 south, Lake Tahoe. Both CA-89 and CA-267 connect Truckee with the north shore of Lake Tahoe.",
+            "highways": [
+                {
+                    "name": "CA-267",
+                    "slug": "ca267"
+                },
+                {
+                    "name": "CA-89",
+                    "slug": "ca89"
+                },
+                {
+                    "name": "I-80",
+                    "slug": "i80"
+                }
+            ],
+            "place": {
+                "name": "Truckee",
+                "slug": "truckee"
+            },
+            "state": {
+                "name": "California",
+                "slug": "california"
+            },
+            "tags": null,
+            "title": "I-80 East Advanced for Exit 188B",
+            "url": "https://sign.roadsign.pictures/3991845742/3991845742_l.jpg",
+            "quality": 2,
+            "date_taken": "2009-10-04T19:41:12Z",
+            "_formatted": {
+                "id": "3991845742",
+                "_geo": {
+                    "lng": "-120.214227",
+                    "lat": "39.322999"
+                },
+                "country": {
+                    "name": "United States",
+                    "slug": "united-states"
+                },
+                "county": {
+                    "name": "Nevada County",
+                    "slug": "nevada-county"
+                },
+                "dateTaken": "2009-10-04 13:41:12.0",
+                "description":
+                    "Advanced signage for Exit 188B - CA-267/North Lake Tahoe. Approaching Exit 185 - CA-89 south, Lake Tahoe. Both CA-89 and CA-267 connect __ais-highlight__Truckee__/ais-highlight__ with the north shore of Lake Tahoe.",
+                "highways": [
+                    {
+                        "name": "CA-267",
+                        "slug": "ca267"
+                    },
+                    {
+                        "name": "CA-89",
+                        "slug": "ca89"
+                    },
+                    {
+                        "name": "I-80",
+                        "slug": "i80"
+                    }
+                ],
+                "place": {
+                    "name": "__ais-highlight__Truckee__/ais-highlight__",
+                    "slug": "__ais-highlight__truckee__/ais-highlight__"
+                },
+                "state": {
+                    "name": "California",
+                    "slug": "california"
+                },
+                "tags": null,
+                "title": "I-80 East Advanced for Exit 188B",
+                "url":
+                    "https://sign.roadsign.pictures/3991845742/3991845742_l.jpg",
+                "quality": "2",
+                "date_taken": "2009-10-04T19:41:12Z"
+            },
+            "_rankingScore": 1
+        },
+        {
+            "id": "1559378679",
+            "_geo": {
+                "lng": -120.174203,
+                "lat": 39.336511
+            },
+            "country": {
+                "name": "United States",
+                "slug": "united-states"
+            },
+            "county": {
+                "name": "Nevada County",
+                "slug": "nevada-county"
+            },
+            "dateTaken": "2001-07-01 00:00:00.0",
+            "description": "Distance Marker to Reno/Verdi/US-395 on I-80 East",
+            "highways": [
+                {
+                    "name": "I-80",
+                    "slug": "i80"
+                },
+                {
+                    "name": "US-395",
+                    "slug": "us395"
+                }
+            ],
+            "place": {
+                "name": "Truckee",
+                "slug": "truckee"
+            },
+            "state": {
+                "name": "California",
+                "slug": "california"
+            },
+            "tags": null,
+            "title": "I-80 East - Distance Marker",
+            "url": "https://sign.roadsign.pictures/1559378679/1559378679_l.jpg",
+            "quality": 3,
+            "date_taken": "2001-07-01T06:00:00Z",
+            "_formatted": {
+                "id": "1559378679",
+                "_geo": {
+                    "lng": "-120.174203",
+                    "lat": "39.336511"
+                },
+                "country": {
+                    "name": "United States",
+                    "slug": "united-states"
+                },
+                "county": {
+                    "name": "Nevada County",
+                    "slug": "nevada-county"
+                },
+                "dateTaken": "2001-07-01 00:00:00.0",
+                "description":
+                    "Distance Marker to Reno/Verdi/US-395 on I-80 East",
+                "highways": [
+                    {
+                        "name": "I-80",
+                        "slug": "i80"
+                    },
+                    {
+                        "name": "US-395",
+                        "slug": "us395"
+                    }
+                ],
+                "place": {
+                    "name": "__ais-highlight__Truckee__/ais-highlight__",
+                    "slug": "__ais-highlight__truckee__/ais-highlight__"
+                },
+                "state": {
+                    "name": "California",
+                    "slug": "california"
+                },
+                "tags": null,
+                "title": "I-80 East - Distance Marker",
+                "url":
+                    "https://sign.roadsign.pictures/1559378679/1559378679_l.jpg",
+                "quality": "3",
+                "date_taken": "2001-07-01T06:00:00Z"
+            },
+            "_rankingScore": 1
+        }
+    ]
+}
