@@ -7,8 +7,8 @@
 import SwiftUI
 
 struct RandomScreen: View {
-    @State private var randomViewModel = RandomViewModel()
     let countryViewModel: CountryViewModel
+    let randomViewModel: RandomViewModel
     
     
     private var imageCount: Int  {
@@ -42,4 +42,9 @@ struct RandomScreen: View {
             await randomViewModel.fetch(count: imageCount)
         }
     }
+}
+
+
+#Preview {
+    RandomScreen(countryViewModel: CountryViewModel.example, randomViewModel: RandomViewModel.example)
 }

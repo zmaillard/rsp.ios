@@ -26,9 +26,8 @@ struct SignRow: View {
     }
 }
 
-/*
+
 
 #Preview {
-    SignRow(sign: RoadSign.ExampleSign())
+    SignRow(sign: RoadSign.example)
 }
-*/

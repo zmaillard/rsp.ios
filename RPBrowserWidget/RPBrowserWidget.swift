@@ -7,7 +7,6 @@
 
 import WidgetKit
 import SwiftUI
-import rpbrowser
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> ImageEntry {

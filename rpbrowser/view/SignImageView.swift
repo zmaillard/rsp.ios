@@ -32,3 +32,7 @@ public struct SignImageView: View {
         }
     }
 }
+#Preview {
+    let url = RoadSign.example.url
+    SignImageView(urlPath: url)
+}

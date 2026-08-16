@@ -15,11 +15,11 @@ class RandomViewModel {
     init(service: SignSearchService = DefaultSignSearchService()) {
         self.service = service
     }
-
+    
     func fetch(count: Int) async {
         var shouldFetch = false
         if case .loaded = state {
-           shouldFetch = true
+            shouldFetch = true
         } else if .idle == state {
             shouldFetch = true
         }
@@ -42,11 +42,19 @@ class RandomViewModel {
         } catch {
             self.state = .error("unknown error")
         }
-
+        
     }
-
+    
     private func random(max: Int) -> Int {
         return Int.random(in: 0..<max)
+    }
+    
+    //MARK: - Preview
+    static var example: RandomViewModel {
+        let svc = MockSignSearchService()
+        let vm = RandomViewModel(service: svc)
+        vm.state = .loaded(RoadSignDetails.example)
+        return vm
     }
 }
 

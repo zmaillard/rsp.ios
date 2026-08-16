@@ -99,6 +99,15 @@ struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equ
         self.quality = try container.decode(Int.self, forKey: .quality)
     }
     
+    // MARK: - Preview
+    static var example: RoadSign {
+        guard let sampleData = try? SampleDataLoader.loadSampleData() else {
+            return RoadSign(id: "", latitude: 0.0, longitude: 0.0, country: "", countrySlug: "", county: "", countySlug: "", place: "", placeSlug: "", state: "", stateSlug: "", dateTaken: "", description: "", quality: 0, title: "", highways: [], url: "")
+        }
+        
+        return sampleData.sign.ToRoadSign()
+    }
+
 }
 
 

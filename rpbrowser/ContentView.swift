@@ -19,7 +19,7 @@ struct ContentView: View {
                 LocationScreen()
             }
             Tab("Random", systemImage: "shuffle") {
-                RandomScreen(countryViewModel: countryViewModel)
+                RandomScreen(countryViewModel: countryViewModel, randomViewModel: RandomViewModel())
             }
             
             Tab(role: .search) {

@@ -8,9 +8,13 @@ import SwiftUI
 import CoreLocation
 
 struct LocationScreen: View {
-    var locationDataManager = LocationDataManager()
+    var locationDataManager: LocationDataManager
     var locationViewModel = LocationViewModel()
     
+    init(location: LocationDataManager = DeviceLocationDataManager()) {
+        self.locationDataManager = location
+    }
+
     @State var location: CLLocation?
     
     var body: some View {
@@ -50,9 +54,7 @@ struct LocationScreen: View {
     }
 }
 
-/*
 
 #Preview {
-    SearchScreen()
+    LocationScreen(location: MockLocationDataManager())
 }
-*/

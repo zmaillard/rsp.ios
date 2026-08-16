@@ -22,8 +22,8 @@ struct SignDetailView: View {
                 Text(sign.title).font(.headline)
                 Text(sign.description)
                 if let onRefresh {
-                    Button(action: onRefresh) {
-                        Text("Refresh")
+                    Button("Refresh", systemImage: "shuffle"){
+                        onRefresh()
                     }
                 }
                 Text("\(sign.place) | \(sign.county) | \(sign.state) | \(sign.country)").font(.footnote)
@@ -41,3 +41,6 @@ struct SignDetailView: View {
     }
 }
 
+#Preview {
+    SignDetailView(sign: RoadSign.example, onRefresh: nil)
+}

@@ -20,6 +20,15 @@ struct StateDetails : Equatable, Identifiable, Hashable, Decodable {
         case places
         case stateSubdivisions
     }
+    
+    // MARK: - Preview
+    static var example: StateDetails {
+        guard let sampleData = try? SampleDataLoader.loadSampleData() else {
+            return StateDetails(id: "", highways: [], name: "", imageCount: 0, places: [], stateSubdivisions: [])
+        }
+        
+        return sampleData.state
+    }
 }
 
 struct HighwaySlim : Equatable, Identifiable, Hashable, Decodable {
@@ -37,7 +46,7 @@ struct HighwaySlim : Equatable, Identifiable, Hashable, Decodable {
     
 }
 
-struct StateSubdivisionSlim : Equatable, Identifiable, Hashable, Decodable {
+struct StateSubdivisionSlim : Equatable, Comparable, Identifiable, Hashable, Decodable {
     let id: String
     let name: String
     let url: String
@@ -47,7 +56,10 @@ struct StateSubdivisionSlim : Equatable, Identifiable, Hashable, Decodable {
         case name
         case url
     }
-}
+    
+    static func < (lhs: StateSubdivisionSlim, rhs: StateSubdivisionSlim) -> Bool {
+        return lhs.name < rhs.name
+    }}
 
 struct PlaceSlim : Equatable, Identifiable, Hashable, Decodable {
     let id: String
