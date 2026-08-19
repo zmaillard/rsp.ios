@@ -57,6 +57,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				config/Environment.swift,
+				model/BrowseRoute.swift,
 				model/Country.swift,
 				model/Highway.swift,
 				model/Results.swift,
@@ -64,6 +65,7 @@
 				model/RoadSignDetails.swift,
 				model/SearchType.swift,
 				model/State.swift,
+				model/TabIdentifier.swift,
 				networking/APIError.swift,
 				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
@@ -411,6 +413,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rpbrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -464,6 +467,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rpbrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -513,7 +517,7 @@
 				DEVELOPMENT_TEAM = KJ5EK7M4FC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RPBrowserWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RPBrowserWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
@@ -546,7 +550,7 @@
 				DEVELOPMENT_TEAM = KJ5EK7M4FC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RPBrowserWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RPBrowserWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;

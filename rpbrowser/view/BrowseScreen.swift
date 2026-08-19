@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BrowseScreen: View {
     let countryViewModel: CountryViewModel
-    
+    @State var linkActive = false
+
     var body: some View {
         NavigationStack {
             switch countryViewModel.state {
@@ -24,7 +25,14 @@ struct BrowseScreen: View {
                     NavigationLink(value: country){
                         Text(country.name)
                     }
-                }.navigationDestination(for: CountrySlim.self)
+                }
+                .navigationTitle("Browse for Signs")
+                .navigationBarTitleDisplayMode(.inline)
+                .onOpenURL {url in
+                    print("received url: \(url)")
+                    linkActive = true
+                }
+                .navigationDestination(for: CountrySlim.self)
                 { country in StateListView(country: country, countryDetailsViewModel: CountryDetailsViewModel())
                     
                 }.navigationDestination(for: SearchType.self)
@@ -36,14 +44,16 @@ struct BrowseScreen: View {
                 }.navigationDestination(for: RoadSign.self)
                 { sign in SignDetailView(sign: sign){}
                     
-                }
-
+                }.navigationDestination(isPresented: $linkActive) {
+                     Text("Destination")
+                 }
 
 
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
         }
+            
     }
 }
 

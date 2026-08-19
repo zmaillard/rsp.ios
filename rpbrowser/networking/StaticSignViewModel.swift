@@ -7,18 +7,16 @@
 import Foundation
 
 @Observable
-class RandomViewModel {
+class StaticSignViewModel {
     var state: LoadingState<RoadSignDetails> = .idle
     
     private let service: SignSearchService
-    
-    var initialIdenitifer: String?
     
     init(service: SignSearchService = DefaultSignSearchService()) {
         self.service = service
     }
     
-    func fetch(count: Int) async {
+    func fetch(signId: String) async {
         var shouldFetch = false
         if case .loaded = state {
             shouldFetch = true
@@ -30,29 +28,18 @@ class RandomViewModel {
             return
         }
         
-        if (count == 0) {
-            return
-        }
         
         self.state = .loading
         do {
-            let url = "https://roadsign.pictures/signindex/\(random(max: count))/index.json"
-            let randomSign = try await self.service.fetchSignDetail(from: url)
-            self.state = .loaded(randomSign)
+            let url = "https://roadsign.pictures/sign/\(signId)/index.json"
+            let sign = try await self.service.fetchSignDetail(from: url)
+            self.state = .loaded(sign)
         } catch let error as APIError{
             self.state = .error(error.errorDescription ?? "unknown error")
         } catch {
             self.state = .error("unknown error")
         }
-        
-        if self.initialIdenitifer != nil {
-            print(self.initialIdenitifer!)
-        }
             
-    }
-    
-    private func random(max: Int) -> Int {
-        return Int.random(in: 0..<max)
     }
     
     //MARK: - Preview

@@ -12,7 +12,7 @@ struct StateListView: View {
     let countryDetailsViewModel: CountryDetailsViewModel
     
     var body: some View {
-        VStack {
+        NavigationView {
             switch countryDetailsViewModel.state {
             case .idle:
                 Text("No data yet")
@@ -25,7 +25,8 @@ struct StateListView: View {
                     NavigationLink(value: state){
                         Text(state.name)
                     }
-                }
+                }.navigationTitle("States in \(country.name)")
+                 .navigationBarTitleDisplayMode(.inline)
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
