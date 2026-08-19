@@ -10,9 +10,10 @@ import SwiftUI
 struct CountyListView: View {
     let state:StateSlim
     let stateDetailsViewModel: StateDetailsViewModel
-
+    
+    
     var body: some View {
-        VStack {
+        NavigationView {
             switch stateDetailsViewModel.state {
             case .idle:
                 Text("No data yet")
@@ -21,11 +22,31 @@ struct CountyListView: View {
                     Text("Loading...")
                 }
             case .loaded(let state):
-                List(state.stateSubdivisions.sorted()){ county in
-                    NavigationLink(value: SearchType.StateSubdivisionFilter(county.id)){
-                        Text(county.name)
+                List {
+                    Section("Counties") {
+                        ForEach(state.stateSubdivisions.sorted()){ county in
+                            NavigationLink(value: SearchType.StateSubdivisionFilter(county.id)){
+                                Text(county.name)
+                            }
+                        }
                     }
-                }
+                    Section("Places") {
+                        ForEach(state.places.sorted()){ place in
+                            NavigationLink(value: SearchType.PlaceFilter(place.id)){
+                                Text(place.name)
+                            }
+                        }
+                    }
+                    Section("Highways") {
+                        ForEach(state.highways.sorted()){ highway in
+                            NavigationLink(value: SearchType.Term(highway.name)){ //TODO: Filter highway
+                                Text(highway.name)
+                            }
+                        }
+                    }
+                }.navigationTitle("Details for \(state.name)")
+                 .navigationBarTitleDisplayMode(.inline)
+
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }

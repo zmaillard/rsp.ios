@@ -31,7 +31,8 @@ struct StateDetails : Equatable, Identifiable, Hashable, Decodable {
     }
 }
 
-struct HighwaySlim : Equatable, Identifiable, Hashable, Decodable {
+struct HighwaySlim : Equatable, Comparable, Identifiable, Hashable, Decodable {
+    
     let id: String
     let imageName: String
     let name: String
@@ -43,7 +44,10 @@ struct HighwaySlim : Equatable, Identifiable, Hashable, Decodable {
         case url
         case imageName
     }
-    
+    static func < (lhs: HighwaySlim, rhs: HighwaySlim) -> Bool {
+        return lhs.name < rhs.name
+    }
+
 }
 
 struct StateSubdivisionSlim : Equatable, Comparable, Identifiable, Hashable, Decodable {
@@ -61,7 +65,7 @@ struct StateSubdivisionSlim : Equatable, Comparable, Identifiable, Hashable, Dec
         return lhs.name < rhs.name
     }}
 
-struct PlaceSlim : Equatable, Identifiable, Hashable, Decodable {
+struct PlaceSlim : Equatable, Comparable, Identifiable, Hashable, Decodable {
     let id: String
     let name: String
     let url: String
@@ -71,4 +75,8 @@ struct PlaceSlim : Equatable, Identifiable, Hashable, Decodable {
         case name
         case url
     }
+    static func < (lhs: PlaceSlim, rhs: PlaceSlim) -> Bool {
+        return lhs.name < rhs.name
+    }
+    
 }

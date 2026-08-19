@@ -11,7 +11,7 @@ import SwiftUI
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> ImageEntry {
         let snapshotSign = UIImage(named: "random-sign")!
-        let entry = ImageEntry(date: Date(), image: snapshotSign)
+        let entry = ImageEntry(date: Date(), image: snapshotSign, imageId: "3406055620")
         return entry
     }
 
@@ -24,17 +24,17 @@ struct Provider: TimelineProvider {
             snapshotSign = RandomSignFetcher.cachedSign!
         }
         
-        let entry = ImageEntry(date: Date(), image: snapshotSign)
+        let entry = ImageEntry(date: Date(), image: snapshotSign, imageId: "3406055620")
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         Task {
-            guard let image = try? await RandomSignFetcher.fetchRandomSign() else {
+            guard let (image, imageId) = try? await RandomSignFetcher.fetchRandomSign() else {
                 return
             }
             
-            let entry = ImageEntry(date: Date(), image: image)
+            let entry = ImageEntry(date: Date(), image: image, imageId: imageId)
             
             let nextUpdate = Calendar.current.date(byAdding: DateComponents(hour: 12), to: Date())!
             
@@ -49,6 +49,7 @@ struct Provider: TimelineProvider {
 struct ImageEntry: TimelineEntry {
     let date: Date
     let image: UIImage
+    let imageId: String
 }
 
 struct RPBrowserWidgetEntryView : View {
@@ -71,16 +72,21 @@ struct RPBrowserWidget: Widget {
             if #available(iOS 17.0, *) {
                 RPBrowserWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
+                    .widgetURL(URL(string: "rpbrowser://show-sign?id=\(entry.imageId)"))
+
             } else {
                 RPBrowserWidgetEntryView(entry: entry)
                     .padding()
                     .background()
+                    .widgetURL(URL(string: "rpbrowser://show-sign?id=\(entry.imageId)"))
+
             }
         }
         .supportedFamilies([.systemSmall])
         .contentMarginsDisabled()
         .configurationDisplayName("Random Road Sign")
         .description("Show a random road sign")
+
     }
 }
 
@@ -88,6 +94,6 @@ struct RPBrowserWidget: Widget {
 #Preview(as: .systemSmall) {
     RPBrowserWidget()
 } timeline: {
-    ImageEntry(date: .now, image: UIImage(named: "random-sign")!)
+    ImageEntry(date: .now, image: UIImage(named: "random-sign")!, imageId: "")
 }
 

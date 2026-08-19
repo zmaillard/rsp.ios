@@ -6,39 +6,30 @@
 //
 import SwiftUI
 
-struct RandomScreen: View {
-    let countryViewModel: CountryViewModel
-    let randomViewModel: RandomViewModel
-    
-    private var imageCount: Int  {
-        switch countryViewModel.state {
-        case .loaded(let countries):
-            return countries.imageCount
-        default: return 0
-        }
-    }
+struct StaticSignScreen: View {
+    let signId: String
+    let callback: () -> Void
+    let staticSignViewModel: StaticSignViewModel = StaticSignViewModel()
     
     var body: some View {
         VStack {
             // Display content based on randomViewModel.state
-            switch randomViewModel.state {
+            switch staticSignViewModel.state {
             case .idle:
                 ProgressView("Loading...")
             case .loading:
                 ProgressView("Loading random sign...")
             case .loaded(let sign):
                 SignDetailView(sign: sign.ToRoadSign()) {
-                    Task {
-                        await randomViewModel.fetch(count: imageCount)
-                    }
+                    callback()
                 }
             case .error(let message):
                 // Stub: will implement error handling later
                 Text("Error: \(message)")
             }
         }
-        .task(id: imageCount) {
-            await randomViewModel.fetch(count: imageCount)
+        .task(id: signId) {
+            await staticSignViewModel.fetch(signId: signId)
         }
     }
 }
