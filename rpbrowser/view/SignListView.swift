@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignListView: View {
+    @SwiftUI.Environment(Router.self) var router:Router
+    
     let searchType:SearchType
     
    
@@ -27,7 +29,7 @@ struct SignListView: View {
                 }
             case .loaded(let signs):
                 List(signs){ sign in
-                    NavigationLink(value: sign){
+                    NavigationLink(value: BrowseRoute.sign(sign)){
                         SignRow(sign: sign)
                     }
                 }

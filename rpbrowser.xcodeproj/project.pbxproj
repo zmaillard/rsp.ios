@@ -57,7 +57,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				config/Environment.swift,
-				model/BrowseRoute.swift,
 				model/Country.swift,
 				model/Highway.swift,
 				model/Results.swift,
@@ -65,12 +64,15 @@
 				model/RoadSignDetails.swift,
 				model/SearchType.swift,
 				model/State.swift,
-				model/TabIdentifier.swift,
 				networking/APIError.swift,
 				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
 				networking/Services/MockSignSearchService.swift,
 				networking/Services/SignSearchService.swift,
+				routing/BrowseRoute.swift,
+				routing/DeepLinkParser.swift,
+				routing/Router.swift,
+				routing/TabIdentifier.swift,
 			);
 			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
 		};
