@@ -11,7 +11,11 @@ import SwiftUI
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> ImageEntry {
         let snapshotSign = UIImage(named: "random-sign")!
-        let entry = ImageEntry(date: Date(), image: snapshotSign, imageId: "3406055620")
+        let entry = ImageEntry(date: Date(), image: snapshotSign,
+                               imageId: "3406055620",countrySlug: "united-states",
+                               stateSlug: "california",
+                               countySlug: "arizona_santa-cruz-county",
+                               placeSlug: "arizona_sonoita")
         return entry
     }
 
@@ -24,7 +28,13 @@ struct Provider: TimelineProvider {
             snapshotSign = RandomSignFetcher.cachedSign!
         }
         
-        let entry = ImageEntry(date: Date(), image: snapshotSign, imageId: "3406055620")
+        let entry = ImageEntry(date: Date(),
+                               image: snapshotSign,
+                               imageId: "3406055620",
+                               countrySlug: "united-states",
+                               stateSlug: "california",
+                               countySlug: "arizona_santa-cruz-county",
+                               placeSlug: "arizona_sonoita")
         completion(entry)
     }
 
@@ -34,9 +44,9 @@ struct Provider: TimelineProvider {
                 return
             }
             
-            let entry = ImageEntry(date: Date(), image: image, imageId: imageId)
+            let entry = ImageEntry(date: Date(), image: image, imageId: imageId.id, countrySlug: imageId.country.id, stateSlug: imageId.state.id, countySlug: imageId.stateSubdivision?.id, placeSlug: imageId.place?.id)
             
-            let nextUpdate = Calendar.current.date(byAdding: DateComponents(hour: 12), to: Date())!
+            let nextUpdate = Calendar.current.date(byAdding: DateComponents(hour: 8), to: Date())!
             
             let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
             
@@ -50,6 +60,10 @@ struct ImageEntry: TimelineEntry {
     let date: Date
     let image: UIImage
     let imageId: String
+    let countrySlug: String
+    let stateSlug: String
+    let countySlug: String?
+    let placeSlug: String?
 }
 
 struct RPBrowserWidgetEntryView : View {
@@ -72,13 +86,13 @@ struct RPBrowserWidget: Widget {
             if #available(iOS 17.0, *) {
                 RPBrowserWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
-                    .widgetURL(URL(string: "rpbrowser://show-sign?id=\(entry.imageId)"))
+                    .widgetURL(buildUrl(for: entry))
 
             } else {
                 RPBrowserWidgetEntryView(entry: entry)
                     .padding()
                     .background()
-                    .widgetURL(URL(string: "rpbrowser://show-sign?id=\(entry.imageId)"))
+                    .widgetURL(buildUrl(for: entry))
 
             }
         }
@@ -88,12 +102,22 @@ struct RPBrowserWidget: Widget {
         .description("Show a random road sign")
 
     }
+    
+    private func buildUrl(for entry: ImageEntry) -> URL? {
+        if let countySlug = entry.countySlug{
+            return URL(string: "rpbrowser://show-sign-county/\(entry.countrySlug)/\(entry.stateSlug)/\(countySlug)/\(entry.imageId)")
+        }
+        if let placeSlug = entry.placeSlug{
+            return URL(string: "rpbrowser://show-sign-place/\(entry.countrySlug)/\(entry.stateSlug)/\(placeSlug)/\(entry.imageId)")
+        }
+        return URL(string: "rpbrowser://show-sign-state/\(entry.countrySlug)/\(entry.stateSlug)/\(entry.imageId)")
+    }
 }
 
 
 #Preview(as: .systemSmall) {
     RPBrowserWidget()
 } timeline: {
-    ImageEntry(date: .now, image: UIImage(named: "random-sign")!, imageId: "")
+    ImageEntry(date: .now, image: UIImage(named: "random-sign")!, imageId: "", countrySlug: "", stateSlug: "", countySlug: "", placeSlug: "")
 }
 

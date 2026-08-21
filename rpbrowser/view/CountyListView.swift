@@ -25,21 +25,21 @@ struct CountyListView: View {
                 List {
                     Section("Counties") {
                         ForEach(state.stateSubdivisions.sorted()){ county in
-                            NavigationLink(value: SearchType.StateSubdivisionFilter(county.id)){
+                            NavigationLink(value: BrowseRoute.countylist(SearchType.StateSubdivisionFilter(county.id))){
                                 Text(county.name)
                             }
                         }
                     }
                     Section("Places") {
                         ForEach(state.places.sorted()){ place in
-                            NavigationLink(value: SearchType.PlaceFilter(place.id)){
+                            NavigationLink(value: BrowseRoute.placelist(SearchType.PlaceFilter(place.id))){
                                 Text(place.name)
                             }
                         }
                     }
                     Section("Highways") {
                         ForEach(state.highways.sorted()){ highway in
-                            NavigationLink(value: SearchType.Term(highway.name)){ //TODO: Filter highway
+                            NavigationLink(value: BrowseRoute.highwayList(SearchType.Term(highway.name))){ //TODO: Filter highway
                                 Text(highway.name)
                             }
                         }

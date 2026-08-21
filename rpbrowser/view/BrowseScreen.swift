@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct BrowseScreen: View {
+    @Bindable var router: Router
     let countryViewModel: CountryViewModel
-    @State var linkActive = false
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             switch countryViewModel.state {
             case .idle:
                 Text("No data yet")
@@ -22,41 +22,42 @@ struct BrowseScreen: View {
                 }
             case .loaded(let countries):
                 List(countries.countries.sorted()){ country in
-                    NavigationLink(value: country){
+                    NavigationLink(value: BrowseRoute.state(country)){
                         Text(country.name)
                     }
                 }
                 .navigationTitle("Browse for Signs")
                 .navigationBarTitleDisplayMode(.inline)
-                .onOpenURL {url in
-                    print("received url: \(url)")
-                    linkActive = true
+                .navigationDestination(for: BrowseRoute.self) {route in
+                    switch route {
+                    case .state(let country):
+                        StateListView(country: country, countryDetailsViewModel: CountryDetailsViewModel())
+                    case .stateDetails(let state):
+                        CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    case .highwayList(let highwaySearch):
+                        SignListView(searchType: highwaySearch)
+                    case .countylist(let countySearch):
+                        SignListView(searchType: countySearch)
+                    case .placelist(let placeSearch):
+                        SignListView(searchType: placeSearch)
+                    case .sign(let sign):
+                        SignDetailView(sign:sign, onRefresh: nil)
+                    case .signWithLoading(let signId):
+                        SignLoadingView(signId: signId)
+                    }
+                    
                 }
-                .navigationDestination(for: CountrySlim.self)
-                { country in StateListView(country: country, countryDetailsViewModel: CountryDetailsViewModel())
-                    
-                }.navigationDestination(for: SearchType.self)
-                { searchType in SignListView(searchType: searchType)
-                    
-                }.navigationDestination(for: StateSlim.self)
-                { state in CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
-                    
-                }.navigationDestination(for: RoadSign.self)
-                { sign in SignDetailView(sign: sign){}
-                    
-                }.navigationDestination(isPresented: $linkActive) {
-                     Text("Destination")
-                 }
 
 
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
         }
+        .environment(router)
             
     }
 }
 
  #Preview {
-     BrowseScreen(countryViewModel: CountryViewModel.example)
+     BrowseScreen(router: Router(), countryViewModel: CountryViewModel.example)
  }

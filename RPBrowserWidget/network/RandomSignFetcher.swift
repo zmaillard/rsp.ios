@@ -28,7 +28,7 @@ struct RandomSignFetcher {
         cachedSign != nil
     }
 
-    static func fetchRandomSign() async throws -> (UIImage, String) {
+    static func fetchRandomSign() async throws -> (UIImage, RoadSignDetails) {
         let service = DefaultSignSearchService()
         let rootItems = try await service.fetchRoot()
         
@@ -49,7 +49,7 @@ struct RandomSignFetcher {
             try? await cache(imageData)
         }
         
-        return (image, randomSign.id)
+        return (image, randomSign)
         
     }
     

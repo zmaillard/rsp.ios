@@ -22,7 +22,7 @@ struct StateListView: View {
                 }
             case .loaded(let country):
                 List(country.states.sorted()){ state in
-                    NavigationLink(value: state){
+                    NavigationLink(value: BrowseRoute.stateDetails(state)){
                         Text(state.name)
                     }
                 }.navigationTitle("States in \(country.name)")

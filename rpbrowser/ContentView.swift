@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var countryViewModel = CountryViewModel()
     @State private var activeTab: TabIdentifier = .random
     @State private var signId: String?
+    @State private var router: Router = Router()
     
     var body: some View {
         TabView(selection: $activeTab) {
@@ -24,7 +25,7 @@ struct ContentView: View {
                 }
             }
             Tab("Browse", systemImage: "rectangle.stack.fill", value: TabIdentifier.browse) {
-                BrowseScreen(countryViewModel: countryViewModel)
+                BrowseScreen(router: router, countryViewModel: countryViewModel)
             }
             Tab("Location", systemImage: "mappin.and.ellipse", value: TabIdentifier.location) {
                 LocationScreen()
@@ -35,33 +36,12 @@ struct ContentView: View {
         }.task{
             await countryViewModel.fetch()
         }.onOpenURL { incomingURL in
-            print("App was opened via URL: \(incomingURL)")
-            handleIncomingURL(incomingURL)
+            if let routes = DeepLinkParser.Parse(incomingURL) {
+                self.activeTab = .browse
+                self.router.setPath(routes)
+            }
         }
         
     }
     
-    private func handleIncomingURL(_ url: URL) {
-        guard url.scheme == "rpbrowser" else {
-            return
-        }
-        
-        
-        // Update random screen to just take a sign id
-
-        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            return
-        }
-        
-        guard let action = components.host, action == "show-sign" else {
-            return
-        }
-        
-        guard let signId = components.queryItems?.first(where: {$0.name == "id"})?.value else {
-            return
-        }
-         
-        self.signId = signId
-        activeTab  = .random
-    }
 }
