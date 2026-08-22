@@ -27,12 +27,13 @@ struct LocationScreen: View {
                     ProgressView {
                         Text("Loading...")
                     }
-                case .loaded(let signs):
-                    List(signs){ sign in
+                case .loaded(let searchResults):
+                    List(searchResults.signs){ sign in
                         NavigationLink(value: sign){
                             SignRow(sign: sign)
                         }
                     }
+                    .navigationTitle(searchResults.title)
                     .navigationDestination(for: RoadSign.self)
                         {
                             sign in SignDetailView(sign: sign, onRefresh: nil)
