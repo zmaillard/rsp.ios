@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct BrowseScreen: View {
+    @SwiftUI.Environment(CountryViewModel.self) var countryViewModel: CountryViewModel
+   
     @Bindable var router: Router
-    let countryViewModel: CountryViewModel
 
     var body: some View {
         NavigationStack(path: $router.path) {
@@ -56,6 +57,6 @@ struct BrowseScreen: View {
     }
 }
 
- #Preview {
-     BrowseScreen(router: Router(), countryViewModel: CountryViewModel.example)
+#Preview {
+    BrowseScreen(router: Router()).environment(CountryViewModel.example)
  }

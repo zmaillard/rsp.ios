@@ -9,23 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var countryViewModel = CountryViewModel()
-    @State private var activeTab: TabIdentifier = .random
     @State private var signId: String?
-    @State private var router: Router = Router()
+    @State private var router: AppRouter = AppRouter()
     
     var body: some View {
-        TabView(selection: $activeTab) {
+        TabView(selection: $router.selectedTab) {
             Tab("Random", systemImage: "shuffle", value: TabIdentifier.random) {
-                if let signId = signId {
-                    StaticSignScreen(signId: signId) {
-                        self.signId = nil
-                    }
-                } else {
-                    RandomScreen(countryViewModel: countryViewModel, randomViewModel: RandomViewModel())
-                }
+                RandomScreen(randomViewModel: RandomViewModel())
             }
             Tab("Browse", systemImage: "rectangle.stack.fill", value: TabIdentifier.browse) {
-                BrowseScreen(router: router, countryViewModel: countryViewModel)
+                BrowseScreen(router: router.browseRouter)
             }
             Tab("Location", systemImage: "mappin.and.ellipse", value: TabIdentifier.location) {
                 LocationScreen()
@@ -36,12 +29,12 @@ struct ContentView: View {
         }.task{
             await countryViewModel.fetch()
         }.onOpenURL { incomingURL in
+            print(incomingURL)
             if let routes = DeepLinkParser.Parse(incomingURL) {
-                self.activeTab = .browse
-                self.router.setPath(routes)
+                self.router.navigateTo(tab: .browse)
+                self.router.browseRouter.setPath(routes)
             }
-        }
-        
+        }.environment(countryViewModel)
     }
     
 }

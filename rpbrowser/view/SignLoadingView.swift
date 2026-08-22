@@ -32,6 +32,8 @@ struct SignLoadingView: View {
 }
 
 
-#Preview {
-    RandomScreen(countryViewModel: CountryViewModel.example, randomViewModel: RandomViewModel.example)
-}
+/*
+ #Preview {
+ SignLoadingView()
+ }
+ */

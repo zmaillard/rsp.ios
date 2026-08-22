@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct RandomScreen: View {
-    let countryViewModel: CountryViewModel
+    @SwiftUI.Environment(CountryViewModel.self) var countryViewModel: CountryViewModel
     let randomViewModel: RandomViewModel
     
     private var imageCount: Int  {
@@ -45,5 +45,5 @@ struct RandomScreen: View {
 
 
 #Preview {
-    RandomScreen(countryViewModel: CountryViewModel.example, randomViewModel: RandomViewModel.example)
+    RandomScreen(randomViewModel: RandomViewModel.example).environment(CountryViewModel.example)
 }
