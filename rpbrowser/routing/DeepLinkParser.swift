@@ -28,7 +28,7 @@ struct DeepLinkParser {
             return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
                     BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
                     BrowseRoute.countylist(SearchType.StateSubdivisionFilter(countySlug)),
-                    BrowseRoute.signWithLoading(signId)]
+                    BrowseRoute.sign(signId)]
         case "show-sign-place":
             if components.count != 4 {
                 return nil
@@ -44,7 +44,7 @@ struct DeepLinkParser {
             return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
                     BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
                     BrowseRoute.placelist(SearchType.PlaceFilter(placeSlug)),
-                    BrowseRoute.signWithLoading(signId)]
+                    BrowseRoute.sign(signId)]
         case "show-sign-state":
             if components.count != 3 {
                 return nil
@@ -58,7 +58,7 @@ struct DeepLinkParser {
             
             return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
                     BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
-                    BrowseRoute.signWithLoading(signId)]
+                    BrowseRoute.sign(signId)]
         default:
             return nil
         }

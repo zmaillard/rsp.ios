@@ -24,7 +24,7 @@ struct Index: Decodable, Equatable, Hashable  {
     }
 }
 
-struct CountrySlim: Decodable, Comparable, Identifiable, Equatable, Hashable  {
+struct CountrySlim: Codable, Comparable, Identifiable, Equatable, Hashable  {
     let id: String
     let name: String
     let url: String
@@ -58,7 +58,7 @@ struct HighwayTypeSlim : Decodable, Identifiable, Equatable, Hashable {
     }
 }
 
-struct StateSlim : Decodable, Identifiable, Comparable, Equatable, Hashable {
+struct StateSlim : Codable, Identifiable, Comparable, Equatable, Hashable {
     let id: String
     let name: String
     let url: String

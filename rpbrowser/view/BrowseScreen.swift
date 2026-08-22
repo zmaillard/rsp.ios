@@ -40,9 +40,7 @@ struct BrowseScreen: View {
                         SignListView(searchType: countySearch)
                     case .placelist(let placeSearch):
                         SignListView(searchType: placeSearch)
-                    case .sign(let sign):
-                        SignDetailView(sign:sign, onRefresh: nil)
-                    case .signWithLoading(let signId):
+                    case .sign(let signId):
                         SignLoadingView(signId: signId)
                     }
                     

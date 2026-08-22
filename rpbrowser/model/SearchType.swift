@@ -6,12 +6,21 @@
 //
 import CoreLocation
 
-enum SearchType : Hashable {
+struct Coordinates : Hashable, Codable {
+    let latitude: Double
+    let longitude: Double
+    
+    static func from(location: CLLocation) -> Coordinates {
+        return Coordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    }
+}
+
+enum SearchType : Hashable, Codable {
     case StateFilter(String)
     case StateSubdivisionFilter(String)
     case PlaceFilter(String)
     case Term(String)
-    case Location(CLLocation)
+    case Location(Coordinates)
 
     func query() throws -> Any {
         switch self {
@@ -37,7 +46,7 @@ enum SearchType : Hashable {
             let filter = "state.slug=\(stateFilter)"
             return ["queries": [["indexUid": "signs", "q": "", "filter":filter, "facets":[]]]]
         case .Location(let coords):
-            let filter = ["_geoRadius(\(coords.coordinate.latitude),\(coords.coordinate.longitude),5000)"]
+            let filter = ["_geoRadius(\(coords.latitude),\(coords.longitude),5000)"]
             return ["queries": [["indexUid": "signs", "filter":filter]]]
         }
     }
