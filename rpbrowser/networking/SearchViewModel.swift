@@ -44,7 +44,5 @@ class SearchViewModel {
             self.state = .error("unknown error")
         }
     }
-
-    
 }
 

@@ -30,10 +30,12 @@ struct DefaultSignSearchService : SignSearchService {
         }
     
         do {
+            await URLSession.shared.flush()
             let (data, response) = try await  URLSession.shared.data(from: url)
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                throw APIError.invalidResponse
             }
+            
             
             return try JSONDecoder().decode(type, from: data)
             

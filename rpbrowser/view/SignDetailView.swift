@@ -23,7 +23,6 @@ struct SignDetailView: View {
             
             VStack(alignment: .leading, spacing: 5) {
                 let desc: LocalizedStringKey = LocalizedStringKey(trimTags(from: sign.description))
-                Text(sign.title).font(.headline)
                 Text(desc)
                 if let onRefresh {
                     Button("Refresh", systemImage: "shuffle"){
@@ -38,6 +37,7 @@ struct SignDetailView: View {
                 
                 Spacer()
             }.padding()
+                .navigationTitle(sign.title)
                 .navigationBarTitleDisplayMode(.inline)
             
             

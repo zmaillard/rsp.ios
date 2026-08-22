@@ -19,7 +19,7 @@ struct RandomScreen: View {
     }
     
     var body: some View {
-        VStack {
+        NavigationStack {
             // Display content based on randomViewModel.state
             switch randomViewModel.state {
             case .idle:
@@ -31,7 +31,7 @@ struct RandomScreen: View {
                     Task {
                         await randomViewModel.fetch(count: imageCount)
                     }
-                }
+                }.navigationTitle(sign.title)
             case .error(let message):
                 // Stub: will implement error handling later
                 Text("Error: \(message)")

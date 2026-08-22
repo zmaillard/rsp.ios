@@ -62,6 +62,7 @@
 				model/Results.swift,
 				model/RoadSign.swift,
 				model/RoadSignDetails.swift,
+				model/RoadSignLoaded.swift,
 				model/SearchType.swift,
 				model/State.swift,
 				networking/APIError.swift,

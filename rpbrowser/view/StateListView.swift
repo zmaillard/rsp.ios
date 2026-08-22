@@ -25,7 +25,7 @@ struct StateListView: View {
                     NavigationLink(value: BrowseRoute.stateDetails(state)){
                         Text(state.name)
                     }
-                }.navigationTitle("States in \(country.name)")
+                }.navigationTitle("\(country.subdivisionName)s in \(country.name)")
                  .navigationBarTitleDisplayMode(.inline)
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)

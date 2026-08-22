@@ -26,13 +26,13 @@ struct SignListView: View {
             case .loading:
                 ProgressView {
                     Text("Loading...")
-                }
-            case .loaded(let signs):
-                List(signs){ sign in
-                    NavigationLink(value: BrowseRoute.sign(sign)){
+                }.navigationTitle("Loading Signs")
+            case .loaded(let searchResult):
+                List(searchResult.signs){ sign in
+                    NavigationLink(value: BrowseRoute.sign(sign.id)){
                         SignRow(sign: sign)
                     }
-                }
+                }.navigationTitle(searchResult.title)
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
