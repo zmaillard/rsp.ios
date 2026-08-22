@@ -58,7 +58,7 @@ struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable {
     // MARK: - Preview
     static var example: RoadSignDetails {
         guard let sampleData = try? SampleDataLoader.loadSampleData() else {
-            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: ""), country: CountrySlim(id: "", name: "", url: ""), stateSubdivision: nil, title: "")
+            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: ""), country: CountrySlim(id: "", name: "", subdivisionName: "", url: ""), stateSubdivision: nil, title: "")
         }
         
         return sampleData.sign

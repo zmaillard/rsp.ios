@@ -11,6 +11,7 @@ struct StateDetails : Equatable, Identifiable, Hashable, Decodable {
     let imageCount: Int
     let places: [PlaceSlim]
     let stateSubdivisions: [StateSubdivisionSlim]
+    let subdivisionName: String
     
     enum CodingKeys: String, CodingKey {
         case id = "slug"
@@ -19,12 +20,13 @@ struct StateDetails : Equatable, Identifiable, Hashable, Decodable {
         case imageCount
         case places
         case stateSubdivisions
+        case subdivisionName
     }
     
     // MARK: - Preview
     static var example: StateDetails {
         guard let sampleData = try? SampleDataLoader.loadSampleData() else {
-            return StateDetails(id: "", highways: [], name: "", imageCount: 0, places: [], stateSubdivisions: [])
+            return StateDetails(id: "", highways: [], name: "", imageCount: 0, places: [], stateSubdivisions: [], subdivisionName: "")
         }
         
         return sampleData.state

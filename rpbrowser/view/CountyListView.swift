@@ -23,7 +23,7 @@ struct CountyListView: View {
                 }
             case .loaded(let state):
                 List {
-                    Section("Counties") {
+                    Section(state.subdivisionName) {
                         ForEach(state.stateSubdivisions.sorted()){ county in
                             NavigationLink(value: BrowseRoute.countylist(SearchType.StateSubdivisionFilter(county.id))){
                                 Text(county.name)
