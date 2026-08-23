@@ -9,4 +9,20 @@ enum LoadingState<T: Equatable> : Equatable {
     case loading
     case loaded(T)
     case error(String)
+    
+    
+    
+    var isLoading: Bool {
+        if case .loading = self {
+            return true
+        }
+        return false
+    }
+    
+    var error: String? {
+        if case .error(let message) = self {
+            return message
+        }
+        return nil
+    }
 }

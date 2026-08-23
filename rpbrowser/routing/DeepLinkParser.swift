@@ -13,52 +13,60 @@ struct DeepLinkParser {
         
         let components = url.pathComponents.filter { $0 != "/" }
         switch url.host {
-        case "show-sign-county":
-            if components.count != 4 {
+        case "show-sign":
+            if components.count != 1 {
                 return nil
             }
             
-            let countrySlug = components[0]
-            let stateSlug = components[1]
-            let countySlug = components[2]
-            let signId = components[3]
+            let signId = components[0]
             
-            
-            
-            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
-                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
-                    BrowseRoute.countylist(SearchType.StateSubdivisionFilter(countySlug)),
-                    BrowseRoute.sign(signId)]
-        case "show-sign-place":
-            if components.count != 4 {
-                return nil
-            }
-            
-            let countrySlug = components[0]
-            let stateSlug = components[1]
-            let placeSlug = components[2]
-            let signId = components[3]
-            
-            
-            
-            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
-                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
-                    BrowseRoute.placelist(SearchType.PlaceFilter(placeSlug)),
-                    BrowseRoute.sign(signId)]
-        case "show-sign-state":
-            if components.count != 3 {
-                return nil
-            }
-            
-            let countrySlug = components[0]
-            let stateSlug = components[1]
-            let signId = components[2]
-            
-            
-            
-            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
-                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
-                    BrowseRoute.sign(signId)]
+            return [BrowseRoute.sign(signId)]
+//        case "show-sign-county":
+//            if components.count != 4 {
+//                return nil
+//            }
+//            
+//            let countrySlug = components[0]
+//            let stateSlug = components[1]
+//            let countySlug = components[2]
+//            let signId = components[3]
+//            
+//            
+//            
+//            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json", imageCount: 10, states: [])),
+//                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json", imageCount: 10)),
+//                    BrowseRoute.countylist(SearchType.StateSubdivisionFilter(countySlug)),
+//                    BrowseRoute.sign(signId)]
+//        case "show-sign-place":
+//            if components.count != 4 {
+//                return nil
+//            }
+//            
+//            let countrySlug = components[0]
+//            let stateSlug = components[1]
+//            let placeSlug = components[2]
+//            let signId = components[3]
+//            
+//            
+//            
+//            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
+//                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
+//                    BrowseRoute.placelist(SearchType.PlaceFilter(placeSlug)),
+//                    BrowseRoute.sign(signId)]
+//        case "show-sign-state":
+//            if components.count != 3 {
+//                return nil
+//            }
+//            
+//            let countrySlug = components[0]
+//            let stateSlug = components[1]
+//            let signId = components[2]
+//            
+//            
+//            
+//            return [BrowseRoute.state(CountrySlim(id: countrySlug, name: countrySlug, subdivisionName: "", url: "https://roadsign.pictures/country/\(countrySlug)/index.json")),
+//                    BrowseRoute.stateDetails(StateSlim(id: stateSlug, name: stateSlug, url: "https://roadsign.pictures/state/\(stateSlug)/index.json")),
+//                    BrowseRoute.sign(signId)]
         default:
             return nil
         }

@@ -1,18 +1,12 @@
-//
-//  RoadSignsViewModel.swift
-//  rpbrowser
-//
-//  Created by Zach Maillard on 8/5/26.
-//
-
 import Foundation
 import Observation
 
+
 @Observable
-class CountryViewModel {
+class RoadSignListViewModel {
     
-    var state: LoadingState<Index> = .idle
     
+    var state: LoadingState<StateSubdivision> = .idle
     
     private let service: SignSearchService
     
@@ -20,25 +14,19 @@ class CountryViewModel {
         self.service = service
     }
     
-    func fetch() async {
+    func fetchSigns(url: String) async {
         guard !state.isLoading || state.error != nil else { return }
         self.state = .loading
         do {
-            let countries =  try await service.fetchRoot()
-            self.state = .loaded(countries)
+            let stateSubdivision =  try await service.fetchStateSubdivision(from: url)
+            self.state = .loaded(stateSubdivision)
         } catch let error as APIError{
             self.state = .error(error.errorDescription ?? "unknown error")
         } catch {
             self.state = .error("unknown error")
         }
     }
+
     
-    // MARK: - Preview
-    static var example: CountryViewModel {
-        let svc = MockSignSearchService()
-        let vm = CountryViewModel(service: svc)
-        vm.state = .loaded(Index.example)
-        return vm
-    }
 }
 

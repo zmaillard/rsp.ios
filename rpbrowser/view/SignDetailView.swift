@@ -9,27 +9,43 @@ import SwiftUI
 import MapKit
 
 struct SignDetailView: View {
-    let sign: RoadSign
+    let sign: RoadSignDetails
     let onRefresh:(() -> Void)?
     let imageSize: CGFloat = 300.0
     
     
-    
     var body: some View {
         VStack {
-            SignImageView(urlPath: sign.url)
+            SignImageView(urlPath: sign.image.large)
                 .frame(height: 300)
                 .clipped()
             
             VStack(alignment: .leading, spacing: 5) {
                 let desc: LocalizedStringKey = LocalizedStringKey(trimTags(from: sign.description))
                 Text(desc)
+                HStack {
+                    ForEach(sign.highways) { h in
+                        SignImageView(urlPath: h.shield.large)
+                            .frame(width: 30.0, height: 30.0)
+                            .clipped()
+                    }
+                }
+                HStack {
+                    if sign.place != nil{
+                        Text(sign.place!.name).font(.footnote)
+                    }
+                    if sign.stateSubdivision != nil{
+                        Text(sign.stateSubdivision!.name).font(.footnote)
+                    }
+                    Text(sign.state.name).font(.footnote)
+                    Text(sign.country.name).font(.footnote)
+                }
+                Divider()
                 if let onRefresh {
                     Button("Refresh", systemImage: "shuffle"){
                         onRefresh()
                     }
                 }
-                Text("\(sign.place) | \(sign.county) | \(sign.state) | \(sign.country)").font(.footnote)
                 Map(){
                     Marker(sign.title, coordinate: CLLocationCoordinate2D(latitude:sign.latitude, longitude:sign.longitude))
                     
@@ -49,6 +65,9 @@ struct SignDetailView: View {
     }
 }
 
-#Preview {
-    SignDetailView(sign: RoadSign.example, onRefresh: nil)
-}
+/*
+ 
+ #Preview {
+ SignDetailView(sign: RoadSign.example, onRefresh: nil)
+ }
+ */

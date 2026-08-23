@@ -23,7 +23,7 @@ class RoadSignsViewModel {
     }
     
     func fetchSigns(searchType: SearchType) async {
-        guard state == .idle else { return }
+        guard !state.isLoading || state.error != nil else { return }
         self.state = .loading
         do {
             let signs =  try await service.fetchSigns(type: searchType)

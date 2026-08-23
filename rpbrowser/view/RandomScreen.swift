@@ -27,7 +27,7 @@ struct RandomScreen: View {
             case .loading:
                 ProgressView("Loading random sign...")
             case .loaded(let sign):
-                SignDetailView(sign: sign.ToRoadSign()) {
+                SignDetailView(sign: sign) {
                     Task {
                         await randomViewModel.fetch(count: imageCount)
                     }

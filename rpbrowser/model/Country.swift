@@ -16,19 +16,22 @@ struct Index: Decodable, Equatable, Hashable  {
     // MARK: - Preview
     static var example: Index {
         return Index(imageCount: 19099, countries: [
-            CountrySlim(id: "united-states", name: "United States", subdivisionName: "State", url: "https://roadsign.pictures/country/united-states/index.json", ),
-            CountrySlim(id: "canada", name: "Canada", subdivisionName: "Province", url: "https://roadsign.pictures/country/canada/index.json", ),
-            CountrySlim(id: "mexico", name: "Mexico", subdivisionName: "Estado", url: "https://roadsign.pictures/country/mexico/index.json", ),
-            CountrySlim(id: "costa-rica", name: "Costa Rica", subdivisionName: "Provincia", url: "https://roadsign.pictures/country/costa-rica/index.json"),
+            CountrySlim(id: "united-states", name: "United States", subdivisionName: "State", url: "https://roadsign.pictures/country/united-states/index.json", imageCount: 10, states: [] ),
+            CountrySlim(id: "canada", name: "Canada", subdivisionName: "Province", url: "https://roadsign.pictures/country/canada/index.json", imageCount: 10, states: [] ),
+            CountrySlim(id: "mexico", name: "Mexico", subdivisionName: "Estado", url: "https://roadsign.pictures/country/mexico/index.json", imageCount: 10, states: [] ),
+            CountrySlim(id: "costa-rica", name: "Costa Rica", subdivisionName: "Provincia", url: "https://roadsign.pictures/country/costa-rica/index.json",imageCount: 10, states: [] ),
         ])
     }
 }
+
 
 struct CountrySlim: Codable, Comparable, Identifiable, Equatable, Hashable  {
     let id: String
     let name: String
     let subdivisionName: String
     let url: String
+    let imageCount: Int
+    let states: [StateSlim]?
     
     
     enum CodingKeys: String, CodingKey {
@@ -36,6 +39,8 @@ struct CountrySlim: Codable, Comparable, Identifiable, Equatable, Hashable  {
         case name
         case subdivisionName
         case url
+        case imageCount
+        case states
     }
     
     static func < (lhs: CountrySlim, rhs: CountrySlim) -> Bool {
@@ -45,7 +50,7 @@ struct CountrySlim: Codable, Comparable, Identifiable, Equatable, Hashable  {
 
     // MARK:: - Preview
     static var example: CountrySlim {
-        return CountrySlim(id: "united-states", name: "United States",subdivisionName: "State", url: "https://roadsign.pictures/country/united-states/index.json")
+        return CountrySlim(id: "united-states", name: "United States",subdivisionName: "State", url: "https://roadsign.pictures/country/united-states/index.json", imageCount: 10, states: [] )
     }
 
 }
@@ -66,11 +71,13 @@ struct StateSlim : Codable, Identifiable, Comparable, Equatable, Hashable {
     let id: String
     let name: String
     let url: String
+    let imageCount: Int
     
     enum CodingKeys: String, CodingKey {
         case id = "slug"
         case name
         case url
+        case imageCount
     }
     
     static func < (lhs: StateSlim, rhs: StateSlim) -> Bool {
@@ -82,7 +89,7 @@ struct StateSlim : Codable, Identifiable, Comparable, Equatable, Hashable {
     // MARK: - Preview
     static var example: StateSlim {
         guard let sampleData = try? SampleDataLoader.loadSampleData() else {
-            return StateSlim(id: "", name: "", url: "")
+            return StateSlim(id: "", name: "", url: "", imageCount: 10)
         }
         
         return sampleData.country.states[0]

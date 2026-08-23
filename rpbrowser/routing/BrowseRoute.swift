@@ -5,10 +5,9 @@
 //  Created by Zach Maillard on 8/16/26.
 //
 enum BrowseRoute: Hashable, Codable {
-    case state(CountrySlim)
     case stateDetails(StateSlim)
     case sign (String)
-    case countylist(SearchType)
-    case placelist(SearchType)
+    case countylist(String, String)
+    case placelist(String, String)
     case highwayList(SearchType)
 }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equatable {
+struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equatable, SignRowRecord {
+    
     let id: String
     let latitude: Double
     let longitude: Double
@@ -26,6 +27,10 @@ struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equ
     let title: String
     let highways: [Highway]
     let url: String
+    
+    func getImageUrl() -> String {
+     return self.url.replacing("_l", with: "_s")
+    }
     
     enum GeoKeys: String, CodingKey {
         case latitude = "lat"
@@ -51,6 +56,8 @@ struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equ
         case url
         case quality
     }
+    
+    
     
     init (id: String, latitude: Double, longitude: Double, country: String, countrySlug: String, county: String, countySlug: String, place: String, placeSlug: String, state: String, stateSlug: String, dateTaken: String, description: String, quality: Int, title: String, highways: [Highway], url: String) {
         self.id = id
@@ -98,6 +105,7 @@ struct RoadSign: Decodable, Hashable, CustomStringConvertible, Identifiable, Equ
         self.url = try container.decode(String.self, forKey: .url)
         self.quality = try container.decode(Int.self, forKey: .quality)
     }
+    
     
     // MARK: - Preview
     static var example: RoadSign {

@@ -20,7 +20,7 @@ class CountryDetailsViewModel {
 
     
     func fetch(for root: CountrySlim) async {
-        guard state != .loading else { return }
+        guard !state.isLoading || state.error != nil else { return }
         self.state = .loading
         do {
             let country =  try await service.fetchCountry(from: root.url )
