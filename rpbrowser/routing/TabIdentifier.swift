@@ -8,5 +8,6 @@ enum TabIdentifier: Hashable, Codable {
     case location
     case random
     case browse
+    case map
     case search
 }

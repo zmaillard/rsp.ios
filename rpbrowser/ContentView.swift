@@ -20,6 +20,11 @@ struct ContentView: View {
             Tab("Browse", systemImage: "rectangle.stack.fill", value: TabIdentifier.browse) {
                 BrowseScreen(router: router.browseRouter)
             }
+            Tab("Map", systemImage: "map.fill", value: TabIdentifier.map) {
+                // TODO: Pass router to enable navigation from map
+                // MapScreen(router: router.browseRouter)
+                MapScreen()
+            }
             Tab("Location", systemImage: "mappin.and.ellipse", value: TabIdentifier.location) {
                 LocationScreen()
             }

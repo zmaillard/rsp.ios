@@ -17,7 +17,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52A2F84130314CEF00BCFEE4"
-               BuildableName = "RPBrowserWidgetExtension.appex"
+               BuildableName = "Road Signs.appex"
                BlueprintName = "RPBrowserWidgetExtension"
                ReferencedContainer = "container:rpbrowser.xcodeproj">
             </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52A2F84130314CEF00BCFEE4"
-            BuildableName = "RPBrowserWidgetExtension.appex"
+            BuildableName = "Road Signs.appex"
             BlueprintName = "RPBrowserWidgetExtension"
             ReferencedContainer = "container:rpbrowser.xcodeproj">
          </BuildableReference>
