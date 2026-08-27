@@ -104,13 +104,16 @@ struct RPBrowserWidget: Widget {
     }
     
     private func buildUrl(for entry: ImageEntry) -> URL? {
+        
+        /*
         if let countySlug = entry.countySlug{
             return URL(string: "rpbrowser://show-sign-county/\(entry.countrySlug)/\(entry.stateSlug)/\(countySlug)/\(entry.imageId)")
         }
         if let placeSlug = entry.placeSlug{
             return URL(string: "rpbrowser://show-sign-place/\(entry.countrySlug)/\(entry.stateSlug)/\(placeSlug)/\(entry.imageId)")
         }
-        return URL(string: "rpbrowser://show-sign-state/\(entry.countrySlug)/\(entry.stateSlug)/\(entry.imageId)")
+         */
+         return URL(string: "rpbrowser://show-sign/\(entry.imageId)")
     }
 }
 

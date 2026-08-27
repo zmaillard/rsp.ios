@@ -21,7 +21,7 @@ class CountryViewModel {
     }
     
     func fetch() async {
-        guard state == .idle else { return }
+        guard !state.isLoading || state.error != nil else { return }
         self.state = .loading
         do {
             let countries =  try await service.fetchRoot()

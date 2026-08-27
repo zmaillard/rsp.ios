@@ -10,7 +10,12 @@ import Foundation
 struct MockSignSearchService : SignSearchService {
     
     
-    
+    func fetchStateSubdivision(from URLString: String) async throws -> StateSubdivision {
+        let data = try SampleDataLoader.loadSampleData()
+        
+        return data.subdivision
+    }
+
     func fetchSigns(type: SearchType) async throws -> [RoadSign] {
         let data = try SampleDataLoader.loadSampleData()
         

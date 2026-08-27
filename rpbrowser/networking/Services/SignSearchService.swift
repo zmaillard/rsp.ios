@@ -11,4 +11,5 @@ protocol SignSearchService : Sendable{
     func fetchState(from URLString: String) async throws -> StateDetails
     func fetchSigns(type: SearchType) async throws -> [RoadSign]
     func fetchSignDetail(from URLString: String) async throws -> RoadSignDetails
+    func fetchStateSubdivision(from URLString: String) async throws -> StateSubdivision
 }

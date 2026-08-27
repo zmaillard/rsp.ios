@@ -7,24 +7,30 @@
 
 import Foundation
 import Observation
+import CoreLocation
+import MapLibre
 
 @Observable
-class CountryDetailsViewModel {
-    var state: LoadingState<Country> = .idle
+class MapViewModel {
+    
+    var state: LoadingState<[RoadSign]> = .idle
     
     private let service: SignSearchService
     
     init(service: SignSearchService = DefaultSignSearchService()) {
         self.service = service
     }
-
     
-    func fetch(for root: CountrySlim) async {
-        guard !state.isLoading || state.error != nil else { return }
+    func fetchSigns(for location: Rectangle) async {
+        let searchTerm:SearchType = .BoundingBox(location.lowerLeft, location.upperRight)
+        
+
         self.state = .loading
+        
+        
         do {
-            let country =  try await service.fetchCountry(from: root.url )
-            self.state = .loaded(country)
+            let signs =  try await service.fetchSigns(type: searchTerm)
+            self.state = .loaded(signs)
         } catch let error as APIError{
             self.state = .error(error.errorDescription ?? "unknown error")
         } catch {
@@ -32,14 +38,6 @@ class CountryDetailsViewModel {
         }
     }
 
-    // MARK: - Preview
-    static var example: CountryDetailsViewModel {
-        let svc = MockSignSearchService()
-        let vm = CountryDetailsViewModel(service: svc)
-        vm.state = .loaded(Country.example)
-        return vm
-    }
+    
 }
-
-
 

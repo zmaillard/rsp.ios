@@ -8,7 +8,7 @@ import SwiftUI
 
 @Observable
 @MainActor
-final class Router {
+final class Router : Codable {
     var path: [BrowseRoute] = []
     
     func push(_ route: BrowseRoute) {
@@ -27,4 +27,15 @@ final class Router {
         path = newPath
     }
     
+}
+
+@Observable
+@MainActor
+class AppRouter : Codable {
+    var browseRouter = Router()
+    var selectedTab: TabIdentifier = .random
+    
+    func navigateTo(tab: TabIdentifier) {
+       self.selectedTab = tab
+    }
 }

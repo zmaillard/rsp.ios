@@ -12,6 +12,7 @@ struct SampleData : Decodable {
     let country: Country
     let state: StateDetails
     let sign: RoadSignDetails
+    let subdivision: StateSubdivision
     
     enum CodingKeys: String, CodingKey {
         case root
@@ -19,6 +20,7 @@ struct SampleData : Decodable {
         case country
         case state
         case sign = "signDetail"
+        case subdivision
         
     }
 }

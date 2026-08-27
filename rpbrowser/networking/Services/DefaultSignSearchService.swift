@@ -48,6 +48,10 @@ struct DefaultSignSearchService : SignSearchService {
     }
     
     
+    func fetchStateSubdivision(from URLString: String) async throws -> StateSubdivision {
+        return try await fetch(from: URLString, type: StateSubdivision.self)
+    }
+    
     func fetchSigns(type: SearchType) async throws -> [RoadSign] {
         guard let url = URL(string: "https://search.roadsign.pictures/multi-search") else {
             throw APIError.invalidURL

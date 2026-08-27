@@ -20,7 +20,7 @@ struct ImageDetails : Decodable, Equatable, Hashable {
     }
 }
 
-struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable {
+struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable, SignRowRecord {
     let id: String
     let date: String
     let description: String
@@ -34,6 +34,11 @@ struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable {
     let country: CountrySlim
     let stateSubdivision: StateSubdivisionSlim?
     let title: String
+    
+    func getImageUrl() -> String {
+        return image.medium
+    }
+    
     
     enum CodingKeys: String, CodingKey {
         case date
@@ -58,7 +63,7 @@ struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable {
     // MARK: - Preview
     static var example: RoadSignDetails {
         guard let sampleData = try? SampleDataLoader.loadSampleData() else {
-            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: ""), country: CountrySlim(id: "", name: "", subdivisionName: "", url: ""), stateSubdivision: nil, title: "")
+            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: "", imageCount: 10), country: CountrySlim(id: "", name: "", subdivisionName: "", url: "", imageCount: 10, states: []), stateSubdivision: nil, title: "")
         }
         
         return sampleData.sign

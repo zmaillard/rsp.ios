@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-struct SignListView: View {
+struct SignSearchView: View {
+    @SwiftUI.Environment(Router.self) var router:Router
     
-    let title: String
-    let url:String
+    let searchType:SearchType
     
+   
+    init(searchType: SearchType) {
+        self.searchType = searchType
+    }
 
-    var roadSignListViewModel = RoadSignListViewModel()
+    var roadSignsViewModel = RoadSignsViewModel()
     var body: some View {
         VStack {
-            switch roadSignListViewModel.state {
+            switch roadSignsViewModel.state {
             case .idle:
                 Text("No data yet")
             case .loading:
@@ -26,14 +30,14 @@ struct SignListView: View {
             case .loaded(let searchResult):
                 List(searchResult.signs){ sign in
                     NavigationLink(value: BrowseRoute.sign(sign.id)){
-                        SignRowSlim(sign: sign)
+                        SignRow(sign: sign)
                     }
-                }.navigationTitle(title)
+                }.navigationTitle(searchResult.title)
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
         }.task{
-            await roadSignListViewModel.fetchSigns(url: self.url)
+            await roadSignsViewModel.fetchSigns(searchType: searchType)
         }
     }
 }

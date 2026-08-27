@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */; };
 		52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */; };
-		52A2F85230314CF000BCFEE4 /* RPBrowserWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* RPBrowserWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
+		52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
+		52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */; };
+		52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				52A2F85230314CF000BCFEE4 /* RPBrowserWidgetExtension.appex in Embed Foundation Extensions */,
+				52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		527EDDD53016A338003AA02B /* rpbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rpbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		52A2F84230314CEF00BCFEE4 /* RPBrowserWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RPBrowserWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A2F84230314CEF00BCFEE4 /* Road Signs.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Road Signs.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
@@ -63,8 +66,11 @@
 				model/RoadSign.swift,
 				model/RoadSignDetails.swift,
 				model/RoadSignLoaded.swift,
+				model/RoadSignSlim.swift,
 				model/SearchType.swift,
+				model/SignRowRecord.swift,
 				model/State.swift,
+				model/StateSubdivision.swift,
 				networking/APIError.swift,
 				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
@@ -111,6 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */,
+				52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */,
+				52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				527EDDD53016A338003AA02B /* rpbrowser.app */,
-				52A2F84230314CEF00BCFEE4 /* RPBrowserWidgetExtension.appex */,
+				52A2F84230314CEF00BCFEE4 /* Road Signs.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +186,9 @@
 			);
 			name = rpbrowser;
 			packageProductDependencies = (
+				52BE8BDC303DC01B00B63832 /* MapLibre */,
+				52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */,
+				52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */,
 			);
 			productName = rpbrowser;
 			productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
@@ -201,7 +213,7 @@
 			packageProductDependencies = (
 			);
 			productName = RPBrowserWidgetExtension;
-			productReference = 52A2F84230314CEF00BCFEE4 /* RPBrowserWidgetExtension.appex */;
+			productReference = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -231,6 +243,10 @@
 			);
 			mainGroup = 527EDDCC3016A338003AA02B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+				52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
 			projectDirPath = "";
@@ -533,7 +549,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Road Signs";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -566,7 +582,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Road Signs";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -610,6 +626,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.29.0;
+			};
+		};
+		52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/swiftui-dsl";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52BE8BDC303DC01B00B63832 /* MapLibre */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibre;
+		};
+		52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
+			productName = MapLibreSwiftDSL;
+		};
+		52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
+			productName = MapLibreSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 527EDDCD3016A338003AA02B /* Project object */;
 }

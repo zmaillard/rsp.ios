@@ -8,7 +8,7 @@ import SwiftUI
 
 struct SignLoadingView: View {
     let signId: String
-    let roadSignViewModel: StaticSignViewModel = StaticSignViewModel()
+    @State var roadSignViewModel: StaticSignViewModel
     
     var body: some View {
         VStack {
@@ -19,19 +19,21 @@ struct SignLoadingView: View {
             case .loading:
                 ProgressView("Loading random sign...")
             case .loaded(let sign):
-                SignDetailView(sign: sign.ToRoadSign(), onRefresh: nil)
+                SignDetailView(sign: sign, onRefresh: nil)
             case .error(let message):
                 // Stub: will implement error handling later
                 Text("Error: \(message)")
             }
         }
-        .task {
+        .task(id: signId) {
             await roadSignViewModel.fetch(signId: self.signId)
         }
     }
 }
 
 
-#Preview {
-    RandomScreen(countryViewModel: CountryViewModel.example, randomViewModel: RandomViewModel.example)
-}
+/*
+ #Preview {
+ SignLoadingView()
+ }
+ */

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountyListView: View {
     let state:StateSlim
-    let stateDetailsViewModel: StateDetailsViewModel
+    @State var stateDetailsViewModel: StateDetailsViewModel
     
     
     var body: some View {
@@ -23,34 +23,44 @@ struct CountyListView: View {
                 }
             case .loaded(let state):
                 List {
-                    Section(state.subdivisionName) {
-                        ForEach(state.stateSubdivisions.sorted()){ county in
-                            NavigationLink(value: BrowseRoute.countylist(SearchType.StateSubdivisionFilter(county.id))){
-                                Text(county.name)
+                    if state.subdivisionName != nil && state.stateSubdivisions?.isEmpty == false {
+                        Section(state.subdivisionName!) {
+                            let stateSubs = state.stateSubdivisions ?? []
+                            ForEach(stateSubs.sorted()){ county in
+                                NavigationLink(value: BrowseRoute.countylist("\(county.name), \(state.name)", county.url)){
+                                    Text(county.name).badge(county.imageCount)
+                                }
                             }
                         }
                     }
-                    Section("Places") {
-                        ForEach(state.places.sorted()){ place in
-                            NavigationLink(value: BrowseRoute.placelist(SearchType.PlaceFilter(place.id))){
-                                Text(place.name)
+                    if state.places?.isEmpty == false {
+                        Section("Places") {
+                            let places = state.places ?? []
+                            ForEach(places.sorted()){ place in
+                                NavigationLink(value: BrowseRoute.placelist("\(place.name), \(state.name)", place.url)){
+                                    Text(place.name).badge(place.imageCount)
+                                }
                             }
                         }
                     }
-                    Section("Highways") {
-                        ForEach(state.highways.sorted()){ highway in
-                            NavigationLink(value: BrowseRoute.highwayList(SearchType.Term(highway.name))){ //TODO: Filter highway
-                                Text(highway.name)
+                    if state.highways?.isEmpty == false {
+                        Section("Highways") {
+                            let highways = state.highways ?? []
+                            ForEach(highways.sorted()){ highway in
+                                NavigationLink(value: BrowseRoute.highwayList(SearchType.Term(highway.name))){ //TODO: Filter highway
+                                    HighwayRow(highway: highway)
+                                }
                             }
                         }
                     }
                 }.navigationTitle("Details for \(state.name)")
-                 .navigationBarTitleDisplayMode(.inline)
-
+                    .navigationBarTitleDisplayMode(.inline)
+                
             case .error(let error):
                 Text(error).foregroundStyle(Color.red)
             }
         }.task{
+            print("Loading counties")
             await stateDetailsViewModel.fetch(for: state)
         }
     }

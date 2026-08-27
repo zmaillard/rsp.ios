@@ -23,7 +23,7 @@ class RoadSignsViewModel {
     }
     
     func fetchSigns(searchType: SearchType) async {
-        guard state == .idle else { return }
+        guard !state.isLoading || state.error != nil else { return }
         self.state = .loading
         do {
             let signs =  try await service.fetchSigns(type: searchType)
@@ -53,6 +53,8 @@ class RoadSignsViewModel {
             return "Search Results for \(searchTerm)"
         case .Location(_):
             return "Signs at Current Location"
+        case .BoundingBox(_,_):
+            return "Signs at Current Map Extent"
         }
     }
 }
