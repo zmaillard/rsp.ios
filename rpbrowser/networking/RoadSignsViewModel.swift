@@ -53,6 +53,8 @@ class RoadSignsViewModel {
             return "Search Results for \(searchTerm)"
         case .Location(_):
             return "Signs at Current Location"
+        case .BoundingBox(_,_):
+            return "Signs at Current Map Extent"
         }
     }
 }

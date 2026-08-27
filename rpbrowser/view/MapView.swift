@@ -14,7 +14,8 @@ struct MapView: UIViewRepresentable {
     
     let OPENFREEMAP_LIBERTY_STYLE = URL(string: "https://tiles.openfreemap.org/styles/liberty")
     let onSignTapped: ((String) -> Void)
-    
+    let onExtentChanged: ((MLNCoordinateBounds) -> Void)?
+
     func makeUIView(context: Context) -> MLNMapView {
         let mapView = MLNMapView()
         mapView.styleURL = OPENFREEMAP_LIBERTY_STYLE
@@ -52,23 +53,30 @@ struct MapView: UIViewRepresentable {
         var parent: MapView
         var selectedSignCoordinate: CLLocationCoordinate2D?
         var currentAnnotation: SignAnnotation?
-        
+        var callback: ((String) -> Void)?
+        var onExtentChanged: ((MLNCoordinateBounds) -> Void)?
+
         init(_ parent: MapView) {
             self.parent = parent
+            self.callback = parent.onSignTapped
+            self.onExtentChanged = parent.onExtentChanged
         }
         
+        func mapView(_ mapView: MLNMapView, regionDidChangeAnimated animated: Bool) {
+            print (mapView.visibleCoordinateBounds)
+            
+            if self.onExtentChanged != nil {
+                self.onExtentChanged!(mapView.visibleCoordinateBounds)
+            }
+        }
         
         
         func mapView(_ mapView: MLNMapView, tapOnCalloutFor annotation: MLNAnnotation) {
             guard let signAnnotation = annotation as? SignAnnotation else { return }
             
-            /*
-             if let callback = onSignTapped {
-             callback(signAnnotation.imageid)
-             } else {
-             print("🚧 Navigation stub: would navigate to sign \(signAnnotation.imageid)")
-             }
-             */
+            if self.callback != nil {
+                self.callback!(signAnnotation.imageid)
+            }
         }
         
         func mapView(_ mapView: MLNMapView, didDeselect annotation: MLNAnnotation) {
@@ -169,7 +177,6 @@ struct MapView: UIViewRepresentable {
             
             //let tapRect = mapView.convert(bufferedRect, toCoordinateBoundsFrom: nil)
             let features = mapView.visibleFeatures(in: bufferedRect, styleLayerIdentifiers: Set(["signs-style"]))
-            print(features)
             if let feature = features.first,
                let imageid = feature.attribute(forKey: "imageid") as? String,
                let title = feature.attribute(forKey: "title") as? String,

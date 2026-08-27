@@ -7,33 +7,61 @@
 
 import Foundation
 import SwiftUI
+import MapLibre
 
 struct MapScreen: View {
+    @SwiftUI.Environment(\.horizontalSizeClass) var sizeClass
+    
+    var mapViewModel = MapViewModel()
+    @State private var newExtent: Rectangle?
+    
+    
     var body: some View {
-        MapView() { f in
-           print(f)
+        NavigationStack {
+            if sizeClass == .compact {
+                MapView(onSignTapped: onCallback, onExtentChanged: nil).navigationTitle("Map")
+            } else {
+                HStack {
+                    MapView(onSignTapped: onCallback, onExtentChanged: onExtentChanged).navigationTitle("Map")
+                    
+                    
+                    switch mapViewModel.state {
+                    case .idle:
+                        List {
+                            
+                        }
+                    case .loading:
+                        List {
+                            
+                        }
+                    case .loaded(let signs):
+                        List(signs){ sign in
+                            NavigationLink(value: sign){
+                                SignRow(sign: sign)
+                            }
+                        }
+                        .navigationDestination(for: RoadSign.self)
+                        {
+                            sign in SignLoadingView(signId: sign.id, roadSignViewModel: StaticSignViewModel())
+                        }
+                    case .error(let error):
+                        Text(error).foregroundStyle(Color.red)
+                    }
+                    
+                }
+            }
+        }.task(id: newExtent) {
+            if let newExtent {
+                await mapViewModel.fetchSigns(for: newExtent)
+            }
         }
     }
+    
+    func onCallback(signId: String) {
+        print(signId)
+    }
+    
+    func onExtentChanged(bounds: MLNCoordinateBounds) {
+        self.newExtent = Rectangle.from(mapView: bounds)
+    }
 }
-
-//struct MapScreen: UIViewControllerRepresentable {
-//   typealias UIViewControllerType = MapView
-//    
-//    // TODO: Add router binding when navigation is implemented
-//    // @Binding var router: Router
-//    
-//    func makeUIViewController(context: Context) -> MapView {
-//        let mapView = MapView()
-//        
-//        // Stub: wire up navigation callback
-//        mapView.onSignTapped = { signId in
-//            print("🚧 MapScreen stub: received tap for sign \(signId)")
-//            // TODO: router.push(.sign(signId))
-//        }
-//        
-//        return mapView
-//    }
-//    
-//    func updateUIViewController(_ uiViewController: MapView, context: Context) {
-//    }
-//}
