@@ -11,3 +11,7 @@ enum BrowseRoute: Hashable, Codable {
     case placelist(String, String)
     case highwayList(SearchType)
 }
+
+enum MapRoute: Hashable, Codable {
+    case sign (String)
+}

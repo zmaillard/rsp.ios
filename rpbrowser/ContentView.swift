@@ -21,12 +21,7 @@ struct ContentView: View {
                 BrowseScreen(router: router.browseRouter)
             }
             Tab("Map", systemImage: "map.fill", value: TabIdentifier.map) {
-                // TODO: Pass router to enable navigation from map
-                // MapScreen(router: router.browseRouter)
-                MapScreen()
-            }
-            Tab("Location", systemImage: "mappin.and.ellipse", value: TabIdentifier.location) {
-                LocationScreen()
+                MapScreen(router: router.mapRouter)
             }
             Tab(value: TabIdentifier.search, role: .search ) {
                 SearchScreen()
@@ -34,27 +29,18 @@ struct ContentView: View {
         }.task{
             await countryViewModel.fetch()
         }.onOpenURL { incomingURL in
-            print("🔗 Deep link received: \(incomingURL)")
             if let routes = DeepLinkParser.Parse(incomingURL) {
-                print("📍 Parsed \(routes.count) routes from deep link")
                 self.router.navigateTo(tab: .browse)
-                print("🔄 Switched to Browse tab")
                 
                 Task { @MainActor in
                     // Ensure country data is loaded before navigation
-                    print("⏳ Waiting for country data...")
                     await countryViewModel.fetch()
-                    print("✅ Country data ready, state: \(countryViewModel.state)")
                     
                     // Delay to ensure Browse tab is fully rendered (100ms for reliability)
                     try? await Task.sleep(for: .milliseconds(100))
-                    print("🚀 Setting navigation path with \(routes.count) routes")
                     
                     self.router.browseRouter.setPath(routes)
-                    print("✓ Navigation path set successfully")
                 }
-            } else {
-                print("❌ Failed to parse deep link URL")
             }
         }.environment(countryViewModel)
     }

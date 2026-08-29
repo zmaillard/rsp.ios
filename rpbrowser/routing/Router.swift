@@ -6,12 +6,13 @@
 //
 import SwiftUI
 
+
 @Observable
 @MainActor
-final class Router : Codable {
-    var path: [BrowseRoute] = []
+final class Router<T: Codable> : Codable {
+    var path: [T] = []
     
-    func push(_ route: BrowseRoute) {
+    func push(_ route: T) {
         path.append(route)
     }
     
@@ -23,19 +24,21 @@ final class Router : Codable {
         path.removeAll()
     }
     
-    func setPath(_ newPath: [BrowseRoute]) {
+    func setPath(_ newPath: [T]) {
         path = newPath
     }
     
 }
 
-@Observable
-@MainActor
+
+ @Observable
+ @MainActor
 class AppRouter : Codable {
-    var browseRouter = Router()
+    var browseRouter = Router<BrowseRoute>()
+    var mapRouter = Router<MapRoute>()
     var selectedTab: TabIdentifier = .random
     
     func navigateTo(tab: TabIdentifier) {
-       self.selectedTab = tab
+        self.selectedTab = tab
     }
 }

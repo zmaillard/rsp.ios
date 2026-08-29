@@ -27,7 +27,8 @@ struct MapView: UIViewRepresentable {
         let boise = CLLocationCoordinate2D(latitude: 46.0, longitude: -116.0)
         mapView.setCenter(boise, animated: false)
         mapView.zoomLevel = 8
-        
+        mapView.showsUserLocation = true
+
         let singleTap = UITapGestureRecognizer(
             target: context.coordinator,
             action: #selector(Coordinator.handleMapTap(sender:))
@@ -55,7 +56,8 @@ struct MapView: UIViewRepresentable {
         var currentAnnotation: SignAnnotation?
         var callback: ((String) -> Void)?
         var onExtentChanged: ((MLNCoordinateBounds) -> Void)?
-
+        var pannedToUserLocation = false
+        
         init(_ parent: MapView) {
             self.parent = parent
             self.callback = parent.onSignTapped
@@ -86,7 +88,16 @@ struct MapView: UIViewRepresentable {
             }
         }
 
-        
+        // when a location is available for the first time, we fly to it
+        func mapView(_ mapView: MLNMapView, didUpdate _: MLNUserLocation?) {
+            guard !pannedToUserLocation else { return }
+            guard let userLocation = mapView.userLocation else {
+                print("User location is currently not available.")
+                return
+            }
+            mapView.fly(to: MLNMapCamera(lookingAtCenter: userLocation.coordinate, altitude: 100_000, pitch: 0, heading: 0))
+            pannedToUserLocation = true
+        }
         
         func mapView(_ mapView: MLNMapView, annotationCanShowCallout annotation: MLNAnnotation) -> Bool {
             return annotation is SignAnnotation

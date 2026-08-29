@@ -36,6 +36,8 @@ struct RandomScreen: View {
                 // Stub: will implement error handling later
                 Text("Error: \(message)")
             }
+        }.refreshable {
+            print("hey")
         }
         .task(id: imageCount) {
             await randomViewModel.fetch(count: imageCount)
