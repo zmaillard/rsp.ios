@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignSearchView: View {
-    @SwiftUI.Environment(Router.self) var router:Router
+    @SwiftUI.Environment(Router<BrowseRoute>.self) var router:Router
     
     let searchType:SearchType
     

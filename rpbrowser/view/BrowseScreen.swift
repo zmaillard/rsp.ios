@@ -10,7 +10,7 @@ import SwiftUI
 struct BrowseScreen: View {
     @SwiftUI.Environment(CountryViewModel.self) var countryViewModel: CountryViewModel
    
-    @Bindable var router: Router
+    @Bindable var router: Router<BrowseRoute>
 
     var body: some View {
         NavigationStack(path: $router.path) {

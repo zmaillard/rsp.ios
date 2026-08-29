@@ -12,56 +12,92 @@ import MapLibre
 struct MapScreen: View {
     @SwiftUI.Environment(\.horizontalSizeClass) var sizeClass
     
+    
     var mapViewModel = MapViewModel()
     @State private var newExtent: Rectangle?
+    @Bindable var router: Router<MapRoute>
     
+    @State private var isSheetPresented = false
     
     var body: some View {
-        NavigationStack {
-            if sizeClass == .compact {
-                MapView(onSignTapped: onCallback, onExtentChanged: nil).navigationTitle("Map")
-            } else {
-                HStack {
-                    MapView(onSignTapped: onCallback, onExtentChanged: onExtentChanged).navigationTitle("Map")
-                    
-                    
-                    switch mapViewModel.state {
-                    case .idle:
-                        List {
-                            
-                        }
-                    case .loading:
-                        List {
-                            
-                        }
-                    case .loaded(let signs):
-                        List(signs){ sign in
-                            NavigationLink(value: sign){
-                                SignRow(sign: sign)
-                            }
-                        }
-                        .navigationDestination(for: RoadSign.self)
-                        {
-                            sign in SignLoadingView(signId: sign.id, roadSignViewModel: StaticSignViewModel())
-                        }
-                    case .error(let error):
-                        Text(error).foregroundStyle(Color.red)
+        NavigationStack(path: $router.path) {
+            DynamicStack{
+                MapView(onSignTapped: onCallback, onExtentChanged: onExtentChanged)
+            }
+            sidebar:  {
+                switch mapViewModel.state {
+                case .idle:
+                    List {
+                        
                     }
-                    
+                case .loading:
+                    List {
+                        
+                    }
+                case .loaded(let signs):
+                    List(signs){ sign in
+                        NavigationLink(value: MapRoute.sign(sign.id)) {
+                            SignRow(sign: sign)
+                        }
+                    }.frame(maxWidth: .infinity)
+                case .error(let error):
+                    Text(error).foregroundStyle(Color.red)
+                }
+            }
+            .navigationDestination(for: MapRoute.self) {route in
+                switch route {
+                case .sign(let signId):
+                    SignLoadingView(signId: signId, roadSignViewModel: StaticSignViewModel())
                 }
             }
         }.task(id: newExtent) {
             if let newExtent {
+                print(newExtent)
                 await mapViewModel.fetchSigns(for: newExtent)
             }
         }
     }
     
     func onCallback(signId: String) {
-        print(signId)
+        self.router.push(MapRoute.sign(signId))
     }
     
     func onExtentChanged(bounds: MLNCoordinateBounds) {
         self.newExtent = Rectangle.from(mapView: bounds)
     }
+    
+    func sidebar() -> some View {
+        Text("")
+    }
+    
+    
 }
+
+
+/*
+ 
+ 
+ .adaptiveSheet(isPresented: $isSheetPresented) {
+     switch mapViewModel.state {
+     case .idle:
+         List {
+             
+         }
+     case .loading:
+         List {
+             
+         }
+     case .loaded(let signs):
+         List(signs){ sign in
+             NavigationLink(value: MapRoute.sign(sign.id)) {
+                 SignRow(sign: sign)
+             }
+         }.frame(maxWidth: .infinity)
+     case .error(let error):
+         Text(error).foregroundStyle(Color.red)
+     }
+ }
+
+ 
+ 
+ */

@@ -50,8 +50,6 @@ struct SignDetailView: View {
                     Marker(sign.title, coordinate: CLLocationCoordinate2D(latitude:sign.latitude, longitude:sign.longitude))
                     
                 }
-                
-                Spacer()
             }.padding()
                 .navigationTitle(sign.title)
                 .navigationBarTitleDisplayMode(.inline)
