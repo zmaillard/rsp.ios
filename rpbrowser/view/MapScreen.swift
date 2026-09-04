@@ -21,7 +21,7 @@ struct MapScreen: View {
     
     var body: some View {
         NavigationStack(path: $router.path) {
-            DynamicStack{
+            DynamicAdaptiveStack{
                 MapView(onSignTapped: onCallback, onExtentChanged: onExtentChanged)
             }
             sidebar:  {
@@ -72,32 +72,3 @@ struct MapScreen: View {
     
     
 }
-
-
-/*
- 
- 
- .adaptiveSheet(isPresented: $isSheetPresented) {
-     switch mapViewModel.state {
-     case .idle:
-         List {
-             
-         }
-     case .loading:
-         List {
-             
-         }
-     case .loaded(let signs):
-         List(signs){ sign in
-             NavigationLink(value: MapRoute.sign(sign.id)) {
-                 SignRow(sign: sign)
-             }
-         }.frame(maxWidth: .infinity)
-     case .error(let error):
-         Text(error).foregroundStyle(Color.red)
-     }
- }
-
- 
- 
- */

@@ -9,8 +9,16 @@ import SwiftUI
 
 public struct SignImageView: View {
     let urlPath: String
+    var callback: (() -> Void)? = nil
+    
+    
     
     public var body: some View {
+        let tap =    TapGesture(count: 1).onEnded { _ in
+            if let callback = self.callback {
+                callback()
+            }
+        }
         AsyncImage(url: URL(string: urlPath)) { phase in
             switch phase {
             case .empty:
@@ -25,14 +33,16 @@ public struct SignImageView: View {
                     .scaledToFit()
             case .failure(_):
                 Text("Could not load image")
-                @unknown default:
-                    fatalError()
+            @unknown default:
+                fatalError()
             }
             
-        }
+        }.gesture(tap)
+        
     }
 }
 #Preview {
     let url = RoadSign.example.url
     SignImageView(urlPath: url)
 }
+ 

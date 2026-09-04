@@ -75,6 +75,7 @@
 				networking/APIError.swift,
 				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
+				networking/Services/ImageService.swift,
 				networking/Services/MockSignSearchService.swift,
 				networking/Services/SignSearchService.swift,
 				routing/BrowseRoute.swift,

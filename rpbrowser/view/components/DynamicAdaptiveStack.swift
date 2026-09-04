@@ -8,8 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct DynamicStack<Content: View>: View {
+struct DynamicAdaptiveStack<Content: View, Sidebar: View>: View {
     @SwiftUI.Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @State private var isSheetPresented = false
 
     var horizontalAlignment = HorizontalAlignment.center
     var verticalAlignment = VerticalAlignment.center
@@ -17,6 +18,7 @@ struct DynamicStack<Content: View>: View {
     var spacing: CGFloat?
     
     @ViewBuilder var content: () ->  Content
+    @ViewBuilder var sidebar: () -> Sidebar
     
     var body: some View {
         switch horizontalSizeClass {
@@ -30,16 +32,20 @@ struct DynamicStack<Content: View>: View {
     }
 }
 
-private extension DynamicStack {
+private extension DynamicAdaptiveStack {
     var hstack: some View {
         HStack(alignment: verticalAlignment, spacing: spacing) {
            content()
+           sidebar()
         }
     }
     
     var vstack: some View {
         VStack(alignment: horizontalAlignment, spacing: spacing) {
             content()
+                .adaptiveSheet(isPresented: $isSheetPresented) {
+                    sidebar()
+                }
         }
     }
 }
