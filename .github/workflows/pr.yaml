@@ -20,6 +20,7 @@ jobs:
         run: |
           xcodebuild clean build test \
             -project rpbrowser.xcodeproj
+            -scheme rpbrowser
             -destination 'platform=iOS' \
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
