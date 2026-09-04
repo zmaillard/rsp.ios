@@ -1,6 +1,7 @@
 import XCTest
 @testable import rpbrowser
 
+@MainActor
 final class DeepLinkParserTests: XCTestCase {
     func testParseReturnsNilForWrongScheme() {
         let url = URL(string: "https://rpbrowser/show-sign/abc")!

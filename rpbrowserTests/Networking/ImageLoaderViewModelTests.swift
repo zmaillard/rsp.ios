@@ -2,6 +2,7 @@ import XCTest
 import UIKit
 @testable import rpbrowser
 
+@MainActor
 final class ImageLoaderViewModelTests: XCTestCase {
     func testFetchSetsLoadedStateWhenServiceSucceeds() async {
         let image = makeImage(color: .blue)

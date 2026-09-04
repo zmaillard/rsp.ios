@@ -1,6 +1,7 @@
 import XCTest
 @testable import rpbrowser
 
+@MainActor
 final class RoadSignTests: XCTestCase {
     func testDecodeRoadSignParsesNestedFields() throws {
         let json = """
