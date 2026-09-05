@@ -21,7 +21,7 @@ jobs:
           xcodebuild clean build test \
             -project rpbrowser.xcodeproj \
             -scheme rpbrowser \
-            -destination 'platform=iOS Simulator,OS=26.5,name=Any iOS Device' \
+            -destination 'platform=iOS Simulator,OS=26.5,name=iPhone 17' \
             CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
 
