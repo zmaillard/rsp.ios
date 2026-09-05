@@ -4,7 +4,7 @@
 //
 //  Created by Zach Maillard on 8/11/26.
 //
-struct ImageDetails : Decodable, Equatable, Hashable {
+struct ImageDetails : Codable, Equatable, Hashable {
     let large: String
     let medium: String
     let original: String
@@ -17,6 +17,13 @@ struct ImageDetails : Decodable, Equatable, Hashable {
         case original
         case small
         case thumbnail
+    }
+    // MARK: - Preview
+    static var example: ImageDetails {
+        let base = "https://sign.roadsign.pictures/5090401834372614470/5090401834372614470"
+        
+        return ImageDetails(large: "\(base)_l.jpg", medium: "\(base)_m.jpg", original: "\(base).jpg", small: "\(base)_s.jpg", thumbnail: "\(base)_t.jpg")
+        
     }
 }
 
@@ -63,9 +70,10 @@ struct RoadSignDetails : Decodable, Identifiable, Equatable, Hashable, SignRowRe
     // MARK: - Preview
     static var example: RoadSignDetails {
         guard let sampleData = try? SampleDataLoader.loadSampleData() else {
-            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: "", imageCount: 10), country: CountrySlim(id: "", name: "", subdivisionName: "", url: "", imageCount: 10, states: []), stateSubdivision: nil, title: "")
+            return RoadSignDetails(id: "", date: "", description: "", hasProcessed: false, highways: [], image: ImageDetails(large: "", medium: "", original: "", small: "", thumbnail: ""), latitude: 0.0, longitude: 0.0, place: nil, state: StateSlim(id: "", name: "", url: "", imageCount: 10, featured: nil), country: CountrySlim(id: "", name: "", subdivisionName: "", url: "", imageCount: 10, states: [], featured: ImageDetails.example), stateSubdivision: nil, title: "")
         }
         
         return sampleData.sign
     }
+    
 }
