@@ -1,5 +1,5 @@
 {
-  "originHash" : "4edbf32873ec05705a5627bf17419015b4ac115f7880475cee96fcf9da0fedc0",
+  "originHash" : "e70d3525c8e2819a8b34f22909815dab5c700c25a06c32388f3930f7b3627768",
   "pins" : [
     {
       "identity" : "maplibre-gl-native-distribution",
@@ -8,33 +8,6 @@
       "state" : {
         "revision" : "86992aabad3e89ce8818adec2e8b9d03177d69da",
         "version" : "6.29.0"
-      }
-    },
-    {
-      "identity" : "swift-syntax",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-syntax.git",
-      "state" : {
-        "revision" : "4799286537280063c85a32f09884cfbca301b1a1",
-        "version" : "602.0.0"
-      }
-    },
-    {
-      "identity" : "swiftui-dsl",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maplibre/swiftui-dsl",
-      "state" : {
-        "branch" : "main",
-        "revision" : "139e83d1487f29b42a4f5db2458594170f0ff7e3"
-      }
-    },
-    {
-      "identity" : "zoomable",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ryohey/Zoomable.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "27463744a1c82e550959703153bd6f3c62fef906"
       }
     }
   ],

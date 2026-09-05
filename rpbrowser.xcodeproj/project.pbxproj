@@ -1,810 +1,776 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 77;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        53B100001234567890ABC001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B100001234567890ABC004 /* XCTest.framework */; };
-        52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */; };
-        52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */; };
-        52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-        52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
-        52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
-        52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */; };
-        52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */; };
+		52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */; };
+		52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */; };
+		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
+		52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
+		53B100001234567890ABC001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B100001234567890ABC004 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        53B100001234567890ABC002 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 527EDDCD3016A338003AA02B /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 527EDDD43016A338003AA02B;
-            remoteInfo = rpbrowser;
-        };
-        52A2F85030314CF000BCFEE4 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 527EDDCD3016A338003AA02B /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 52A2F84130314CEF00BCFEE4;
-            remoteInfo = RPBrowserWidgetExtension;
-        };
+		52A2F85030314CF000BCFEE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 527EDDCD3016A338003AA02B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A2F84130314CEF00BCFEE4;
+			remoteInfo = RPBrowserWidgetExtension;
+		};
+		53B100001234567890ABC002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 527EDDCD3016A338003AA02B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 527EDDD43016A338003AA02B;
+			remoteInfo = rpbrowser;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-        52A2F85330314CF000BCFEE4 /* Embed Foundation Extensions */ = {
-            isa = PBXCopyFilesBuildPhase;
-            buildActionMask = 2147483647;
-            dstPath = "";
-            dstSubfolderSpec = 13;
-            files = (
-                52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */,
-            );
-            name = "Embed Foundation Extensions";
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		52A2F85330314CF000BCFEE4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-        527EDDD53016A338003AA02B /* rpbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rpbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        53B100001234567890ABC003 /* rpbrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rpbrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        52A2F84230314CEF00BCFEE4 /* Road Signs.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Road Signs.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-        52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-        52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-        53B100001234567890ABC004 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
-        52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		527EDDD53016A338003AA02B /* rpbrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rpbrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A2F84230314CEF00BCFEE4 /* Road Signs.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Road Signs.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		53B100001234567890ABC003 /* rpbrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rpbrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B100001234567890ABC004 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-        52A2F85630314CF000BCFEE4 /* Exceptions for "RPBrowserWidget" folder in "RPBrowserWidgetExtension" target */ = {
-            isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-            membershipExceptions = (
-                Info.plist,
-            );
-            target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
-        };
-        52A2F8593031512B00BCFEE4 /* Exceptions for "rpbrowser" folder in "RPBrowserWidgetExtension" target */ = {
-            isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-            membershipExceptions = (
-                config/Environment.swift,
-                model/Coordinates.swift,
-                model/Country.swift,
-                model/Highway.swift,
-                model/Results.swift,
-                model/RoadSign.swift,
-                model/RoadSignDetails.swift,
-                model/RoadSignLoaded.swift,
-                model/RoadSignSlim.swift,
-                model/SearchType.swift,
-                model/SignRowRecord.swift,
-                model/State.swift,
-                model/StateSubdivision.swift,
-                networking/APIError.swift,
-                networking/helpers/SampleDataLoader.swift,
-                networking/Services/DefaultSignSearchService.swift,
-                networking/Services/ImageService.swift,
-                networking/Services/MockSignSearchService.swift,
-                networking/Services/SignSearchService.swift,
-                routing/BrowseRoute.swift,
-                routing/DeepLinkParser.swift,
-                routing/Router.swift,
-                routing/TabIdentifier.swift,
-            );
-            target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
-        };
-        52A2F8713031E9A400BCFEE4 /* Exceptions for "rpbrowser" folder in "rpbrowser" target */ = {
-            isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-            membershipExceptions = (
-                Info.plist,
-            );
-            target = 527EDDD43016A338003AA02B /* rpbrowser */;
-        };
+		52A2F85630314CF000BCFEE4 /* Exceptions for "RPBrowserWidget" folder in "RPBrowserWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
+		};
+		52A2F8593031512B00BCFEE4 /* Exceptions for "rpbrowser" folder in "RPBrowserWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				config/Environment.swift,
+				model/Coordinates.swift,
+				model/Country.swift,
+				model/Highway.swift,
+				model/Results.swift,
+				model/RoadSign.swift,
+				model/RoadSignDetails.swift,
+				model/RoadSignLoaded.swift,
+				model/RoadSignSlim.swift,
+				model/SearchType.swift,
+				model/SignRowRecord.swift,
+				model/State.swift,
+				model/StateSubdivision.swift,
+				networking/APIError.swift,
+				networking/helpers/SampleDataLoader.swift,
+				networking/Services/DefaultSignSearchService.swift,
+				networking/Services/ImageService.swift,
+				networking/Services/MockSignSearchService.swift,
+				networking/Services/SignSearchService.swift,
+				routing/BrowseRoute.swift,
+				routing/DeepLinkParser.swift,
+				routing/Router.swift,
+				routing/TabIdentifier.swift,
+			);
+			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
+		};
+		52A2F8713031E9A400BCFEE4 /* Exceptions for "rpbrowser" folder in "rpbrowser" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 527EDDD43016A338003AA02B /* rpbrowser */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-        527EDDD73016A338003AA02B /* rpbrowser */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            exceptions = (
-                52A2F8713031E9A400BCFEE4 /* Exceptions for "rpbrowser" folder in "rpbrowser" target */,
-                52A2F8593031512B00BCFEE4 /* Exceptions for "rpbrowser" folder in "RPBrowserWidgetExtension" target */,
-            );
-            path = rpbrowser;
-            sourceTree = "<group>";
-        };
-        53B100001234567890ABC005 /* rpbrowserTests */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            path = rpbrowserTests;
-            sourceTree = "<group>";
-        };
-        52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            exceptions = (
-                52A2F85630314CF000BCFEE4 /* Exceptions for "RPBrowserWidget" folder in "RPBrowserWidgetExtension" target */,
-            );
-            path = RPBrowserWidget;
-            sourceTree = "<group>";
-        };
+		527EDDD73016A338003AA02B /* rpbrowser */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				52A2F8713031E9A400BCFEE4 /* Exceptions for "rpbrowser" folder in "rpbrowser" target */,
+				52A2F8593031512B00BCFEE4 /* Exceptions for "rpbrowser" folder in "RPBrowserWidgetExtension" target */,
+			);
+			path = rpbrowser;
+			sourceTree = "<group>";
+		};
+		52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				52A2F85630314CF000BCFEE4 /* Exceptions for "RPBrowserWidget" folder in "RPBrowserWidgetExtension" target */,
+			);
+			path = RPBrowserWidget;
+			sourceTree = "<group>";
+		};
+		53B100001234567890ABC005 /* rpbrowserTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = rpbrowserTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        527EDDD23016A338003AA02B /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */,
-                52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */,
-                52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        53B100001234567890ABC006 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                53B100001234567890ABC001 /* XCTest.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        52A2F83F30314CEF00BCFEE4 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */,
-                52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		527EDDD23016A338003AA02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A2F83F30314CEF00BCFEE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */,
+				52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B100001234567890ABC006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B100001234567890ABC001 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        527EDDCC3016A338003AA02B = {
-            isa = PBXGroup;
-            children = (
-                52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */,
-                527EDDD73016A338003AA02B /* rpbrowser */,
-                53B100001234567890ABC005 /* rpbrowserTests */,
-                52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */,
-                52A2F84330314CEF00BCFEE4 /* Frameworks */,
-                527EDDD63016A338003AA02B /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        527EDDD63016A338003AA02B /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                527EDDD53016A338003AA02B /* rpbrowser.app */,
-                53B100001234567890ABC003 /* rpbrowserTests.xctest */,
-                52A2F84230314CEF00BCFEE4 /* Road Signs.appex */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        52A2F84330314CEF00BCFEE4 /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */,
-                52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */,
-                53B100001234567890ABC004 /* XCTest.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
+		527EDDCC3016A338003AA02B = {
+			isa = PBXGroup;
+			children = (
+				52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */,
+				527EDDD73016A338003AA02B /* rpbrowser */,
+				53B100001234567890ABC005 /* rpbrowserTests */,
+				52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */,
+				52A2F84330314CEF00BCFEE4 /* Frameworks */,
+				527EDDD63016A338003AA02B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		527EDDD63016A338003AA02B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				527EDDD53016A338003AA02B /* rpbrowser.app */,
+				53B100001234567890ABC003 /* rpbrowserTests.xctest */,
+				52A2F84230314CEF00BCFEE4 /* Road Signs.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52A2F84330314CEF00BCFEE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */,
+				52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */,
+				53B100001234567890ABC004 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        527EDDD43016A338003AA02B /* rpbrowser */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 527EDDE03016A339003AA02B /* Build configuration list for PBXNativeTarget "rpbrowser" */;
-            buildPhases = (
-                527EDDD13016A338003AA02B /* Sources */,
-                527EDDD23016A338003AA02B /* Frameworks */,
-                527EDDD33016A338003AA02B /* Resources */,
-                52A2F85330314CF000BCFEE4 /* Embed Foundation Extensions */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                52A2F85130314CF000BCFEE4 /* PBXTargetDependency */,
-            );
-            fileSystemSynchronizedGroups = (
-                527EDDD73016A338003AA02B /* rpbrowser */,
-            );
-            name = rpbrowser;
-            packageProductDependencies = (
-                52BE8BDC303DC01B00B63832 /* MapLibre */,
-                52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */,
-                52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */,
-            );
-            productName = rpbrowser;
-            productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
-            productType = "com.apple.product-type.application";
-        };
-        53B100001234567890ABC007 /* rpbrowserTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */;
-            buildPhases = (
-                53B100001234567890ABC009 /* Sources */,
-                53B100001234567890ABC006 /* Frameworks */,
-                53B100001234567890ABC008 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                53B100001234567890ABC00A /* PBXTargetDependency */,
-            );
-            fileSystemSynchronizedGroups = (
-                53B100001234567890ABC005 /* rpbrowserTests */,
-            );
-            name = rpbrowserTests;
-            packageProductDependencies = (
-            );
-            productName = rpbrowserTests;
-            productReference = 53B100001234567890ABC003 /* rpbrowserTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 52A2F85730314CF000BCFEE4 /* Build configuration list for PBXNativeTarget "RPBrowserWidgetExtension" */;
-            buildPhases = (
-                52A2F83E30314CEF00BCFEE4 /* Sources */,
-                52A2F83F30314CEF00BCFEE4 /* Frameworks */,
-                52A2F84030314CEF00BCFEE4 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            fileSystemSynchronizedGroups = (
-                52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */,
-            );
-            name = RPBrowserWidgetExtension;
-            packageProductDependencies = (
-            );
-            productName = RPBrowserWidgetExtension;
-            productReference = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */;
-            productType = "com.apple.product-type.app-extension";
-        };
+		527EDDD43016A338003AA02B /* rpbrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 527EDDE03016A339003AA02B /* Build configuration list for PBXNativeTarget "rpbrowser" */;
+			buildPhases = (
+				527EDDD13016A338003AA02B /* Sources */,
+				527EDDD23016A338003AA02B /* Frameworks */,
+				527EDDD33016A338003AA02B /* Resources */,
+				52A2F85330314CF000BCFEE4 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A2F85130314CF000BCFEE4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				527EDDD73016A338003AA02B /* rpbrowser */,
+			);
+			name = rpbrowser;
+			packageProductDependencies = (
+				52BE8BDC303DC01B00B63832 /* MapLibre */,
+			);
+			productName = rpbrowser;
+			productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A2F85730314CF000BCFEE4 /* Build configuration list for PBXNativeTarget "RPBrowserWidgetExtension" */;
+			buildPhases = (
+				52A2F83E30314CEF00BCFEE4 /* Sources */,
+				52A2F83F30314CEF00BCFEE4 /* Frameworks */,
+				52A2F84030314CEF00BCFEE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */,
+			);
+			name = RPBrowserWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RPBrowserWidgetExtension;
+			productReference = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		53B100001234567890ABC007 /* rpbrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */;
+			buildPhases = (
+				53B100001234567890ABC009 /* Sources */,
+				53B100001234567890ABC006 /* Frameworks */,
+				53B100001234567890ABC008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53B100001234567890ABC00A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				53B100001234567890ABC005 /* rpbrowserTests */,
+			);
+			name = rpbrowserTests;
+			packageProductDependencies = (
+			);
+			productName = rpbrowserTests;
+			productReference = 53B100001234567890ABC003 /* rpbrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        527EDDCD3016A338003AA02B /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                BuildIndependentTargetsInParallel = 1;
-                LastSwiftUpdateCheck = 2660;
-                LastUpgradeCheck = 2660;
-                TargetAttributes = {
-                    527EDDD43016A338003AA02B = {
-                        CreatedOnToolsVersion = 26.6;
-                    };
-                    53B100001234567890ABC007 = {
-                        CreatedOnToolsVersion = 26.6;
-                        TestTargetID = 527EDDD43016A338003AA02B;
-                    };
-                    52A2F84130314CEF00BCFEE4 = {
-                        CreatedOnToolsVersion = 26.6;
-                    };
-                };
-            };
-            buildConfigurationList = 527EDDD03016A338003AA02B /* Build configuration list for PBXProject "rpbrowser" */;
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 527EDDCC3016A338003AA02B;
-            minimizedProjectReferenceProxies = 1;
-            packageReferences = (
-                52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
-                52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */,
-                52BE8D1A30411CAD00B63832 /* XCRemoteSwiftPackageReference "Zoomable" */,
-            );
-            preferredProjectObjectVersion = 77;
-            productRefGroup = 527EDDD63016A338003AA02B /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                527EDDD43016A338003AA02B /* rpbrowser */,
-                53B100001234567890ABC007 /* rpbrowserTests */,
-                52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */,
-            );
-        };
+		527EDDCD3016A338003AA02B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					527EDDD43016A338003AA02B = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					52A2F84130314CEF00BCFEE4 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					53B100001234567890ABC007 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 527EDDD43016A338003AA02B;
+					};
+				};
+			};
+			buildConfigurationList = 527EDDD03016A338003AA02B /* Build configuration list for PBXProject "rpbrowser" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 527EDDCC3016A338003AA02B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				527EDDD43016A338003AA02B /* rpbrowser */,
+				53B100001234567890ABC007 /* rpbrowserTests */,
+				52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        527EDDD33016A338003AA02B /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        53B100001234567890ABC008 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        52A2F84030314CEF00BCFEE4 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		527EDDD33016A338003AA02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A2F84030314CEF00BCFEE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B100001234567890ABC008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        527EDDD13016A338003AA02B /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        53B100001234567890ABC009 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        52A2F83E30314CEF00BCFEE4 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		527EDDD13016A338003AA02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A2F83E30314CEF00BCFEE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53B100001234567890ABC009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        53B100001234567890ABC00A /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 527EDDD43016A338003AA02B /* rpbrowser */;
-            targetProxy = 53B100001234567890ABC002 /* PBXContainerItemProxy */;
-        };
-        52A2F85130314CF000BCFEE4 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
-            targetProxy = 52A2F85030314CF000BCFEE4 /* PBXContainerItemProxy */;
-        };
+		52A2F85130314CF000BCFEE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
+			targetProxy = 52A2F85030314CF000BCFEE4 /* PBXContainerItemProxy */;
+		};
+		53B100001234567890ABC00A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 527EDDD43016A338003AA02B /* rpbrowser */;
+			targetProxy = 53B100001234567890ABC002 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-        527EDDDE3016A339003AA02B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                ENABLE_USER_SCRIPT_SANDBOXING = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu17;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                PRODUCT_NAME = "Road Signs";
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        527EDDDF3016A339003AA02B /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_USER_SCRIPT_SANDBOXING = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu17;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                PRODUCT_NAME = "Road Signs";
-                SWIFT_COMPILATION_MODE = wholemodule;
-            };
-            name = Release;
-        };
-        527EDDE13016A339003AA02B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = RPBrowserIcon;
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_ASSET_PATHS = "rpbrowser/Preview\\ Assets rpbrowser/Preview\\ Assets/SampleData.json";
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                ENABLE_APP_SANDBOX = YES;
-                ENABLE_PREVIEWS = YES;
-                ENABLE_USER_SELECTED_FILES = readonly;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = rpbrowser/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
-                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-                INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
-                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-                "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-                "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-                "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
-                "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-                "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-                INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-                "LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-                MACOSX_DEPLOYMENT_TARGET = 26.5;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                REGISTER_APP_GROUPS = YES;
-                SDKROOT = iphoneos;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-                SUPPORTS_MACCATALYST = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_STRICT_CONCURRENCY = targeted;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 6.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                XROS_DEPLOYMENT_TARGET = 26.5;
-            };
-            name = Debug;
-        };
-        527EDDE23016A339003AA02B /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = RPBrowserIcon;
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_ASSET_PATHS = "rpbrowser/Preview\\ Assets rpbrowser/Preview\\ Assets/SampleData.json";
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                ENABLE_APP_SANDBOX = YES;
-                ENABLE_PREVIEWS = YES;
-                ENABLE_USER_SELECTED_FILES = readonly;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = rpbrowser/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
-                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
-                INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
-                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-                "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-                "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-                "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-                "INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-                INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
-                "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-                "INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-                INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-                "LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-                MACOSX_DEPLOYMENT_TARGET = 26.5;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                REGISTER_APP_GROUPS = YES;
-                SDKROOT = iphoneos;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-                SUPPORTS_MACCATALYST = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_STRICT_CONCURRENCY = targeted;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 6.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                XROS_DEPLOYMENT_TARGET = 26.5;
-            };
-            name = Release;
-        };
-        52A2F85430314CF000BCFEE4 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = RPBrowserWidget/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
-                INFOPLIST_KEY_LSApplicationCategoryType = "";
-                INFOPLIST_KEY_NSHumanReadableCopyright = "";
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@executable_path/../../Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
-                PRODUCT_NAME = "Road Signs";
-                SDKROOT = iphoneos;
-                SKIP_INSTALL = YES;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        52A2F85530314CF000BCFEE4 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = RPBrowserWidget/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
-                INFOPLIST_KEY_LSApplicationCategoryType = "";
-                INFOPLIST_KEY_NSHumanReadableCopyright = "";
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@executable_path/../../Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
-                PRODUCT_NAME = "Road Signs";
-                SDKROOT = iphoneos;
-                SKIP_INSTALL = YES;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        53B100001234567890ABC00B /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                GENERATE_INFOPLIST_FILE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SDKROOT = iphoneos;
-                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-                SWIFT_VERSION = 6.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
-            };
-            name = Debug;
-        };
-        53B100001234567890ABC00C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = KJ5EK7M4FC;
-                GENERATE_INFOPLIST_FILE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.5;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SDKROOT = iphoneos;
-                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-                SWIFT_VERSION = 6.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
+		527EDDDE3016A339003AA02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Road Signs";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		527EDDDF3016A339003AA02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Road Signs";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		527EDDE13016A339003AA02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = RPBrowserIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "rpbrowser/Preview\\ Assets rpbrowser/Preview\\ Assets/SampleData.json";
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rpbrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		527EDDE23016A339003AA02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = RPBrowserIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "rpbrowser/Preview\\ Assets rpbrowser/Preview\\ Assets/SampleData.json";
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rpbrowser/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Needs Your Location Data To Query For Signs Near Your Location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		52A2F85430314CF000BCFEE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RPBrowserWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
+				PRODUCT_NAME = "Road Signs";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52A2F85530314CF000BCFEE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RPBrowserWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Road Signs";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowser.RPBrowserWidget;
+				PRODUCT_NAME = "Road Signs";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53B100001234567890ABC00B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
+			};
+			name = Debug;
+		};
+		53B100001234567890ABC00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        527EDDD03016A338003AA02B /* Build configuration list for PBXProject "rpbrowser" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                527EDDDE3016A339003AA02B /* Debug */,
-                527EDDDF3016A339003AA02B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        527EDDE03016A339003AA02B /* Build configuration list for PBXNativeTarget "rpbrowser" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                527EDDE13016A339003AA02B /* Debug */,
-                527EDDE23016A339003AA02B /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                53B100001234567890ABC00B /* Debug */,
-                53B100001234567890ABC00C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        52A2F85730314CF000BCFEE4 /* Build configuration list for PBXNativeTarget "RPBrowserWidgetExtension" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                52A2F85430314CF000BCFEE4 /* Debug */,
-                52A2F85530314CF000BCFEE4 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		527EDDD03016A338003AA02B /* Build configuration list for PBXProject "rpbrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				527EDDDE3016A339003AA02B /* Debug */,
+				527EDDDF3016A339003AA02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		527EDDE03016A339003AA02B /* Build configuration list for PBXNativeTarget "rpbrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				527EDDE13016A339003AA02B /* Debug */,
+				527EDDE23016A339003AA02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A2F85730314CF000BCFEE4 /* Build configuration list for PBXNativeTarget "RPBrowserWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A2F85430314CF000BCFEE4 /* Debug */,
+				52A2F85530314CF000BCFEE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B100001234567890ABC00B /* Debug */,
+				53B100001234567890ABC00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 6.29.0;
-            };
-        };
-        52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/maplibre/swiftui-dsl";
-            requirement = {
-                branch = main;
-                kind = branch;
-            };
-        };
-        52BE8D1A30411CAD00B63832 /* XCRemoteSwiftPackageReference "Zoomable" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/ryohey/Zoomable.git";
-            requirement = {
-                branch = main;
-                kind = branch;
-            };
-        };
+		52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.29.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        52BE8BDC303DC01B00B63832 /* MapLibre */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
-            productName = MapLibre;
-        };
-        52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
-            productName = MapLibreSwiftDSL;
-        };
-        52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
-            productName = MapLibreSwiftUI;
-        };
+		52BE8BDC303DC01B00B63832 /* MapLibre */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibre;
+		};
 /* End XCSwiftPackageProductDependency section */
-    };
-    rootObject = 527EDDCD3016A338003AA02B /* Project object */;
+	};
+	rootObject = 527EDDCD3016A338003AA02B /* Project object */;
 }
