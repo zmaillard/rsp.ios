@@ -16,6 +16,10 @@ jobs:
         with:
           xcode-version: '26.6'
 
+      - name: Create APIKey.xcconfig
+        run: |
+          echo "SEARCH_API_KEY = ${{ secrets.SEARCH_API_KEY }}" > APIKey.xcconfig
+
       - name: Build and Test
         run: |
           xcodebuild clean build test \
