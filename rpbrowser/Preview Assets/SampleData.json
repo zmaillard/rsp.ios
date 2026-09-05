@@ -1,253 +1,562 @@
 {
+    "subdivision": {
+        "imageCount": 4,
+        "name": "Improvement District No. 4",
+        "signs": [
+            {
+                "image":
+                    "https://sign.roadsign.pictures/4927305924820484538/4927305924820484538_m.jpg",
+                "imageid": "4927305924820484538",
+                "title": "AB-6 South - Border Crossing Information",
+                "url":
+                    "https://roadsign.pictures/sign/4927305924820484538/index.json"
+            },
+            {
+                "image":
+                    "https://sign.roadsign.pictures/4927305892074951491/4927305892074951491_m.jpg",
+                "imageid": "4927305892074951491",
+                "title": "AB-6 North at AB-5 - Waterton National Park",
+                "url":
+                    "https://roadsign.pictures/sign/4927305892074951491/index.json"
+            },
+            {
+                "image":
+                    "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844_m.jpg",
+                "imageid": "4927305864119930844",
+                "title": "AB-5 North/AB-6 South at AB-5/AB-6 Split",
+                "url":
+                    "https://roadsign.pictures/sign/4927305864119930844/index.json"
+            },
+            {
+                "image":
+                    "https://sign.roadsign.pictures/4927305771429121875/4927305771429121875_m.jpg",
+                "imageid": "4927305771429121875",
+                "title":
+                    "AB-6 South Approaching AB-5 - Waterton Lakes National Park",
+                "url":
+                    "https://roadsign.pictures/sign/4927305771429121875/index.json"
+            }
+        ],
+        "slug": "improvement-district-no-4",
+        "stateSlug": "alberta"
+    },
     "signDetail": {
-        "date": "2016-07-17T15:10:39Z",
+        "country": {
+            "imageCount": 537,
+            "name": "Canada",
+            "slug": "canada",
+            "subdivisionName": "Province",
+            "url": "https://roadsign.pictures/country/canada/index.json"
+        },
+        "date": "2018-08-10T12:58:17Z",
         "description":
-            "\u003cp\u003eFirst AK-9 shield northbound along 3rd Ave. in Seward.  Speed limit 25 MPH.\u003c/p\u003e\n",
+            "\u003cp\u003eAB-5 North/AB-6 South at AB-5/AB-6 split in Waterton Park.  Turn right for AB-6 south; continue straight for AB-5 north.\u003c/p\u003e\n",
         "hasProcessed": false,
         "highways": [
             {
-                "imageName": "AK-9.png",
-                "name": "AK-9",
-                "slug": "ak9",
-                "url": "https://roadsign.pictures/highway/ak9/index.json"
-            }
-        ],
-        "image": {
-            "large":
-                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_l.jpg",
-            "medium":
-                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_m.jpg",
-            "original":
-                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463.jpg",
-            "small":
-                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_s.jpg",
-            "thumbnail":
-                "https://sign.roadsign.pictures/4384734159547601463/4384734159547601463_t.jpg"
-        },
-        "imageid": "4384734159547601463",
-        "latitude": 60.1008027777778,
-        "longitude": -149.441955555556,
-        "place": {
-            "name": "Seward",
-            "slug": "alaska_seward",
-            "url": "https://roadsign.pictures/place/alaska_seward/index.json"
-        },
-        "state": {
-            "name": "Alaska",
-            "slug": "alaska",
-            "url": "https://roadsign.pictures/state/alaska/index.json"
-        },
-        "stateSubdivision": {
-            "name": "Kenai Peninsula Borough",
-            "slug": "alaska_kenai-peninsula-borough",
-            "url":
-                "https://roadsign.pictures/county/alaska_kenai-peninsula-borough/index.json"
-        },
-        "title": "AK-9 North - Seward"
-    },
-    "state": {
-        "highways": [
-            {
-                "imageName": "AB-1A.png",
-                "name": "AB-1A",
-                "slug": "ab1a",
-                "url": "https://roadsign.pictures/highway/ab1a/index.json"
-            },
-            {
-                "imageName": "AB-2.png",
-                "name": "AB-2",
-                "slug": "ab2",
-                "url": "https://roadsign.pictures/highway/ab2/index.json"
-            },
-            {
-                "imageName": "AB-22.png",
-                "name": "AB-22",
-                "slug": "ab22",
-                "url": "https://roadsign.pictures/highway/ab22/index.json"
-            },
-            {
-                "imageName": "AB-22X.png",
-                "name": "AB-22X",
-                "slug": "ab22x",
-                "url": "https://roadsign.pictures/highway/ab22x/index.json"
-            },
-            {
-                "imageName": "AB-23.png",
-                "name": "AB-23",
-                "slug": "ab23",
-                "url": "https://roadsign.pictures/highway/ab23/index.json"
-            },
-            {
-                "imageName": "AB-25.png",
-                "name": "AB-25",
-                "slug": "ab25",
-                "url": "https://roadsign.pictures/highway/ab25/index.json"
-            },
-            {
-                "imageName": "AB-2A.png",
-                "name": "AB-2A",
-                "slug": "ab2a",
-                "url": "https://roadsign.pictures/highway/ab2a/index.json"
-            },
-            {
-                "imageName": "AB-3.png",
-                "name": "AB-3",
-                "slug": "ab3",
-                "url": "https://roadsign.pictures/highway/ab3/index.json"
-            },
-            {
-                "imageName": "AB-36.png",
-                "name": "AB-36",
-                "slug": "ab36",
-                "url": "https://roadsign.pictures/highway/ab36/index.json"
-            },
-            {
-                "imageName": "AB-3A.png",
-                "name": "AB-3A",
-                "slug": "ab3a",
-                "url": "https://roadsign.pictures/highway/ab3a/index.json"
-            },
-            {
-                "imageName": "AB-40.png",
-                "name": "AB-40",
-                "slug": "ab40",
-                "url": "https://roadsign.pictures/highway/ab40/index.json"
-            },
-            {
-                "imageName": "AB-41.png",
-                "name": "AB-41",
-                "slug": "ab41",
-                "url": "https://roadsign.pictures/highway/ab41/index.json"
-            },
-            {
-                "imageName": "AB-5.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_5",
                 "name": "AB-5",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-5.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-5.png"
+                },
                 "slug": "ab5",
                 "url": "https://roadsign.pictures/highway/ab5/index.json"
             },
             {
-                "imageName": "AB-501.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_6",
+                "name": "AB-6",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-6.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-6.png"
+                },
+                "slug": "ab6",
+                "url": "https://roadsign.pictures/highway/ab6/index.json"
+            }
+        ],
+        "image": {
+            "large":
+                "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844_l.jpg",
+            "medium":
+                "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844_m.jpg",
+            "original":
+                "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844.jpg",
+            "small":
+                "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844_s.jpg",
+            "thumbnail":
+                "https://sign.roadsign.pictures/4927305864119930844/4927305864119930844_t.jpg"
+        },
+        "imageid": "4927305864119930844",
+        "latitude": 49.11192593217851,
+        "longitude": -113.83206947712952,
+        "place": {
+            "imageCount": 4,
+            "name": "Waterton Park",
+            "slug": "alberta_waterton-park",
+            "url":
+                "https://roadsign.pictures/place/alberta_waterton-park/index.json"
+        },
+        "state": {
+            "imageCount": 142,
+            "name": "Alberta",
+            "slug": "alberta",
+            "url": "https://roadsign.pictures/state/alberta/index.json"
+        },
+        "stateSubdivision": {
+            "imageCount": 4,
+            "name": "Improvement District No. 4",
+            "slug": "alberta_improvement-district-no-4",
+            "url":
+                "https://roadsign.pictures/county/alberta_improvement-district-no-4/index.json"
+        },
+        "title": "AB-5 North/AB-6 South at AB-5/AB-6 Split"
+    },
+    "state": {
+        "highways": [
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_1A",
+                "name": "AB-1A",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-1A.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-1A.png"
+                },
+                "slug": "ab1a",
+                "url": "https://roadsign.pictures/highway/ab1a/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_2",
+                "name": "AB-2",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-2.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-2.png"
+                },
+                "slug": "ab2",
+                "url": "https://roadsign.pictures/highway/ab2/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_22",
+                "name": "AB-22",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-22.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-22.png"
+                },
+                "slug": "ab22",
+                "url": "https://roadsign.pictures/highway/ab22/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_22X",
+                "name": "AB-22X",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-22X.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-22X.png"
+                },
+                "slug": "ab22x",
+                "url": "https://roadsign.pictures/highway/ab22x/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_23",
+                "name": "AB-23",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-23.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-23.png"
+                },
+                "slug": "ab23",
+                "url": "https://roadsign.pictures/highway/ab23/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_25",
+                "name": "AB-25",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-25.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-25.png"
+                },
+                "slug": "ab25",
+                "url": "https://roadsign.pictures/highway/ab25/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_2A",
+                "name": "AB-2A",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-2A.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-2A.png"
+                },
+                "slug": "ab2a",
+                "url": "https://roadsign.pictures/highway/ab2a/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_3",
+                "name": "AB-3",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-3.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-3.png"
+                },
+                "slug": "ab3",
+                "url": "https://roadsign.pictures/highway/ab3/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_36",
+                "name": "AB-36",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-36.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-36.png"
+                },
+                "slug": "ab36",
+                "url": "https://roadsign.pictures/highway/ab36/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_3A",
+                "name": "AB-3A",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-3A.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-3A.png"
+                },
+                "slug": "ab3a",
+                "url": "https://roadsign.pictures/highway/ab3a/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_40",
+                "name": "AB-40",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-40.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-40.png"
+                },
+                "slug": "ab40",
+                "url": "https://roadsign.pictures/highway/ab40/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_41",
+                "name": "AB-41",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-41.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-41.png"
+                },
+                "slug": "ab41",
+                "url": "https://roadsign.pictures/highway/ab41/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_5",
+                "name": "AB-5",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-5.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-5.png"
+                },
+                "slug": "ab5",
+                "url": "https://roadsign.pictures/highway/ab5/index.json"
+            },
+            {
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_501",
                 "name": "AB-501",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-501.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-501.png"
+                },
                 "slug": "ab501",
                 "url": "https://roadsign.pictures/highway/ab501/index.json"
             },
             {
-                "imageName": "AB-505.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#505",
                 "name": "AB-505",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-505.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-505.png"
+                },
                 "slug": "ab505",
                 "url": "https://roadsign.pictures/highway/ab505/index.json"
             },
             {
-                "imageName": "AB-506.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#506",
                 "name": "AB-506",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-506.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-506.png"
+                },
                 "slug": "ab506",
                 "url": "https://roadsign.pictures/highway/ab506/index.json"
             },
             {
-                "imageName": "AB-507.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#507",
                 "name": "AB-507",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-507.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-507.png"
+                },
                 "slug": "ab507",
                 "url": "https://roadsign.pictures/highway/ab507/index.json"
             },
             {
-                "imageName": "AB-509.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#509",
                 "name": "AB-509",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-509.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-509.png"
+                },
                 "slug": "ab509",
                 "url": "https://roadsign.pictures/highway/ab509/index.json"
             },
             {
-                "imageName": "AB-52.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_52",
                 "name": "AB-52",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-52.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-52.png"
+                },
                 "slug": "ab52",
                 "url": "https://roadsign.pictures/highway/ab52/index.json"
             },
             {
-                "imageName": "AB-522.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#522",
                 "name": "AB-522",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-522.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-522.png"
+                },
                 "slug": "ab522",
                 "url": "https://roadsign.pictures/highway/ab522/index.json"
             },
             {
-                "imageName": "AB-550.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_550",
                 "name": "AB-550",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-550.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-550.png"
+                },
                 "slug": "ab550",
                 "url": "https://roadsign.pictures/highway/ab550/index.json"
             },
             {
-                "imageName": "AB-561.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#561",
                 "name": "AB-561",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-561.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-561.png"
+                },
                 "slug": "ab561",
                 "url": "https://roadsign.pictures/highway/ab561/index.json"
             },
             {
-                "imageName": "AB-563.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_563",
                 "name": "AB-563",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-563.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-563.png"
+                },
                 "slug": "ab563",
                 "url": "https://roadsign.pictures/highway/ab563/index.json"
             },
             {
-                "imageName": "AB-6.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_6",
                 "name": "AB-6",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-6.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-6.png"
+                },
                 "slug": "ab6",
                 "url": "https://roadsign.pictures/highway/ab6/index.json"
             },
             {
-                "imageName": "AB-62.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_62",
                 "name": "AB-62",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-62.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-62.png"
+                },
                 "slug": "ab62",
                 "url": "https://roadsign.pictures/highway/ab62/index.json"
             },
             {
-                "imageName": "AB-68.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_68",
                 "name": "AB-68",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-68.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-68.png"
+                },
                 "slug": "ab68",
                 "url": "https://roadsign.pictures/highway/ab68/index.json"
             },
             {
-                "imageName": "AB-785.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#785",
                 "name": "AB-785",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-785.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-785.png"
+                },
                 "slug": "ab785",
                 "url": "https://roadsign.pictures/highway/ab785/index.json"
             },
             {
-                "imageName": "AB-786.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#786",
                 "name": "AB-786",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-786.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-786.png"
+                },
                 "slug": "ab786",
                 "url": "https://roadsign.pictures/highway/ab786/index.json"
             },
             {
-                "imageName": "AB-811.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#811",
                 "name": "AB-811",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-811.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-811.png"
+                },
                 "slug": "ab811",
                 "url": "https://roadsign.pictures/highway/ab811/index.json"
             },
             {
-                "imageName": "AB-817.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/List_of_Alberta_provincial_highways#817",
                 "name": "AB-817",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-817.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-817.png"
+                },
                 "slug": "ab817",
                 "url": "https://roadsign.pictures/highway/ab817/index.json"
             },
             {
-                "imageName": "AB-873.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_873",
                 "name": "AB-873",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-873.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-873.png"
+                },
                 "slug": "ab873",
                 "url": "https://roadsign.pictures/highway/ab873/index.json"
             },
             {
-                "imageName": "AB-93.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/Alberta_Highway_93",
                 "name": "AB-93",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/AB-93.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/AB-93.png"
+                },
                 "slug": "ab93",
                 "url": "https://roadsign.pictures/highway/ab93/index.json"
             },
             {
-                "imageName": "BC-3.png",
+                "externalLink":
+                    "https://en.wikipedia.org/wiki/British_Columbia_Highway_3",
                 "name": "BC-3",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/BC-3.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/BC-3.png"
+                },
                 "slug": "bc3",
                 "url": "https://roadsign.pictures/highway/bc3/index.json"
             },
             {
-                "imageName": "TC-1.png",
+                "externalLink": null,
                 "name": "TC-1",
+                "shield": {
+                    "large":
+                        "https://shield.roadsign.pictures/Shields/TC-1.png",
+                    "small":
+                        "https://shield.roadsign.pictures/Shields/20x/TC-1.png"
+                },
                 "slug": "tc1",
                 "url": "https://roadsign.pictures/highway/tc1/index.json"
             }
@@ -256,329 +565,527 @@
         "name": "Alberta",
         "places": [
             {
+                "imageCount": 2,
                 "name": "Bragg Creek",
-                "slug": "bragg-creek",
+                "slug": "alberta_bragg-creek",
                 "url":
                     "https://roadsign.pictures/place/alberta_bragg-creek/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "High River",
-                "slug": "high-river",
+                "slug": "alberta_high-river",
                 "url":
                     "https://roadsign.pictures/place/alberta_high-river/index.json"
             },
             {
+                "imageCount": 17,
                 "name": "Calgary",
-                "slug": "calgary",
+                "slug": "alberta_calgary",
                 "url":
                     "https://roadsign.pictures/place/alberta_calgary/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Cardston",
-                "slug": "cardston",
+                "slug": "alberta_cardston",
                 "url":
                     "https://roadsign.pictures/place/alberta_cardston/index.json"
             },
             {
+                "imageCount": 5,
                 "name": "Magrath",
-                "slug": "magrath",
+                "slug": "alberta_magrath",
                 "url":
                     "https://roadsign.pictures/place/alberta_magrath/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Onefour",
-                "slug": "onefour",
+                "slug": "alberta_onefour",
                 "url":
                     "https://roadsign.pictures/place/alberta_onefour/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Chestermere",
-                "slug": "chestermere",
+                "slug": "alberta_chestermere",
                 "url":
                     "https://roadsign.pictures/place/alberta_chestermere/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Standard",
-                "slug": "standard",
+                "slug": "alberta_standard",
                 "url":
                     "https://roadsign.pictures/place/alberta_standard/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Cluny",
-                "slug": "cluny",
+                "slug": "alberta_cluny",
                 "url":
                     "https://roadsign.pictures/place/alberta_cluny/index.json"
             },
             {
+                "imageCount": 6,
                 "name": "Lethbridge",
-                "slug": "lethbridge",
+                "slug": "alberta_lethbridge",
                 "url":
                     "https://roadsign.pictures/place/alberta_lethbridge/index.json"
             },
             {
+                "imageCount": 13,
                 "name": "Pincher Creek",
-                "slug": "pincher-creek",
+                "slug": "alberta_pincher-creek",
                 "url":
                     "https://roadsign.pictures/place/alberta_pincher-creek/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Lundbreck",
-                "slug": "lundbreck",
+                "slug": "alberta_lundbreck",
                 "url":
                     "https://roadsign.pictures/place/alberta_lundbreck/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Brocket",
-                "slug": "brocket",
+                "slug": "alberta_brocket",
                 "url":
                     "https://roadsign.pictures/place/alberta_brocket/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Seebe",
-                "slug": "seebe",
+                "slug": "alberta_seebe",
                 "url":
                     "https://roadsign.pictures/place/alberta_seebe/index.json"
             },
             {
+                "imageCount": 4,
                 "name": "Waterton Park",
-                "slug": "waterton-park",
+                "slug": "alberta_waterton-park",
                 "url":
                     "https://roadsign.pictures/place/alberta_waterton-park/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Strathmore",
-                "slug": "strathmore",
+                "slug": "alberta_strathmore",
                 "url":
                     "https://roadsign.pictures/place/alberta_strathmore/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Frank",
-                "slug": "frank",
+                "slug": "alberta_frank",
                 "url":
                     "https://roadsign.pictures/place/alberta_frank/index.json"
             },
             {
+                "imageCount": 4,
                 "name": "Crowsnest",
-                "slug": "crowsnest",
+                "slug": "alberta_crowsnest",
                 "url":
                     "https://roadsign.pictures/place/alberta_crowsnest/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Welling",
-                "slug": "welling",
+                "slug": "alberta_welling",
                 "url":
                     "https://roadsign.pictures/place/alberta_welling/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Medicine Hat",
-                "slug": "medicine-hat",
+                "slug": "alberta_medicine-hat",
                 "url":
                     "https://roadsign.pictures/place/alberta_medicine-hat/index.json"
             },
             {
+                "imageCount": 5,
                 "name": "Monarch",
-                "slug": "monarch",
+                "slug": "alberta_monarch",
                 "url":
                     "https://roadsign.pictures/place/alberta_monarch/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Lake Louise",
-                "slug": "lake-louise",
+                "slug": "alberta_lake-louise",
                 "url":
                     "https://roadsign.pictures/place/alberta_lake-louise/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Del Bonita",
-                "slug": "del-bonita",
+                "slug": "alberta_del-bonita",
                 "url":
                     "https://roadsign.pictures/place/alberta_del-bonita/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Castle Junction",
-                "slug": "castle-junction",
+                "slug": "alberta_castle-junction",
                 "url":
                     "https://roadsign.pictures/place/alberta_castle-junction/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Sawback",
-                "slug": "sawback",
+                "slug": "alberta_sawback",
                 "url":
                     "https://roadsign.pictures/place/alberta_sawback/index.json"
             },
             {
+                "imageCount": 16,
                 "name": "Fort Macleod",
-                "slug": "fort-macleod",
+                "slug": "alberta_fort-macleod",
                 "url":
                     "https://roadsign.pictures/place/alberta_fort-macleod/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Irvine",
-                "slug": "irvine",
+                "slug": "alberta_irvine",
                 "url":
                     "https://roadsign.pictures/place/alberta_irvine/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Duchess",
-                "slug": "duchess",
+                "slug": "alberta_duchess",
                 "url":
                     "https://roadsign.pictures/place/alberta_duchess/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Brooks",
-                "slug": "brooks",
+                "slug": "alberta_brooks",
                 "url":
                     "https://roadsign.pictures/place/alberta_brooks/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Dead Man's Flats",
-                "slug": "dead-mans-flats",
+                "slug": "alberta_dead-mans-flats",
                 "url":
                     "https://roadsign.pictures/place/alberta_dead-mans-flats/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Cochrane",
-                "slug": "cochrane",
+                "slug": "alberta_cochrane",
                 "url":
                     "https://roadsign.pictures/place/alberta_cochrane/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Bassano",
-                "slug": "bassano",
+                "slug": "alberta_bassano",
                 "url":
                     "https://roadsign.pictures/place/alberta_bassano/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Cressday",
-                "slug": "cressday",
+                "slug": "alberta_cressday",
                 "url":
                     "https://roadsign.pictures/place/alberta_cressday/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Pecten",
-                "slug": "pecten",
+                "slug": "alberta_pecten",
                 "url":
                     "https://roadsign.pictures/place/alberta_pecten/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Pincher Station",
-                "slug": "pincher-station",
+                "slug": "alberta_pincher-station",
                 "url":
                     "https://roadsign.pictures/place/alberta_pincher-station/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Morley",
-                "slug": "morley",
+                "slug": "alberta_morley",
                 "url":
                     "https://roadsign.pictures/place/alberta_morley/index.json"
             },
             {
+                "imageCount": 1,
                 "name": "Stand Off",
-                "slug": "stand-off",
+                "slug": "alberta_stand-off",
                 "url":
                     "https://roadsign.pictures/place/alberta_stand-off/index.json"
             },
             {
+                "imageCount": 6,
                 "name": "Canmore",
-                "slug": "canmore",
+                "slug": "alberta_canmore",
                 "url":
                     "https://roadsign.pictures/place/alberta_canmore/index.json"
             },
             {
+                "imageCount": 3,
                 "name": "Banff",
-                "slug": "banff",
+                "slug": "alberta_banff",
                 "url":
                     "https://roadsign.pictures/place/alberta_banff/index.json"
             },
             {
+                "imageCount": 4,
                 "name": "Bellevue",
-                "slug": "bellevue",
+                "slug": "alberta_bellevue",
                 "url":
                     "https://roadsign.pictures/place/alberta_bellevue/index.json"
             }
         ],
+        "signs": [
+            "4927305924820484538",
+            "4927305892074951491",
+            "4927305864119930844",
+            "4927305771429121875",
+            "4927305742785483978",
+            "4927305711116712572",
+            "4927305680549822323",
+            "4927305648455423819",
+            "4927305620205820283",
+            "4927305589131339750",
+            "4927305560728471043",
+            "4927305523454276566",
+            "4927305493908000906",
+            "4927305464074316310",
+            "4927305435933558034",
+            "4927305409180236912",
+            "4927305378592034043",
+            "4927305322008857665",
+            "4927305289242711397",
+            "4927305233197350944",
+            "4927305200234250590",
+            "4927305168009243668",
+            "4927305136411504787",
+            "4927305110228466444",
+            "4927305080850272253",
+            "932833678",
+            "932830258",
+            "932826778",
+            "932823904",
+            "932820728",
+            "932817378",
+            "932837362",
+            "931962833",
+            "931959207",
+            "932806892",
+            "932803888",
+            "932800088",
+            "932796478",
+            "932793256",
+            "931938543",
+            "931931959",
+            "931935173",
+            "931928749",
+            "932776664",
+            "931922141",
+            "932770296",
+            "932766950",
+            "932760250",
+            "932763732",
+            "931905313",
+            "932753756",
+            "931898535",
+            "1142088089",
+            "1142106307",
+            "1142105141",
+            "1142070683",
+            "1142914488",
+            "1142946544",
+            "1142074215",
+            "1142082381",
+            "1142918898",
+            "1142923800",
+            "1142929380",
+            "1142927674",
+            "1142045849",
+            "1142068329",
+            "1142037195",
+            "1142069421",
+            "1142910080",
+            "1142078411",
+            "1142919742",
+            "1142030081",
+            "1142877046",
+            "1142035721",
+            "1142075469",
+            "1142915500",
+            "1142079901",
+            "1142880972",
+            "1142083817",
+            "1142048347",
+            "1142049545",
+            "1142893146",
+            "1142052211",
+            "1142895748",
+            "1142896894",
+            "1142057937",
+            "1142055515",
+            "1142901474",
+            "1142902734",
+            "1142039679",
+            "1142883372",
+            "1142884502",
+            "1142044663",
+            "1142899122",
+            "1142066061",
+            "1142063989",
+            "1142064867",
+            "1142061623",
+            "1142062851",
+            "1142047095",
+            "1142117505",
+            "1142875810",
+            "1142031605",
+            "1142886002",
+            "1142871414",
+            "3486795827",
+            "1153862148",
+            "1153863302",
+            "1153010137",
+            "1153880394",
+            "1153877626",
+            "1153849180",
+            "1153021009",
+            "1153865658",
+            "1153867176",
+            "1153846060",
+            "1153847658",
+            "1153006067",
+            "1153008613",
+            "1153854638",
+            "1153873748",
+            "1153003475",
+            "1153851782",
+            "1153016847",
+            "1153858696",
+            "1152994807",
+            "1153869694",
+            "1152959449",
+            "1152953979",
+            "1152955391",
+            "1152956735",
+            "1152996587",
+            "1153844772",
+            "1153023815",
+            "1153024939",
+            "1152993601",
+            "1152957965",
+            "1153874980",
+            "1153859986",
+            "1153878818",
+            "1153028621",
+            "1153776780"
+        ],
         "slug": "alberta",
         "stateSubdivisions": [
             {
+                "imageCount": 4,
                 "name": "Foothills County",
-                "slug": "foothills-county",
+                "slug": "alberta_foothills-county",
                 "url":
                     "https://roadsign.pictures/county/alberta_foothills-county/index.json"
             },
             {
+                "imageCount": 4,
                 "name": "Wheatland County",
-                "slug": "wheatland-county",
+                "slug": "alberta_wheatland-county",
                 "url":
                     "https://roadsign.pictures/county/alberta_wheatland-county/index.json"
             },
             {
+                "imageCount": 8,
                 "name": "Cypress County",
-                "slug": "cypress-county",
+                "slug": "alberta_cypress-county",
                 "url":
                     "https://roadsign.pictures/county/alberta_cypress-county/index.json"
             },
             {
+                "imageCount": 7,
                 "name": "Newell County No. 4",
-                "slug": "newell-county-no-4",
+                "slug": "alberta_newell-county-no-4",
                 "url":
                     "https://roadsign.pictures/county/alberta_newell-county-no-4/index.json"
             },
             {
+                "imageCount": 18,
                 "name": "Willow Creek No. 26",
-                "slug": "willow-creek-no-26",
+                "slug": "alberta_willow-creek-no-26",
                 "url":
                     "https://roadsign.pictures/county/alberta_willow-creek-no-26/index.json"
             },
             {
+                "imageCount": 22,
                 "name": "Pincher Creek No. 9",
-                "slug": "pincher-creek-no-9",
+                "slug": "alberta_pincher-creek-no-9",
                 "url":
                     "https://roadsign.pictures/county/alberta_pincher-creek-no-9/index.json"
             },
             {
+                "imageCount": 6,
                 "name": "Rocky View",
-                "slug": "rocky-view",
+                "slug": "alberta_rocky-view",
                 "url":
                     "https://roadsign.pictures/county/alberta_rocky-view/index.json"
             },
             {
+                "imageCount": 9,
                 "name": "Crowsnest Pass",
-                "slug": "crowsnest-pass",
+                "slug": "alberta_crowsnest-pass",
                 "url":
                     "https://roadsign.pictures/county/alberta_crowsnest-pass/index.json"
             },
             {
+                "imageCount": 12,
                 "name": "Cardston County",
-                "slug": "cardston-county",
+                "slug": "alberta_cardston-county",
                 "url":
                     "https://roadsign.pictures/county/alberta_cardston-county/index.json"
             },
             {
+                "imageCount": 12,
                 "name": "Improvement District No. 9",
-                "slug": "improvement-district-no-9",
+                "slug": "alberta_improvement-district-no-9",
                 "url":
                     "https://roadsign.pictures/county/alberta_improvement-district-no-9/index.json"
             },
             {
+                "imageCount": 4,
                 "name": "Improvement District No. 4",
-                "slug": "improvement-district-no-4",
+                "slug": "alberta_improvement-district-no-4",
                 "url":
                     "https://roadsign.pictures/county/alberta_improvement-district-no-4/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Kananaskis",
-                "slug": "kananaskis",
+                "slug": "alberta_kananaskis",
                 "url":
                     "https://roadsign.pictures/county/alberta_kananaskis/index.json"
             },
             {
+                "imageCount": 10,
                 "name": "Lethbridge County",
-                "slug": "lethbridge-county",
+                "slug": "alberta_lethbridge-county",
                 "url":
                     "https://roadsign.pictures/county/alberta_lethbridge-county/index.json"
             },
             {
+                "imageCount": 11,
                 "name": "Bighorn No. 8",
-                "slug": "bighorn-no-8",
+                "slug": "alberta_bighorn-no-8",
                 "url":
                     "https://roadsign.pictures/county/alberta_bighorn-no-8/index.json"
             }
@@ -588,24 +1095,28 @@
     "country": {
         "highwayTypes": [
             {
+                "imageCount": 158,
                 "name": "Trans-Canada Highway",
                 "slug": "trans-canada-highway",
                 "url":
                     "https://roadsign.pictures/highwaytype/trans-canada-highway/index.json"
             },
             {
+                "imageCount": 274,
                 "name": "British Columbia Provincial Highway",
                 "slug": "british-columbia-provincial-highway",
                 "url":
                     "https://roadsign.pictures/highwaytype/british-columbia-provincial-highway/index.json"
             },
             {
+                "imageCount": 117,
                 "name": "Alberta Provincial Highway",
                 "slug": "alberta-provincial-highway",
                 "url":
                     "https://roadsign.pictures/highwaytype/alberta-provincial-highway/index.json"
             },
             {
+                "imageCount": 72,
                 "name": "Saskatchewan Provincial Highway",
                 "slug": "saskatchewan-provincial-highway",
                 "url":
@@ -617,17 +1128,20 @@
         "slug": "canada",
         "states": [
             {
+                "imageCount": 75,
                 "name": "Saskatchewan",
                 "slug": "saskatchewan",
                 "url": "https://roadsign.pictures/state/saskatchewan/index.json"
             },
             {
+                "imageCount": 320,
                 "name": "British Columbia",
                 "slug": "british-columbia",
                 "url":
                     "https://roadsign.pictures/state/british-columbia/index.json"
             },
             {
+                "imageCount": 142,
                 "name": "Alberta",
                 "slug": "alberta",
                 "url": "https://roadsign.pictures/state/alberta/index.json"
@@ -638,24 +1152,415 @@
     "root": {
         "countries": [
             {
+                "imageCount": 18545,
                 "name": "United States",
                 "slug": "united-states",
+                "states": [
+                    {
+                        "imageCount": 42,
+                        "name": "Minnesota",
+                        "slug": "minnesota",
+                        "url":
+                            "https://roadsign.pictures/state/minnesota/index.json"
+                    },
+                    {
+                        "imageCount": 1279,
+                        "name": "Montana",
+                        "slug": "montana",
+                        "url":
+                            "https://roadsign.pictures/state/montana/index.json"
+                    },
+                    {
+                        "imageCount": 837,
+                        "name": "New Mexico",
+                        "slug": "new-mexico",
+                        "url":
+                            "https://roadsign.pictures/state/new-mexico/index.json"
+                    },
+                    {
+                        "imageCount": 7,
+                        "name": "Vermont",
+                        "slug": "vermont",
+                        "url":
+                            "https://roadsign.pictures/state/vermont/index.json"
+                    },
+                    {
+                        "imageCount": 1857,
+                        "name": "Utah",
+                        "slug": "utah",
+                        "url": "https://roadsign.pictures/state/utah/index.json"
+                    },
+                    {
+                        "imageCount": 11,
+                        "name": "Florida",
+                        "slug": "florida",
+                        "url":
+                            "https://roadsign.pictures/state/florida/index.json"
+                    },
+                    {
+                        "imageCount": 77,
+                        "name": "Kansas",
+                        "slug": "kansas",
+                        "url":
+                            "https://roadsign.pictures/state/kansas/index.json"
+                    },
+                    {
+                        "imageCount": 26,
+                        "name": "Maine",
+                        "slug": "maine",
+                        "url":
+                            "https://roadsign.pictures/state/maine/index.json"
+                    },
+                    {
+                        "imageCount": 61,
+                        "name": "Georgia",
+                        "slug": "georgia",
+                        "url":
+                            "https://roadsign.pictures/state/georgia/index.json"
+                    },
+                    {
+                        "imageCount": 161,
+                        "name": "Virginia",
+                        "slug": "virginia",
+                        "url":
+                            "https://roadsign.pictures/state/virginia/index.json"
+                    },
+                    {
+                        "imageCount": 1663,
+                        "name": "California",
+                        "slug": "california",
+                        "url":
+                            "https://roadsign.pictures/state/california/index.json"
+                    },
+                    {
+                        "imageCount": 256,
+                        "name": "Nebraska",
+                        "slug": "nebraska",
+                        "url":
+                            "https://roadsign.pictures/state/nebraska/index.json"
+                    },
+                    {
+                        "imageCount": 934,
+                        "name": "Colorado",
+                        "slug": "colorado",
+                        "url":
+                            "https://roadsign.pictures/state/colorado/index.json"
+                    },
+                    {
+                        "imageCount": 16,
+                        "name": "Delaware",
+                        "slug": "delaware",
+                        "url":
+                            "https://roadsign.pictures/state/delaware/index.json"
+                    },
+                    {
+                        "imageCount": 1844,
+                        "name": "Nevada",
+                        "slug": "nevada",
+                        "url":
+                            "https://roadsign.pictures/state/nevada/index.json"
+                    },
+                    {
+                        "imageCount": 62,
+                        "name": "Tennessee",
+                        "slug": "tennessee",
+                        "url":
+                            "https://roadsign.pictures/state/tennessee/index.json"
+                    },
+                    {
+                        "imageCount": 64,
+                        "name": "Oklahoma",
+                        "slug": "oklahoma",
+                        "url":
+                            "https://roadsign.pictures/state/oklahoma/index.json"
+                    },
+                    {
+                        "imageCount": 27,
+                        "name": "South Carolina",
+                        "slug": "south-carolina",
+                        "url":
+                            "https://roadsign.pictures/state/south-carolina/index.json"
+                    },
+                    {
+                        "imageCount": 32,
+                        "name": "New Hampshire",
+                        "slug": "new-hampshire",
+                        "url":
+                            "https://roadsign.pictures/state/new-hampshire/index.json"
+                    },
+                    {
+                        "imageCount": 35,
+                        "name": "New Jersey",
+                        "slug": "new-jersey",
+                        "url":
+                            "https://roadsign.pictures/state/new-jersey/index.json"
+                    },
+                    {
+                        "imageCount": 93,
+                        "name": "Pennsylvania",
+                        "slug": "pennsylvania",
+                        "url":
+                            "https://roadsign.pictures/state/pennsylvania/index.json"
+                    },
+                    {
+                        "imageCount": 13,
+                        "name": "Rhode Island",
+                        "slug": "rhode-island",
+                        "url":
+                            "https://roadsign.pictures/state/rhode-island/index.json"
+                    },
+                    {
+                        "imageCount": 34,
+                        "name": "Mississippi",
+                        "slug": "mississippi",
+                        "url":
+                            "https://roadsign.pictures/state/mississippi/index.json"
+                    },
+                    {
+                        "imageCount": 2319,
+                        "name": "Idaho",
+                        "slug": "idaho",
+                        "url":
+                            "https://roadsign.pictures/state/idaho/index.json"
+                    },
+                    {
+                        "imageCount": 1852,
+                        "name": "Oregon",
+                        "slug": "oregon",
+                        "url":
+                            "https://roadsign.pictures/state/oregon/index.json"
+                    },
+                    {
+                        "imageCount": 832,
+                        "name": "Arizona",
+                        "slug": "arizona",
+                        "url":
+                            "https://roadsign.pictures/state/arizona/index.json"
+                    },
+                    {
+                        "imageCount": 1140,
+                        "name": "Wyoming",
+                        "slug": "wyoming",
+                        "url":
+                            "https://roadsign.pictures/state/wyoming/index.json"
+                    },
+                    {
+                        "imageCount": 70,
+                        "name": "Alabama",
+                        "slug": "alabama",
+                        "url":
+                            "https://roadsign.pictures/state/alabama/index.json"
+                    },
+                    {
+                        "imageCount": 89,
+                        "name": "Alaska",
+                        "slug": "alaska",
+                        "url":
+                            "https://roadsign.pictures/state/alaska/index.json"
+                    },
+                    {
+                        "imageCount": 138,
+                        "name": "Louisiana",
+                        "slug": "louisiana",
+                        "url":
+                            "https://roadsign.pictures/state/louisiana/index.json"
+                    },
+                    {
+                        "imageCount": 6,
+                        "name": "District of Columbia",
+                        "slug": "district-of-columbia",
+                        "url":
+                            "https://roadsign.pictures/state/district-of-columbia/index.json"
+                    },
+                    {
+                        "imageCount": 36,
+                        "name": "Maryland",
+                        "slug": "maryland",
+                        "url":
+                            "https://roadsign.pictures/state/maryland/index.json"
+                    },
+                    {
+                        "imageCount": 263,
+                        "name": "West Virginia",
+                        "slug": "west-virginia",
+                        "url":
+                            "https://roadsign.pictures/state/west-virginia/index.json"
+                    },
+                    {
+                        "imageCount": 72,
+                        "name": "North Carolina",
+                        "slug": "north-carolina",
+                        "url":
+                            "https://roadsign.pictures/state/north-carolina/index.json"
+                    },
+                    {
+                        "imageCount": 86,
+                        "name": "Kentucky",
+                        "slug": "kentucky",
+                        "url":
+                            "https://roadsign.pictures/state/kentucky/index.json"
+                    },
+                    {
+                        "imageCount": 51,
+                        "name": "Ohio",
+                        "slug": "ohio",
+                        "url": "https://roadsign.pictures/state/ohio/index.json"
+                    },
+                    {
+                        "imageCount": 70,
+                        "name": "Hawaii",
+                        "slug": "hawaii",
+                        "url":
+                            "https://roadsign.pictures/state/hawaii/index.json"
+                    },
+                    {
+                        "imageCount": 54,
+                        "name": "North Dakota",
+                        "slug": "north-dakota",
+                        "url":
+                            "https://roadsign.pictures/state/north-dakota/index.json"
+                    },
+                    {
+                        "imageCount": 29,
+                        "name": "Massachusetts",
+                        "slug": "massachusetts",
+                        "url":
+                            "https://roadsign.pictures/state/massachusetts/index.json"
+                    },
+                    {
+                        "imageCount": 166,
+                        "name": "Texas",
+                        "slug": "texas",
+                        "url":
+                            "https://roadsign.pictures/state/texas/index.json"
+                    },
+                    {
+                        "imageCount": 1202,
+                        "name": "Washington",
+                        "slug": "washington",
+                        "url":
+                            "https://roadsign.pictures/state/washington/index.json"
+                    },
+                    {
+                        "imageCount": 68,
+                        "name": "Iowa",
+                        "slug": "iowa",
+                        "url": "https://roadsign.pictures/state/iowa/index.json"
+                    },
+                    {
+                        "imageCount": 169,
+                        "name": "South Dakota",
+                        "slug": "south-dakota",
+                        "url":
+                            "https://roadsign.pictures/state/south-dakota/index.json"
+                    },
+                    {
+                        "imageCount": 74,
+                        "name": "Illinois",
+                        "slug": "illinois",
+                        "url":
+                            "https://roadsign.pictures/state/illinois/index.json"
+                    },
+                    {
+                        "imageCount": 162,
+                        "name": "Arkansas",
+                        "slug": "arkansas",
+                        "url":
+                            "https://roadsign.pictures/state/arkansas/index.json"
+                    },
+                    {
+                        "imageCount": 166,
+                        "name": "Missouri",
+                        "slug": "missouri",
+                        "url":
+                            "https://roadsign.pictures/state/missouri/index.json"
+                    }
+                ],
+                "subdivisionName": "State",
                 "url":
                     "https://roadsign.pictures/country/united-states/index.json"
             },
             {
+                "imageCount": 537,
                 "name": "Canada",
                 "slug": "canada",
+                "states": [
+                    {
+                        "imageCount": 75,
+                        "name": "Saskatchewan",
+                        "slug": "saskatchewan",
+                        "url":
+                            "https://roadsign.pictures/state/saskatchewan/index.json"
+                    },
+                    {
+                        "imageCount": 320,
+                        "name": "British Columbia",
+                        "slug": "british-columbia",
+                        "url":
+                            "https://roadsign.pictures/state/british-columbia/index.json"
+                    },
+                    {
+                        "imageCount": 142,
+                        "name": "Alberta",
+                        "slug": "alberta",
+                        "url":
+                            "https://roadsign.pictures/state/alberta/index.json"
+                    }
+                ],
+                "subdivisionName": "Province",
                 "url": "https://roadsign.pictures/country/canada/index.json"
             },
             {
+                "imageCount": 2,
                 "name": "Mexico",
                 "slug": "mexico",
+                "states": [
+                    {
+                        "imageCount": 2,
+                        "name": "Sonora",
+                        "slug": "sonora",
+                        "url":
+                            "https://roadsign.pictures/state/sonora/index.json"
+                    }
+                ],
+                "subdivisionName": "Estado",
                 "url": "https://roadsign.pictures/country/mexico/index.json"
             },
             {
+                "imageCount": 15,
                 "name": "Costa Rica",
                 "slug": "costa-rica",
+                "states": [
+                    {
+                        "imageCount": 7,
+                        "name": "LimÃ³n Province",
+                        "slug": "limon-province",
+                        "url":
+                            "https://roadsign.pictures/state/limon-province/index.json"
+                    },
+                    {
+                        "imageCount": 1,
+                        "name": "Alajuela Province",
+                        "slug": "alajuela-province",
+                        "url":
+                            "https://roadsign.pictures/state/alajuela-province/index.json"
+                    },
+                    {
+                        "imageCount": 6,
+                        "name": "San JosÃ© Province",
+                        "slug": "san-jose-province",
+                        "url":
+                            "https://roadsign.pictures/state/san-jose-province/index.json"
+                    },
+                    {
+                        "imageCount": 1,
+                        "name": "Heredia Province",
+                        "slug": "heredia-province",
+                        "url":
+                            "https://roadsign.pictures/state/heredia-province/index.json"
+                    }
+                ],
+                "subdivisionName": "Provincia",
                 "url": "https://roadsign.pictures/country/costa-rica/index.json"
             }
         ],

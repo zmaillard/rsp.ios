@@ -22,22 +22,14 @@ class StateDetailsViewModel {
     
     func fetch(for country: StateSlim) async {
         guard !state.isLoading || state.error != nil else { return }
-        print("inside fetch")
         self.state = .loading
-        print("loading inside fetch")
         do {
             let state =  try await service.fetchState(from: country.url )
-            print("before loaded inside fetch")
             self.state = .loaded(state)
-            print("after loaded inside fetch")
         } catch let error as APIError{
-            print("before error inside fetch")
             self.state = .error(error.errorDescription ?? "unknown error")
-            print("after error inside fetch")
         } catch {
-            print("before unhandled error inside fetch")
             self.state = .error("unknown error")
-            print("after unhandled error inside fetch")
         }
     }
     

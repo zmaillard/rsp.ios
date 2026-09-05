@@ -12,8 +12,7 @@
 		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
 		52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
-		52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */; };
-		52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */; };
+		53B100001234567890ABC001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B100001234567890ABC004 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +22,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 52A2F84130314CEF00BCFEE4;
 			remoteInfo = RPBrowserWidgetExtension;
+		};
+		53B100001234567890ABC002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 527EDDCD3016A338003AA02B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 527EDDD43016A338003AA02B;
+			remoteInfo = rpbrowser;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +52,8 @@
 		52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		53B100001234567890ABC003 /* rpbrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rpbrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B100001234567890ABC004 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -75,6 +83,7 @@
 				networking/APIError.swift,
 				networking/helpers/SampleDataLoader.swift,
 				networking/Services/DefaultSignSearchService.swift,
+				networking/Services/ImageService.swift,
 				networking/Services/MockSignSearchService.swift,
 				networking/Services/SignSearchService.swift,
 				routing/BrowseRoute.swift,
@@ -111,6 +120,11 @@
 			path = RPBrowserWidget;
 			sourceTree = "<group>";
 		};
+		53B100001234567890ABC005 /* rpbrowserTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = rpbrowserTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BE8BE2303DC33400B63832 /* MapLibreSwiftUI in Frameworks */,
-				52BE8BE0303DC33400B63832 /* MapLibreSwiftDSL in Frameworks */,
 				52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +145,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53B100001234567890ABC006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53B100001234567890ABC001 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -141,6 +161,7 @@
 			children = (
 				52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */,
 				527EDDD73016A338003AA02B /* rpbrowser */,
+				53B100001234567890ABC005 /* rpbrowserTests */,
 				52A2F84830314CEF00BCFEE4 /* RPBrowserWidget */,
 				52A2F84330314CEF00BCFEE4 /* Frameworks */,
 				527EDDD63016A338003AA02B /* Products */,
@@ -151,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				527EDDD53016A338003AA02B /* rpbrowser.app */,
+				53B100001234567890ABC003 /* rpbrowserTests.xctest */,
 				52A2F84230314CEF00BCFEE4 /* Road Signs.appex */,
 			);
 			name = Products;
@@ -161,6 +183,7 @@
 			children = (
 				52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */,
 				52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */,
+				53B100001234567890ABC004 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,8 +211,6 @@
 			name = rpbrowser;
 			packageProductDependencies = (
 				52BE8BDC303DC01B00B63832 /* MapLibre */,
-				52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */,
-				52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */,
 			);
 			productName = rpbrowser;
 			productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
@@ -217,6 +238,29 @@
 			productReference = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		53B100001234567890ABC007 /* rpbrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */;
+			buildPhases = (
+				53B100001234567890ABC009 /* Sources */,
+				53B100001234567890ABC006 /* Frameworks */,
+				53B100001234567890ABC008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53B100001234567890ABC00A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				53B100001234567890ABC005 /* rpbrowserTests */,
+			);
+			name = rpbrowserTests;
+			packageProductDependencies = (
+			);
+			productName = rpbrowserTests;
+			productReference = 53B100001234567890ABC003 /* rpbrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,6 +277,10 @@
 					52A2F84130314CEF00BCFEE4 = {
 						CreatedOnToolsVersion = 26.6;
 					};
+					53B100001234567890ABC007 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 527EDDD43016A338003AA02B;
+					};
 				};
 			};
 			buildConfigurationList = 527EDDD03016A338003AA02B /* Build configuration list for PBXProject "rpbrowser" */;
@@ -246,8 +294,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
-				52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */,
-				52BE8D1A30411CAD00B63832 /* XCRemoteSwiftPackageReference "Zoomable" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
@@ -255,6 +301,7 @@
 			projectRoot = "";
 			targets = (
 				527EDDD43016A338003AA02B /* rpbrowser */,
+				53B100001234567890ABC007 /* rpbrowserTests */,
 				52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */,
 			);
 		};
@@ -276,6 +323,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53B100001234567890ABC008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -293,6 +347,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53B100001234567890ABC009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -300,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = 52A2F84130314CEF00BCFEE4 /* RPBrowserWidgetExtension */;
 			targetProxy = 52A2F85030314CF000BCFEE4 /* PBXContainerItemProxy */;
+		};
+		53B100001234567890ABC00A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 527EDDD43016A338003AA02B /* rpbrowser */;
+			targetProxy = 53B100001234567890ABC002 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,6 +663,55 @@
 			};
 			name = Release;
 		};
+		53B100001234567890ABC00B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
+			};
+			name = Debug;
+		};
+		53B100001234567890ABC00C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KJ5EK7M4FC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pictures.roadsign.rpbrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpbrowser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpbrowser";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -627,6 +742,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		53B100001234567890ABC00D /* Build configuration list for PBXNativeTarget "rpbrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53B100001234567890ABC00B /* Debug */,
+				53B100001234567890ABC00C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -638,22 +762,6 @@
 				minimumVersion = 6.29.0;
 			};
 		};
-		52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maplibre/swiftui-dsl";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		52BE8D1A30411CAD00B63832 /* XCRemoteSwiftPackageReference "Zoomable" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ryohey/Zoomable.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -661,16 +769,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
 			productName = MapLibre;
-		};
-		52BE8BDF303DC33400B63832 /* MapLibreSwiftDSL */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
-			productName = MapLibreSwiftDSL;
-		};
-		52BE8BE1303DC33400B63832 /* MapLibreSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52BE8BDE303DC33400B63832 /* XCRemoteSwiftPackageReference "swiftui-dsl" */;
-			productName = MapLibreSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

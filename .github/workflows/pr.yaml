@@ -1,0 +1,31 @@
+name: Build and Test Pull Request
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '26.6'
+
+      - name: Create APIKey.xcconfig
+        run: |
+          echo "SEARCH_API_KEY = ${{ secrets.SEARCH_API_KEY }}" > APIKey.xcconfig
+
+      - name: Build and Test
+        run: |
+          xcodebuild clean build test \
+            -project rpbrowser.xcodeproj \
+            -scheme rpbrowser \
+            -destination 'platform=iOS Simulator,OS=26.5,name=iPhone 17' \
+            CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
+
