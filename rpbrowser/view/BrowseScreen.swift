@@ -9,9 +9,10 @@ import SwiftUI
 
 struct BrowseScreen: View {
     @SwiftUI.Environment(CountryViewModel.self) var countryViewModel: CountryViewModel
-   
+    @SwiftUI.Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     @Bindable var router: Router<BrowseRoute>
-
+    
     var body: some View {
         NavigationStack(path: $router.path) {
             Group {
@@ -23,18 +24,7 @@ struct BrowseScreen: View {
                         Text("Loading...")
                     }
                 case .loaded(let countries):
-                    List {
-                        ForEach(countries.countries.sorted()) { country in
-                            Section(country.name) {
-                                let states = country.states ?? []
-                                ForEach(states.sorted()) { state in
-                                    NavigationLink(value: BrowseRoute.stateDetails(state)){
-                                        Text(state.name).badge(state.imageCount)
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    BrowseGridView(index: countries)
                 case .error(let error):
                     Text(error).foregroundStyle(Color.red)
                 }
@@ -44,7 +34,11 @@ struct BrowseScreen: View {
             .navigationDestination(for: BrowseRoute.self) {route in
                 switch route {
                 case .stateDetails(let state):
-                    CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    if horizontalSizeClass == .compact {
+                        CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    } else {
+                        BrowseSplitView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    }
                 case .highwayList(let highwaySearch):
                     SignSearchView(searchType: highwaySearch)
                 case .countylist(let stateName, let countyUrl):
@@ -57,7 +51,7 @@ struct BrowseScreen: View {
             }
         }
         .environment(router)
-            
+        
     }
 }
 

@@ -12,6 +12,7 @@
 		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
 		52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
+		52FAA53D304DB701006399AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52FAA53C304DB701006399AB /* Kingfisher */; };
 		53B100001234567890ABC001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B100001234567890ABC004 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FAA53D304DB701006399AB /* Kingfisher in Frameworks */,
 				52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +213,7 @@
 			name = rpbrowser;
 			packageProductDependencies = (
 				52BE8BDC303DC01B00B63832 /* MapLibre */,
+				52FAA53C304DB701006399AB /* Kingfisher */,
 			);
 			productName = rpbrowser;
 			productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
@@ -294,6 +297,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+				52FAA53B304DB701006399AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
@@ -762,6 +766,14 @@
 				minimumVersion = 6.29.0;
 			};
 		};
+		52FAA53B304DB701006399AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -769,6 +781,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
 			productName = MapLibre;
+		};
+		52FAA53C304DB701006399AB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52FAA53B304DB701006399AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

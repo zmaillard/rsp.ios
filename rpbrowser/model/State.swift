@@ -75,6 +75,7 @@ struct StateSubdivisionSlim : Equatable, Comparable, Identifiable, Hashable, Dec
         case imageCount
     }
     
+
     static func < (lhs: StateSubdivisionSlim, rhs: StateSubdivisionSlim) -> Bool {
         return lhs.name < rhs.name
     }}
