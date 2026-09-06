@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct StateGridView: View {
     let state: StateSlim
+
+    private var featuredImageURL: URL? {
+        guard let medium = state.featured?.medium else {
+            return nil
+        }
+        return URL(string: medium)
+    }
     
     var body: some View {
         VStack {
+            /*
             AsyncImage(url: URL(string: state.featured!.medium)) { phase in
                 switch phase {
                 case .empty:
@@ -28,6 +37,17 @@ struct StateGridView: View {
                     fatalError()
                 }
             }.frame(height: 200)
+             */
+            if let featuredImageURL {
+                KFImage.url(featuredImageURL)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+            } else {
+                Color.gray.opacity(0.2)
+                    .frame(height: 200)
+            }
+                
             HStack{
                 Text(state.name).font(.headline)
                 Text("\(state.imageCount)")

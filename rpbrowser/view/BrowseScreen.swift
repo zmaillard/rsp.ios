@@ -9,9 +9,10 @@ import SwiftUI
 
 struct BrowseScreen: View {
     @SwiftUI.Environment(CountryViewModel.self) var countryViewModel: CountryViewModel
-   
+    @SwiftUI.Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     @Bindable var router: Router<BrowseRoute>
-
+    
     var body: some View {
         NavigationStack(path: $router.path) {
             Group {
@@ -33,8 +34,11 @@ struct BrowseScreen: View {
             .navigationDestination(for: BrowseRoute.self) {route in
                 switch route {
                 case .stateDetails(let state):
-                    //CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
-                    BrowseSplitView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    if horizontalSizeClass == .compact {
+                        CountyListView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    } else {
+                        BrowseSplitView(state: state, stateDetailsViewModel: StateDetailsViewModel())
+                    }
                 case .highwayList(let highwaySearch):
                     SignSearchView(searchType: highwaySearch)
                 case .countylist(let stateName, let countyUrl):
@@ -47,7 +51,7 @@ struct BrowseScreen: View {
             }
         }
         .environment(router)
-            
+        
     }
 }
 

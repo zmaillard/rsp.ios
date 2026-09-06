@@ -1,6 +1,15 @@
 {
-  "originHash" : "e70d3525c8e2819a8b34f22909815dab5c700c25a06c32388f3930f7b3627768",
+  "originHash" : "ee5108244a69753b763149d173879f9d3a819521e395d75dce61f11e1fc31643",
   "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "be0d257b9bd47a4e6e1265fc8c237411825f107a",
+        "version" : "8.12.0"
+      }
+    },
     {
       "identity" : "maplibre-gl-native-distribution",
       "kind" : "remoteSourceControl",
