@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5214CB26304F00CD00A19018 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 5214CB25304F00CD00A19018 /* ViewInspector */; };
 		52A2F84530314CEF00BCFEE4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84430314CEF00BCFEE4 /* WidgetKit.framework */; };
 		52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */; };
 		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -152,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53B100001234567890ABC001 /* XCTest.framework in Frameworks */,
+				5214CB26304F00CD00A19018 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +261,7 @@
 			);
 			name = rpbrowserTests;
 			packageProductDependencies = (
+				5214CB25304F00CD00A19018 /* ViewInspector */,
 			);
 			productName = rpbrowserTests;
 			productReference = 53B100001234567890ABC003 /* rpbrowserTests.xctest */;
@@ -298,6 +301,7 @@
 			packageReferences = (
 				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
 				52FAA53B304DB701006399AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				5214CB24304F00CD00A19018 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
@@ -758,6 +762,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5214CB24304F00CD00A19018 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.3;
+			};
+		};
 		52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
@@ -777,6 +789,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5214CB25304F00CD00A19018 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5214CB24304F00CD00A19018 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
 		52BE8BDC303DC01B00B63832 /* MapLibre */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;

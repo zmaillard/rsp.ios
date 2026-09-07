@@ -37,7 +37,8 @@ public struct SignImageView: View {
                 fatalError()
             }
             
-        }.gesture(tap)
+        }
+        .gesture(tap)
         
     }
 }

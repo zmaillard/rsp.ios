@@ -13,7 +13,7 @@ struct SignListView: View {
     let url:String
     
 
-    var roadSignListViewModel = RoadSignListViewModel()
+    @State var roadSignListViewModel: RoadSignListViewModel
     var body: some View {
         VStack {
             switch roadSignListViewModel.state {

@@ -22,6 +22,12 @@ struct SignDetailView: View {
                     SignImageView(urlPath: sign.image.large) { self.isPresented = true }
                         .frame(height: imageSize)
                         .clipped()
+                        .contextMenu{
+                            Button("Copy Image Id") {
+                                copyImageId()
+                            }
+                                
+                        }
                     let desc: LocalizedStringKey = LocalizedStringKey(trimTags(from: sign.description))
                     Text(desc)
                 }
@@ -65,6 +71,9 @@ struct SignDetailView: View {
             }
         }
         
+    }
+    func copyImageId() {
+        UIPasteboard.general.string = sign.id
     }
     private func trimTags(from input: String) -> String {
         return input.replacing("<p>", with: "").replacing("</p>", with: "")
