@@ -42,9 +42,9 @@ struct BrowseScreen: View {
                 case .highwayList(let highwaySearch):
                     SignSearchView(searchType: highwaySearch)
                 case .countylist(let stateName, let countyUrl):
-                    SignListView(title: stateName, url: countyUrl)
+                    SignListView(title: stateName, url: countyUrl, roadSignListViewModel: RoadSignListViewModel())
                 case .placelist(let stateName, let placeUrl):
-                    SignListView(title: stateName, url: placeUrl)
+                    SignListView(title: stateName, url: placeUrl, roadSignListViewModel: RoadSignListViewModel())
                 case .sign(let signId):
                     SignLoadingView(signId: signId, roadSignViewModel: StaticSignViewModel())
                 }

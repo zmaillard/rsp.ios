@@ -20,24 +20,6 @@ struct StateGridView: View {
     
     var body: some View {
         VStack {
-            /*
-            AsyncImage(url: URL(string: state.featured!.medium)) { phase in
-                switch phase {
-                case .empty:
-                    Color(white: 0.8)
-                        .overlay {
-                            ProgressView()
-                                .controlSize(.large)
-                        }
-                case .success(let image):
-                    image.resizable().scaledToFill()
-                case .failure(_):
-                    Text("Could not load image")
-                @unknown default:
-                    fatalError()
-                }
-            }.frame(height: 200)
-             */
             if let featuredImageURL {
                 KFImage.url(featuredImageURL)
                     .resizable()
