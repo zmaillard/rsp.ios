@@ -4,10 +4,10 @@ import XCTest
 @MainActor
 final class BrowseSplitViewTests: XCTestCase {
     func testHandleSelectionChangeFetchesStateSubdivisionForBrowseURL() async {
-        let listService = TestSignSearchService(
+        let listService = MockSignSearchService(
             stateSubdivisionResult: .success(makeSubdivision())
         )
-        let signsService = TestSignSearchService(
+        let signsService = MockSignSearchService(
             signsResult: .success([makeSign(id: "id-1")])
         )
 
@@ -22,10 +22,10 @@ final class BrowseSplitViewTests: XCTestCase {
     }
 
     func testHandleSelectionChangeFetchesSignsForBrowseSearch() async {
-        let listService = TestSignSearchService(
+        let listService = MockSignSearchService(
             stateSubdivisionResult: .success(makeSubdivision())
         )
-        let signsService = TestSignSearchService(
+        let signsService = MockSignSearchService(
             signsResult: .success([makeSign(id: "id-1")])
         )
 
@@ -40,10 +40,10 @@ final class BrowseSplitViewTests: XCTestCase {
     }
 
     func testHandleSelectionChangeWithNoSelectionDoesNotFetch() async {
-        let listService = TestSignSearchService(
+        let listService = MockSignSearchService(
             stateSubdivisionResult: .success(makeSubdivision())
         )
-        let signsService = TestSignSearchService(
+        let signsService = MockSignSearchService(
             signsResult: .success([makeSign(id: "id-1")])
         )
 
@@ -57,10 +57,10 @@ final class BrowseSplitViewTests: XCTestCase {
         XCTAssertEqual(signsCalls, 0)
     }
 
-    private func makeView(listService: TestSignSearchService, signsService: TestSignSearchService) -> BrowseSplitView {
+    private func makeView(listService: MockSignSearchService, signsService: MockSignSearchService) -> BrowseSplitView {
         BrowseSplitView(
             state: makeStateSlim(),
-            stateDetailsViewModel: StateDetailsViewModel(service: TestSignSearchService(stateResult: .success(makeStateDetails()))),
+            stateDetailsViewModel: StateDetailsViewModel(service: MockSignSearchService(stateResult: .success(makeStateDetails()))),
             roadSignListViewModel: RoadSignListViewModel(service: listService),
             roadSignsViewModel: RoadSignsViewModel(service: signsService)
         )

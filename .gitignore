@@ -64,3 +64,5 @@ fastlane/test_output
 # Ignore config
 APIKey.xcconfig
 .env
+
+build/
