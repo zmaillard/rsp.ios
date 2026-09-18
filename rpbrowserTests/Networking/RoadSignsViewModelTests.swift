@@ -5,20 +5,20 @@ import XCTest
 final class RoadSignsViewModelTests: XCTestCase {
     func testFetchSignsLoadsSignsAndSearchTitleForTerm() async {
         let signs = [makeSign(state: "New York", place: "Albany", county: "Albany")]
-        let service = MockSignSearchServiceForSigns(signsResult: .success(signs))
+        let service = MockSignSearchService(signsResult: .success(signs))
         let viewModel = RoadSignsViewModel(service: service)
 
         await viewModel.fetchSigns(searchType: .Term("stop"))
 
         XCTAssertEqual(viewModel.state, .loaded(RoadSignLoaded(signs: signs, title: "Search Results for stop")))
-        let callCount = await service.callCount()
-        let searchType = await service.capturedSearchType()
+        let callCount = await service.signsCallCount()
+        let searchType = await service.lastSignsSearchTypeCalled()
         XCTAssertEqual(callCount, 1)
         XCTAssertEqual(searchType, .Term("stop"))
     }
 
     func testFetchSignsUsesNoResultsTitleWhenEmpty() async {
-        let service = MockSignSearchServiceForSigns(signsResult: .success([]))
+        let service = MockSignSearchService(signsResult: .success([]))
         let viewModel = RoadSignsViewModel(service: service)
 
         await viewModel.fetchSigns(searchType: .StateFilter("ny"))
@@ -27,7 +27,7 @@ final class RoadSignsViewModelTests: XCTestCase {
     }
 
     func testFetchSignsSetsErrorStateForApiError() async {
-        let service = MockSignSearchServiceForSigns(signsResult: .failure(APIError.invalidResponse))
+        let service = MockSignSearchService(signsResult: .failure(APIError.invalidResponse))
         let viewModel = RoadSignsViewModel(service: service)
 
         await viewModel.fetchSigns(searchType: .Term("yield"))
@@ -36,7 +36,7 @@ final class RoadSignsViewModelTests: XCTestCase {
     }
 
     func testGetSearchTitleReturnsExpectedStrings() {
-        let viewModel = RoadSignsViewModel(service: MockSignSearchServiceForSigns(signsResult: .success([])))
+        let viewModel = RoadSignsViewModel(service: MockSignSearchService(signsResult: .success([])))
         let sign = makeSign(state: "Massachusetts", place: "Boston", county: "Suffolk")
 
         XCTAssertEqual(viewModel.getSearchTitle(searchType: .StateFilter("ma"), sign: sign), "Signs from Massachusetts")
@@ -66,40 +66,4 @@ final class RoadSignsViewModelTests: XCTestCase {
             url: "https://example.com/photo_l.jpg"
         )
     }
-}
-
-private actor MockSignSearchServiceForSigns: SignSearchService {
-    private let signsResult: Result<[RoadSign], Error>
-
-    private(set) var fetchSignsCallCount = 0
-    private(set) var lastSearchType: SearchType?
-
-    init(signsResult: Result<[RoadSign], Error>) {
-        self.signsResult = signsResult
-    }
-
-    func callCount() -> Int {
-        fetchSignsCallCount
-    }
-
-    func capturedSearchType() -> SearchType? {
-        lastSearchType
-    }
-
-    func fetchSigns(type: SearchType) async throws -> [RoadSign] {
-        fetchSignsCallCount += 1
-        lastSearchType = type
-        switch signsResult {
-        case .success(let signs):
-            return signs
-        case .failure(let error):
-            throw error
-        }
-    }
-
-    func fetchRoot() async throws -> Index { fatalError("Unused in this test") }
-    func fetchCountry(from URLString: String) async throws -> Country { fatalError("Unused in this test") }
-    func fetchState(from URLString: String) async throws -> StateDetails { fatalError("Unused in this test") }
-    func fetchSignDetail(from URLString: String) async throws -> RoadSignDetails { fatalError("Unused in this test") }
-    func fetchStateSubdivision(from URLString: String) async throws -> StateSubdivision { fatalError("Unused in this test") }
 }

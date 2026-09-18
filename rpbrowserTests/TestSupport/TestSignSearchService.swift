@@ -1,7 +1,8 @@
 import Foundation
 @testable import rpbrowser
 
-actor TestSignSearchService: SignSearchService {
+/// Comprehensive mock service for SignSearchService with call tracking
+final class MockSignSearchService: SignSearchService {
     private let rootResult: Result<Index, Error>
     private let countryResult: Result<Country, Error>
     private let stateResult: Result<StateDetails, Error>
@@ -9,8 +10,20 @@ actor TestSignSearchService: SignSearchService {
     private let signDetailResult: Result<RoadSignDetails, Error>
     private let stateSubdivisionResult: Result<StateSubdivision, Error>
 
-    private var stateSubdivisionCalls = 0
+    // Call tracking
+    private var rootCalls = 0
+    private var countryCalls = 0
+    private var stateCalls = 0
     private var signsCalls = 0
+    private var signDetailCalls = 0
+    private var stateSubdivisionCalls = 0
+    
+    // Arguments tracking
+    private var lastCountryURL: String?
+    private var lastStateURL: String?
+    private var lastSignsSearchType: SearchType?
+    private var lastSignDetailURL: String?
+    private var lastSubdivisionURL: String?
 
     init(
         rootResult: Result<Index, Error> = .failure(APIError.invalidResponse),
@@ -29,36 +42,89 @@ actor TestSignSearchService: SignSearchService {
     }
 
     func fetchRoot() async throws -> Index {
-        try rootResult.get()
+        rootCalls += 1
+        return try rootResult.get()
     }
 
     func fetchCountry(from URLString: String) async throws -> Country {
-        try countryResult.get()
+        countryCalls += 1
+        lastCountryURL = URLString
+        return try countryResult.get()
     }
 
     func fetchState(from URLString: String) async throws -> StateDetails {
-        try stateResult.get()
+        stateCalls += 1
+        lastStateURL = URLString
+        return try stateResult.get()
     }
 
     func fetchSigns(type: SearchType) async throws -> [RoadSign] {
         signsCalls += 1
+        lastSignsSearchType = type
         return try signsResult.get()
     }
 
     func fetchSignDetail(from URLString: String) async throws -> RoadSignDetails {
-        try signDetailResult.get()
+        signDetailCalls += 1
+        lastSignDetailURL = URLString
+        return try signDetailResult.get()
     }
 
     func fetchStateSubdivision(from URLString: String) async throws -> StateSubdivision {
         stateSubdivisionCalls += 1
+        lastSubdivisionURL = URLString
         return try stateSubdivisionResult.get()
+    }
+
+    // MARK: - Call Count Accessors
+    
+    func rootCallCount() -> Int {
+        rootCalls
+    }
+
+    func countryCallCount() -> Int {
+        countryCalls
+    }
+
+    func stateCallCount() -> Int {
+        stateCalls
+    }
+
+    func signsCallCount() -> Int {
+        signsCalls
+    }
+
+    func signDetailCallCount() -> Int {
+        signDetailCalls
     }
 
     func stateSubdivisionCallCount() -> Int {
         stateSubdivisionCalls
     }
 
-    func signsCallCount() -> Int {
-        signsCalls
+    // MARK: - Argument Tracking Accessors
+    
+    func lastCountryURLCalled() -> String? {
+        lastCountryURL
+    }
+
+    func lastStateURLCalled() -> String? {
+        lastStateURL
+    }
+
+    func lastSignsSearchTypeCalled() -> SearchType? {
+        lastSignsSearchType
+    }
+
+    func lastSignDetailURLCalled() -> String? {
+        lastSignDetailURL
+    }
+
+    func lastSubdivisionURLCalled() -> String? {
+        lastSubdivisionURL
     }
 }
+
+// MARK: - Test Helpers for Backwards Compatibility
+
+typealias TestSignSearchService = MockSignSearchService
