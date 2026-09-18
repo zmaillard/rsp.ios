@@ -6,19 +6,13 @@
 //
 
 import SwiftUI
+import Zoomable
 
 public struct SignImageView: View {
     let urlPath: String
-    var callback: (() -> Void)? = nil
-    
     
     
     public var body: some View {
-        let tap =    TapGesture(count: 1).onEnded { _ in
-            if let callback = self.callback {
-                callback()
-            }
-        }
         AsyncImage(url: URL(string: urlPath)) { phase in
             switch phase {
             case .empty:
@@ -38,7 +32,7 @@ public struct SignImageView: View {
             }
             
         }
-        .gesture(tap)
+        .zoomable()
         
     }
 }

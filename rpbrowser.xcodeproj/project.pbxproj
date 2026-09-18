@@ -12,6 +12,7 @@
 		52A2F84730314CEF00BCFEE4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2F84630314CEF00BCFEE4 /* SwiftUI.framework */; };
 		52A2F85230314CF000BCFEE4 /* Road Signs.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52A2F84230314CEF00BCFEE4 /* Road Signs.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52A2F86D3031E6C100BCFEE4 /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52A2F86C3031E6C100BCFEE4 /* APIKey.xcconfig */; };
+		52A4C6E1305CB6740071ADDB /* Zoomable in Frameworks */ = {isa = PBXBuildFile; productRef = 52A4C6E0305CB6740071ADDB /* Zoomable */; };
 		52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE8BDC303DC01B00B63832 /* MapLibre */; };
 		52FAA53D304DB701006399AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52FAA53C304DB701006399AB /* Kingfisher */; };
 		53B100001234567890ABC001 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B100001234567890ABC004 /* XCTest.framework */; };
@@ -136,6 +137,7 @@
 			files = (
 				52FAA53D304DB701006399AB /* Kingfisher in Frameworks */,
 				52BE8BDD303DC01B00B63832 /* MapLibre in Frameworks */,
+				52A4C6E1305CB6740071ADDB /* Zoomable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +218,7 @@
 			packageProductDependencies = (
 				52BE8BDC303DC01B00B63832 /* MapLibre */,
 				52FAA53C304DB701006399AB /* Kingfisher */,
+				52A4C6E0305CB6740071ADDB /* Zoomable */,
 			);
 			productName = rpbrowser;
 			productReference = 527EDDD53016A338003AA02B /* rpbrowser.app */;
@@ -302,6 +305,7 @@
 				52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
 				52FAA53B304DB701006399AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				5214CB24304F00CD00A19018 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				52A4C6DF305CB6740071ADDB /* XCRemoteSwiftPackageReference "Zoomable" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 527EDDD63016A338003AA02B /* Products */;
@@ -770,6 +774,14 @@
 				minimumVersion = 0.10.3;
 			};
 		};
+		52A4C6DF305CB6740071ADDB /* XCRemoteSwiftPackageReference "Zoomable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryohey/Zoomable.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		52BE8BDB303DC01B00B63832 /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
@@ -793,6 +805,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5214CB24304F00CD00A19018 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
+		};
+		52A4C6E0305CB6740071ADDB /* Zoomable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52A4C6DF305CB6740071ADDB /* XCRemoteSwiftPackageReference "Zoomable" */;
+			productName = Zoomable;
 		};
 		52BE8BDC303DC01B00B63832 /* MapLibre */ = {
 			isa = XCSwiftPackageProductDependency;

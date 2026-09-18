@@ -12,14 +12,13 @@ struct SignDetailView: View {
     let sign: RoadSignDetails
     let onRefresh:(() -> Void)?
     let imageSize: CGFloat = 500.0
-    @State private var isPresented: Bool = false
     
     
     var body: some View {
         ScrollView {
             DynamicStack {
                 VStack {
-                    SignImageView(urlPath: sign.image.large) { self.isPresented = true }
+                    SignImageView(urlPath: sign.image.large)
                         .frame(height: imageSize)
                         .clipped()
                         .contextMenu{
@@ -65,9 +64,6 @@ struct SignDetailView: View {
                 .padding()
                 .navigationTitle(sign.title)
                 .navigationBarTitleDisplayMode(.inline)
-                .fullScreenCover(isPresented: $isPresented){
-                    FullScreenModalView(imageUrl: sign.image.large, imageSize: imageSize)
-                }
             }
         }
         
